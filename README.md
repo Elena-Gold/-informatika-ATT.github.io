@@ -1,1 +1,1 @@
-# -informatika-ATT.github.io
+# informatika-ATT.github.io
