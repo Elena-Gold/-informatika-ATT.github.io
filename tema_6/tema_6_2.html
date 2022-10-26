@@ -1,0 +1,3700 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xml:lang="en" dir="ltr" lang="en-US">
+<head>
+
+
+
+
+   
+    
+  
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+
+
+    
+
+
+
+    
+  
+  
+  
+  
+  
+  
+  <title>Тема 6.2</title>
+  <link rel="stylesheet" href="../style.css" type="text/css" media="screen">
+<!--[if IE 6]><link rel="stylesheet" href="../style.ie6.css" type="text/css" media="screen" /><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../style.ie7.css" type="text/css" media="screen" /><![endif]-->
+
+
+
+    
+    
+  
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+
+
+
+    
+  
+  
+  
+  <script type="text/javascript" src="../jquery.js"></script>
+    
+  
+  
+  
+  <script type="text/javascript" src="../script.js"></script>
+   
+  
+  
+  
+  <style type="text/css">
+   </style>
+
+
+ 
+  
+  <meta charset="utf-8">
+  <title>Кнопка "Вверх" при помощи JavaScript - "Нубекс"</title>
+  
+  <style>
+  #topNubex {
+	position: fixed;
+	right: 45px;
+	bottom: 45px;
+   }
+  </style>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+  $(window).scroll(function() {
+  if($(this).scrollTop() != 0) {
+  $('#topNubex').fadeIn();
+  } else {
+  $('#topNubex').fadeOut();
+  }
+  });
+  $('#topNubex').click(function() {
+  $('body,html').animate({scrollTop:0},700);
+  });
+  });
+  </script>
+</head>
+
+
+<body>
+
+
+
+
+<div id="art-main">
+    
+<div class="cleared reset-box"></div>
+
+
+
+
+    
+<div class="art-header">
+        
+<div class="art-header-position">
+            
+<div class="art-header-wrapper">
+                
+<div class="cleared reset-box"></div>
+
+
+
+
+                
+<div class="art-header-inner">
+                
+<div class="art-logo">
+                                 
+<h1 class="art-logo-name"><a href="../index.html">&nbsp;</a></h1>
+
+
+
+
+                                                </div>
+
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+
+
+        
+    </div>
+
+
+
+
+    
+<div class="cleared reset-box"></div>
+
+
+
+
+<div class="art-bar art-nav">
+<div class="art-nav-outer">
+<div class="art-nav-wrapper">
+<div class="art-nav-inner">
+	
+<ul class="art-hmenu">
+
+
+
+
+		<li>
+	<li> <a href="../%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F.html">Главная</a>  </li>
+	<li> <a href="../tema_1.html">Тема 1</a> </li>
+	<li> <a href="../tema_2.html">Тема 2</a> </li>
+	<li> <a href="../tema_3.html">Тема 3</a>
+    <ul>
+			<li> <a href="../tema_3/tema_3_1.html">Графический интерфейс ОС Windows</a> </li>
+			<li> <a href="../tema_3/tema_3_2.html">Работа с файловым менеджером Проводник</a> </li>
+    </ul>
+  </li>
+    <li> <a href="../tema_4.html">Тема 4</a>
+    <ul>
+     		  <li> <a href="../tema_4/tema_4_1_1.html">Решение задач по теме системы счисления</a></li>
+			  <li> <a href="../tema_4/tema_4_2.html">Действия с числами в позиционных системах счисления</a></li>
+              <li> <a href="../tema_4/tema_4_3.html">Формы представления чисел</a></li>
+              <li> <a href="../tema_4/tema_4_4.html">Представление и измерение информации</a></li>
+			  <li> <a href="../tema_4/tema_4_5.html">Представление и измерение текстовой, графической и звуковой информации</a></li>
+			  <li> <a href="../tema_4/tema_4_6.html" >Представление и измерение информации. Кодирование звуковой информации</a></li>
+			  <li> <a href="../tema_4/tema_4_7.html">Решение задач по теме адресация в сети Internet</a></li>
+			  <li> <a href="../tema_4/tema_4_8.html">Решение задач по теории игр, выигрышная стратегия</a></li>
+    </ul>
+  </li>
+  <li> <a href="../tema_5.html">Тема 5</a> </li>
+  <li> <a href="../tema_6.html" class="active">Тема 6</a>
+     <ul>
+			<li> <a href="../tema_6/tema_6_1.html">Логические операции</a> </li>
+			<li> <a href="../tema_6/tema_6_2.html" class="active">Построение таблиц истинности и логических схем</a> </li>
+			<li> <a href="../tema_6/tema_6_3.html">Решение задач табличным способом</a> </li>
+			<li> <a href="../tema_6/tema_6_4.html">Круги Эйлера-Венца. Решение задач.</a> </li>
+			<li> <a href="../tema_6/tema_6_5.html">Основные законы Алгебры логики</a> </li>
+			<li> <a href="../tema_6/tema_6_6.html" >Решение задач</a> </li>
+			<li> <a href="../tema_6/tema_6_7.html">Тригеры и сумматоры</a> </li>
+			 </ul>
+		</li>
+		<li><a href="../tema_7.html">Тема 7</a>
+			 <ul>
+						<li> <a href="../tema_7/tema_7_1.html"> Виды и типы компьютеров</a>
+								<ul>
+									 <li> <a href="../tema_7/var7_1.html">Вариант 1</a> </li>
+									 <li> <a href="../tema_7/var7_2.html">Вариант 2</a> </li>
+									 <li> <a href="../tema_7/var7_3.html">Вариант 3</a> </li>
+									 <li> <a href="../tema_7/var7_4.html">Вариант 4</a> </li>
+									 <li> <a href="../tema_7/var7_5.html">Вариант 5</a> </li>
+								</ul>
+						</li>
+						<li> <a href="../tema_7/tema_7_2.html">Внутренние устройства компьютера </a></li>
+						<li> <a href="../tema_7/tema_7_3.html">Периферийные устройства компьютера</a> </li>
+			 </ul>
+		</li>
+		<li> <a href="../tema_8.html">Тема 8</a>
+			 <ul>
+						<li> <a href="../tema_8/tema_8_1.html">Алгоритмы и способы их описания</a> </li>
+						<li> <a href="../tema_8/tema_8_2.html">Компьютерные модели различных процессов</a>
+								<ul>
+									 <li> <a href="../tema_8/var1.html">Вариант 1</a> </li>
+									 <li> <a href="../tema_8/var2.html">Вариант 2</a> </li>
+									 <li> <a href="../tema_8/var3.html">Вариант 3</a> </li>
+									 <li> <a href="../tema_8/var4.html">Вариант 4</a> </li>
+									 <li> <a href="../tema_8/var5.html">Вариант 5</a> </li>
+								</ul>
+						</li>
+						<li> <a href="../tema_8/tema_8_3.html">Реализация различных видов алгоритмов</a> </li>
+						<li> <a href="../tema_8/tema_8_4.html">Теория построения графов</a> </li>
+						<li> <a href="../tema_8/tema_8_5.html">Решение задач</a> </li>
+			 </ul>
+		</li>
+		<li> <a href="../tema_9.html">Тема 9</a> </li>
+		<li> <a href="../control.html">Контроль</a>	</li>
+
+
+</ul>
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+<div class="cleared reset-box"></div>
+
+
+
+
+<div class="art-box art-sheet">
+        
+<div class="art-box-body art-sheet-body">
+            
+<div class="art-layout-wrapper">
+                
+<div class="art-content-layout">
+                    
+<div class="art-content-layout-row">
+                        
+<div class="art-layout-cell art-content">
+<div class="art-box art-post">
+    
+<div class="art-box-body art-post-body">
+<div class="art-post-inner art-article">
+                                                
+<div class="art-postcontent">
+<div class="art-content-layout">
+    
+<div class="art-content-layout-row">
+    
+<div class="art-layout-cell" style="width: 60%;">
+        
+<h1><b><span style="font-family: Arial,sans-serif; color: rgb(0, 0, 0);">Построение таблиц истинности и логических схем</span></b></h1>
+
+
+
+<b></b>
+        
+        
+<p class="MsoNormal" style="margin-left: 3.7pt;"><b></b></p>
+
+
+
+
+        
+        
+<p><b>&nbsp;</b></p>
+
+
+
+
+        
+        
+<h3><span style="text-align: left;"><span style="text-align: justify;"><span style="font-family: Arial,sans-serif; color: black;">Цели</span></span></span></h3>
+
+
+
+
+        
+        
+<ul type="disc">
+
+
+
+
+            <li class="MsoNormal" style="color: black;">
+                
+    
+    
+    
+    <h1 style="margin: 0cm 0cm 0.0001pt 35.7pt; text-indent: -17.85pt;"></h1>
+
+
+
+
+            </li>
+
+
+
+
+        
+            <li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif;"><span style="font-size: 15px;">Обобщить знания учащихся по теме:</span><span style="font-family: Tahoma,Arial,Helvetica,sans-serif;">&nbsp;</span></span><span style="font-family: Arial,sans-serif; font-size: 15px;">&laquo;Логические основы обработки информации&raquo;</span></li>
+
+
+
+
+        
+            <li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif; font-size: 15px; color: rgb(22, 22, 22);">Формировать умения составления таблиц истинности и анализа функциональных схем</span></li>
+
+
+
+
+        
+</ul>
+
+
+
+
+        
+        
+<h3><span style="font-family: Arial,sans-serif; color: black;"><span style="font-weight: normal;"><span style="font-size: 15px;">Инструменты:</span></span></span></h3>
+
+
+
+
+        
+        
+<ul type="disc">
+
+
+
+
+            <li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif;"><span style="font-size: 15px;">ОС Windows</span></span></li>
+
+
+
+
+        
+            <li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif;"><span style="font-size: 15px;">Браузер</span></span></li>
+
+
+
+
+        
+            <li>
+                
+    
+    
+    
+    <p><span style="font-family: Arial,sans-serif; color: rgb(0, 0, 0);"><span style="font-size: 15px;">logika.exe</span></span></p>
+
+
+
+
+            </li>
+
+
+
+
+        
+</ul>
+
+
+
+
+        
+        
+<p  class="dline" style="text-indent: 0pt; text-align: left;"><b><span style="font-family: Arial,sans-serif; color: red;">
+<span style="font-size: 18px;">Задание 1.</span></span></b><span style="font-size: 18px;"> <span style="color: rgb(0, 0, 0);">
+ Запишите информацию в конспект, </span>  <span style=" color: rgb(5, 5, 255);">
+ используя навыки конспектирования    </span></span>
+ <span style="font-size: 14px;"> (например, сокращая слова).</span>
+
+
+
+<p class="dline"> <span style="font-size: 18px; font-family: Times New Roman; font-style: italic;">
+С помощью логических переменных и символов логических операций любое высказывание можно формализовать,то есть заменить логической формулой. (Записать на языке алгебры логики или записать в виде формулы)</b></p>
+
+<p></p><center><table class="definition"><tbody><tr><td>
+Определение <i><u>логической формулы</u></i>: 
+<ol> 
+  <li> Всякая логическая переменная и символы "истина" ("1") и "ложь" ("0")  — формулы.</li>
+  <li> Если &nbsp;А&nbsp;и&nbsp;В  — формулы, &nbsp; то &nbsp;
+  <img src="./Tema_6_images/Tema6_0002.gif"  style="border-width: 0px;" width="19" height="21">, &nbsp; А <b><sup>.</sup></b> В&nbsp;,
+  &nbsp; А v В&nbsp;, &nbsp; А <img src="./Tema_6_images/Tema6_imp.gif"  style="border-width: 0px;" width="24" height="15"> B&nbsp;,
+ &nbsp; А <img src="./Tema_6_images/Tema6_ekv1.gif"  style="border-width: 0px;" width="25" height="17"> В &nbsp;  —&nbsp;  формулы.</li>
+  <li> Никаких других формул в алгебре логики нет.</li>
+</ol>
+</td></tr></tbody></table></center>
+
+
+
+
+<span style="font-size: 12pt; font-family: Arial,sans-serif; color: black;"><span class="active"><span style="color: rgb(204, 0, 0);">Логическая
+  функция (~ формула)</span> -  это функция, которая устанавливает соответствие между одним или несколькими высказываниями, которые называются аргументами функции, и высказыванием которое называется значением функции. </span></span>
+<br><br>
+<span style="font-size: 12pt; font-family: Arial,sans-serif; color: black;"><span class="active">Табли́ца и́стинности &mdash; это таблица, задающая логическую функцию.</span></span>
+<br><br>
+<I><span style="font-size: 12pt; font-family:Time New Roman; color: black;"><span class="active">ТИ - это таблица, с помощью которой устанавливается истинностное значение сложного высказывания при данных значениях входящих в него простых высказываний. В классической математической логике предполагается, что
+каждое простое (не содержащее логических связок) высказывание является либо истинным, либо ложным, но не тем и другим одновременно. Нам не известно, истинно или ложно данное простое высказывание, чтобы установить это, потребовалось бы обратиться к фактам действительности,
+но логика этого не делает. Однако мы знаем, что у высказывания имеется лишь две возможности - быть истинным либо быть ложным. Когда с помощью логических связок мы соединяем простые высказывания в сложное, встает
+вопрос: при каких условиях сложное высказывание считается истинным, а при каких - ложным? Для ответа на этот вопрос и служат таблицы.</span><b><span style="font-size: 18pt; font-family: Arial,sans-serif; color: black;"><br>
+
+</span></i></b>
+
+
+</p>
+<p class="dline"> В качестве примера рассмотрим высказывание <i>"если я куплю яблоки или
+абрикосы, то приготовлю фруктовый пирог".</i> Это высказывание формализуется в виде <b>(A v B) <img src="./Tema_6_images/Tema6_imp.gif"  style="border-width: 0px;" width="24" height="15"> C</b>.
+ Такая же формула соответствует высказыванию &nbsp; <i>"если Игорь знает
+английский или японский язык, то он получит место переводчика".</i>
+
+</p>
+<p class="dline"> Как показывает анализ формулы <b>(A v B) <img src="./Tema_6_images/Tema6_imp.gif"  style="border-width: 0px;" width="24" height="15"> C</b>, при
+определённых сочетаниях значений переменных <b>A, B</b> и <b>C</b> она принимает значение "истина", а при некоторых других сочетаниях — значение "ложь" (разберите самостоятельно эти случаи). Такие формулы называются <b>выполнимыми</b>.
+
+</p>
+<p class="dline"> Некоторые формулы принимают значение "истина" при любых значениях
+истинности входящих в них переменных. Таковой будет, например,
+формула <b>А v <img src="./Tema_6_images/Tema6_0002.gif"  style="border-width: 0px;" width="19" height="21"></b>, 
+соответствующая высказыванию <i>"Этот треугольник прямоугольный или
+косоугольный".</i> Эта формула истинна и тогда, когда треугольник
+прямоугольный, и тогда, когда треугольник не прямоугольный. Такие
+формулы называются <b>тождественно истинными формулами</b> или
+<b>тавтологиями</b>. Высказывания, которые формализуются 
+тавтологиями, называются <b>логически истинными высказываниями.</b>
+
+</p>
+<p class="dline"> В качестве другого примера рассмотрим формулу <b>А<sup> . </sup></b><img src="./Tema_6_images/Tema6_0002.gif"  style="border-width: 0px;" width="19" height="21">, которой соответствует, например,
+высказывание <i>"Катя самая высокая девочка в классе, и в классе есть
+девочки выше Кати".</i> Очевидно, что эта формула ложна, так как либо
+<b>А,</b> либо <img src="./Tema_6_images/Tema6_0002.gif"  style="border-width: 0px;" width="19" height="21"> обязательно 
+ложно. Такие формулы называются <b>тождественно ложными формулами</b> 
+или <b>противоречиями</b>. Высказывания, которые формализуются 
+противоречиями, называются <b>логически ложными высказываниями.</b>
+
+</p>
+<p class="dline"> Если две формулы А и В одновременно, то есть при одинаковых наборах
+значений входящих в них переменных, принимают одинаковые значения, то они
+называются <b>равносильными</b>.
+
+</p>
+<p class="dline"> Равносильность двух формул алгебры логики обозначается символом "="
+или символом "<img src="./Tema_6_images/Tema6_trilines.gif"  style="border-width: 0px;" width="12" height="14">" Замена формулы другой, ей равносильной, называется <b>равносильным преобразованием</b> данной формулы.</p>
+
+
+<br>
+
+
+
+   
+<p class="MsoNormal" style="margin-left: 3.7pt;"><b><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;"><span style="color: rgb(255, 0, 0);">Задание 2</span>.</span></span></b>&nbsp;<b><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Внимательно ознакомтесь с материалом. <span style="color: blue;">Вопросы </span>возникающие при изучении материала, <span style="color: blue;">ЗАПИСАТЬ</span> в конспект.</span></span></b></p>
+
+
+      
+<br>
+
+    
+<p style="color: rgb(0, 0, 0);">По данной теме, вам надо написать проверочную в конце темы.</p>
+
+
+
+<br>
+
+  <br>
+
+  
+<p class="MsoNormal"><span style="font-family: Arial,sans-serif; color: rgb(255, 0, 155);"><span style="font-size: 16px;"><b>Запишите в конспект</b></span></span><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;"> Последовательность построения таблицы истинности</span></span><span style="color: rgb(102, 0, 204);"></span>:</p>
+
+
+
+<span style="font-size: 18px;"></span>
+        
+        
+<p class="MsoListParagraphCxSpFirst" style="text-indent: 0pt; line-height: 150%;"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">1.&nbsp;</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Подсчитать&nbsp; n&nbsp; &mdash; число переменных в выражении;&nbsp;</span></span><span style="line-height: 150%; font-family: Arial,sans-serif; color: black;" xml:lang="EN-US" lang="EN-US"><span style="font-size: 18px;"></span></span></p>
+<p class="MsoListParagraphCxSpFirst" style="text-indent: 0pt; line-height: 150%;"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">2.&nbsp;</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Подсчитать общее число логических операций </span></span><span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">и их порядок </span></span><span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">в выражении;&nbsp;</span></span></p>
+<p class="MsoListParagraphCxSpFirst" style="text-indent: 0pt; line-height: 150%;"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">3.&nbsp;</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Установить последовательность выполнения логических операций с учётом скобок и приоритетов;</span></span></p>
+<p class="MsoListParagraphCxSpFirst" style="text-indent: 0pt; line-height: 150%;"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">4.&nbsp;</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Определить число столбцов в таблице: число переменных + число операций;</span></span></p>
+
+<p class="MsoListParagraphCxSpFirst" style="text-indent: 0pt; line-height: 150%;"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">5.</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Заполнить шапку таблицы, включив в неё переменные и операции в соответствии с
+последовательностью, установленной в п.&nbsp; 3&nbsp;;</span></span>
+<p class="MsoListParagraphCxSpFirst" style="text-indent: 0pt; line-height: 150%;"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">6.&nbsp;</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Определить число строк в таблице (не считая шапки таблицы):&nbsp; m=2<sup>n</sup>&nbsp;;</span></span></p>
+
+<p class="MsoListParagraphCxSpFirst" style="text-indent: 0pt; line-height: 150%;"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">7.&nbsp;</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Выписать
+наборы входных переменных с учётом того, что они представляют собой
+целый ряд&nbsp; n -разрядных двоичных чисел от&nbsp; 0&nbsp; до&nbsp; 2<sup>n</sup>&minus;1 ( первые значения заполняют чередованием 0 и 1, второй столбик чередованием два&nbsp; 0 и две 1 и опять </span></span><span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">два&nbsp; 0 и две 1</span></span><span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">, третий столбик пишут четыре 0 и четыре 1, четветрый&nbsp; столбик &nbsp;восем 0 и восем 1);</span></span><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;"></span></span></b></p>
+
+
+<p class="MsoListParagraphCxSpFirst" style="text-indent: 0pt; line-height: 150%;"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">8.</span></span></b>&nbsp;<span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Провести заполнение таблицы по столбцам, выполняя логические операции в соответствии с установленной последовательностью.</span></span><span style="color: rgb(102, 0, 204);">&nbsp;</span><br style="color: rgb(102, 0, 204);">
+
+
+</p>
+
+
+
+<span style="color: rgb(102, 0, 204);">&nbsp;</span><br style="color: rgb(102, 0, 204);">
+
+
+
+<span style="color: rgb(0, 0, 0);"></span><span style="color: rgb(0, 0, 0);"></span>
+
+<p style="color: rgb(0, 0, 0);">Для формулы, которая содержит две переменные, таких наборов значений переменных всего четыре:</p>
+
+
+
+
+<dir style="color: rgb(0, 0, 0);">
+<p>(0, 0), &nbsp; &nbsp; (1, 0), &nbsp; &nbsp; (0, 1), &nbsp; &nbsp; (1, 1).</p>
+
+
+
+</dir>
+
+
+
+
+<p style="color: rgb(0, 0, 0);">Если формула содержит три переменные, то возможных наборов значений переменных восемь:</p>
+
+
+
+
+
+
+
+
+<p style="color: rgb(0, 0, 0);">Количество наборов для формулы с четырьмя переменными равно шестнадцати и т.д.</p>
+
+
+
+
+
+<p style="color: rgb(0, 0, 0);">Удобной формой записи при нахождении
+значений формулы является таблица, содержащая кроме значений переменных
+и значений формулы также и значения промежуточных формул.</p>
+
+
+
+
+
+<p style="color: rgb(0, 0, 0);"><span style="font-family: Arial,sans-serif; color: rgb(255, 0, 0);"><span style="font-size: 18px;"></span></span><b><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">&nbsp;</span></span></b><b>Примеры. 1</b></p>
+
+
+
+
+
+<p style="color: rgb(0, 0, 0);"><font size="+1"></font><b>Составим таблицу истинности для формулы <img src="./Tema_6_images/Tema6_0042.gif" style="border-width: 0px;" height="18" width="118">,</b>&nbsp;</p>
+
+
+
+<p style="color: rgb(0, 0, 0);"><font size="-1"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">1.&nbsp;</span></span></b> <b><span style="font-size: 18px;">&nbsp;</span></b><span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;"></span></span></font><font size="-1"><span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Две переменные x и y в выражении&nbsp;;&nbsp;</span></span></font></p>
+
+
+
+<p style="color: rgb(0, 0, 0);">
+
+</p>
+
+
+
+<table style="color: rgb(0, 0, 0); width: 388px;" align="center" border="1" cellpadding="5" cellspacing="1" width="96%">
+
+
+
+
+  <tbody>
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center; width: 188px;" colspan="2">Переменные</td>
+
+
+
+
+  
+  
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+ 
+  <td style="text-align: center; width: 187px;"><img src="Tema_6_images/Tema6_0043.gif" style="border-width: 0px;" height="14" width="14"></td>
+
+
+
+
+  <td style="text-align: center; width: 188px;"><img src="Tema_6_images/Tema6_0044.gif" style="border-width: 0px;" height="17" width="14"></td>
+
+ 
+    </tr>
+ </tbody>
+</table>
+
+
+
+    
+        
+<p class="MsoListParagraphCxSpMiddle" style="text-indent: 0pt; line-height: 150%;"><font size="-1"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">&nbsp;2.&nbsp;</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Подсчитать общее число логических операций </span></span><span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">и их порядо </span></span><span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">в выражении 6;&nbsp;</span></span></font></p>
+
+
+
+<font size="-1"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">3.&nbsp;</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Установить последовательность выполнения логических операций с учётом скобок и приоритетов;</span></span></font><br>
+
+
+
+
+        
+        
+<p class="MsoListParagraphCxSpLast" style="text-indent: 0pt; line-height: 150%;"><font size="-1"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">&nbsp;4.&nbsp;</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Определить число столбцов в таблице: число переменных + число операций 2+6=8;</span></span></font></p>
+
+
+
+<table style="color: rgb(0, 0, 0);" align="center" border="1" cellpadding="5" cellspacing="1" width="96%">
+
+
+
+
+  <tbody>
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;" colspan="2" width="17%">Переменные</td>
+
+
+
+
+  <td style="text-align: center;" colspan="5" width="59%">Промежуточные логические формулы</td>
+
+
+
+
+  <td style="text-align: center;" width="25%">Формула</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+ 
+  <td style="text-align: center;" width="9%"></td>
+
+
+
+
+  <td style="text-align: center;" width="8%"><br>
+
+
+      <br>
+
+
+      </td>
+
+
+
+
+  <td style="text-align: center;" width="8%"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"></td>
+
+
+
+
+  <td style="text-align: center;" width="18%"></td>
+
+
+
+
+  <td style="text-align: center;" width="25%"></td>
+
+
+
+
+    </tr>
+
+
+
+
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+<br>
+<font size="-1"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">&nbsp;5.&nbsp;</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Заполнить
+шапку таблицы, включив в неё переменные и операции в соответствии с последовательностью, установленной в п.&nbsp; 3&nbsp;;<br>
+<br>
+
+</span></span></font>
+
+<table style="color: rgb(0, 0, 0);" align="center" border="1" cellpadding="5" cellspacing="1" width="96%">
+
+
+
+
+  <tbody>
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;" colspan="2" width="17%">Переменные</td>
+
+
+
+
+  <td style="text-align: center;" colspan="5" width="59%">Промежуточные логические формулы</td>
+
+
+
+
+  <td style="text-align: center;" width="25%">Формула</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+ 
+  <td style="text-align: center;" width="9%"><img src="Tema_6_images/Tema6_0043.gif" style="border-width: 0px;" height="14" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="8%"><img src="Tema_6_images/Tema6_0044.gif" style="border-width: 0px;" height="17" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="8%"><img src="Tema_6_images/Tema6_0045.gif" style="border-width: 0px;" height="22" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"><img src="Tema_6_images/Tema6_0046.gif" style="border-width: 0px;" height="28" width="33"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"><img src="Tema_6_images/Tema6_0047.gif" style="border-width: 0px;" height="17" width="41"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"><img src="Tema_6_images/Tema6_0048.gif" style="border-width: 0px;" height="26" width="42"></td>
+
+
+
+
+  <td style="text-align: center;" width="18%"><img src="Tema_6_images/Tema6_0049.gif" style="border-width: 0px;" height="25" width="89"></td>
+
+
+
+
+  <td style="text-align: center;" width="25%"><img src="Tema_6_images/Tema6_0042.gif" style="border-width: 0px;" height="18" width="118"></td>
+
+
+
+
+    </tr>
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+        
+        
+<p class="MsoListParagraphCxSpMiddle" style="text-indent: 0pt; line-height: 150%;"><font size="-1"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">&nbsp;6.&nbsp;</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Определить число строк в таблице x+y=2 значит n=2 &nbsp;тогда m=2<sup>2</sup> =4;</span></span></font></p>
+
+
+
+<p class="MsoListParagraphCxSpMiddle" style="text-indent: 0pt; line-height: 150%;">
+
+</p>
+
+
+
+<table style="color: rgb(0, 0, 0);" align="center" border="1" cellpadding="5" cellspacing="1" width="96%">
+
+
+
+
+  <tbody>
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;" colspan="2" width="17%">Переменные</td>
+
+
+
+
+  <td style="text-align: center;" colspan="5" width="59%">Промежуточные логические формулы</td>
+
+
+
+
+  <td style="text-align: center;" width="25%">Формула</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+ 
+  <td style="text-align: center;" width="9%"><img src="Tema_6_images/Tema6_0043.gif" style="border-width: 0px;" height="14" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="8%"><img src="Tema_6_images/Tema6_0044.gif" style="border-width: 0px;" height="17" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="8%"><img src="Tema_6_images/Tema6_0045.gif" style="border-width: 0px;" height="22" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"><img src="Tema_6_images/Tema6_0046.gif" style="border-width: 0px;" height="28" width="33"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"><img src="Tema_6_images/Tema6_0047.gif" style="border-width: 0px;" height="17" width="41"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"><img src="Tema_6_images/Tema6_0048.gif" style="border-width: 0px;" height="26" width="42"></td>
+
+
+
+
+  <td style="text-align: center;" width="18%"><img src="Tema_6_images/Tema6_0049.gif" style="border-width: 0px;" height="25" width="89"></td>
+
+
+
+
+  <td style="text-align: center;" width="25%"><img src="Tema_6_images/Tema6_0042.gif" style="border-width: 0px;" height="18" width="118"></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+ 
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"><br>
+
+
+      </td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"><br>
+
+
+      </td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"><br>
+
+
+      </td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"><br>
+
+
+      </td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+<font size="-1"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">7.&nbsp;</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Выписать
+наборы входных переменных с учётом того, что они представляют собой
+целый ряд&nbsp; n -разрядных двоичных чисел от&nbsp; 0&nbsp; до&nbsp; 2<sup>n</sup>&minus;1 ;</span></span></font>
+<p class="MsoListParagraphCxSpLast" style="text-indent: 0pt; line-height: 150%;">
+
+</p>
+
+
+
+<table style="color: rgb(0, 0, 0);" align="center" border="1" cellpadding="5" cellspacing="1" width="96%">
+
+
+
+
+  <tbody>
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;" colspan="2" width="17%">Переменные</td>
+
+
+
+
+  <td style="text-align: center;" colspan="5" width="59%">Промежуточные логические формулы</td>
+
+
+
+
+  <td style="text-align: center;" width="25%">Формула</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+ 
+  <td style="text-align: center;" width="9%"><img src="Tema_6_images/Tema6_0043.gif" style="border-width: 0px;" height="14" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="8%"><img src="Tema_6_images/Tema6_0044.gif" style="border-width: 0px;" height="17" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="8%"><img src="Tema_6_images/Tema6_0045.gif" style="border-width: 0px;" height="22" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"><img src="Tema_6_images/Tema6_0046.gif" style="border-width: 0px;" height="28" width="33"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"><img src="Tema_6_images/Tema6_0047.gif" style="border-width: 0px;" height="17" width="41"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"><img src="Tema_6_images/Tema6_0048.gif" style="border-width: 0px;" height="26" width="42"></td>
+
+
+
+
+  <td style="text-align: center;" width="18%"><img src="Tema_6_images/Tema6_0049.gif" style="border-width: 0px;" height="25" width="89"></td>
+
+
+
+
+  <td style="text-align: center;" width="25%"><img src="Tema_6_images/Tema6_0042.gif" style="border-width: 0px;" height="18" width="118"></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+ 
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+  <td style="text-align: center;"></td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+<span style="font-weight: bold;"><br>
+
+
+</span><font size="-1"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">8.&nbsp;</span></span></b>&nbsp;<span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Провести заполнение таблицы по столбцам, выполняя логические операции в соответствии с установленной последовательностью.</span></span><span style="color: rgb(102, 0, 204);"> <br>
+
+
+
+</span></font><br>
+
+
+
+<br>
+
+
+
+<table style="color: rgb(0, 0, 0);" align="center" border="1" cellpadding="5" cellspacing="1" width="96%">
+
+
+
+
+  <tbody>
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;" colspan="2" width="17%">Переменные</td>
+
+
+
+
+  <td style="text-align: center;" colspan="5" width="59%">Промежуточные логические формулы</td>
+
+
+
+
+  <td style="text-align: center;" width="25%">Формула</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+ 
+  <td style="text-align: center;" width="9%"><img src="./Tema_6_images/Tema6_0043.gif" style="border-width: 0px;" height="14" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="8%"><img src="./Tema_6_images/Tema6_0044.gif" style="border-width: 0px;" height="17" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="8%"><img src="./Tema_6_images/Tema6_0045.gif" style="border-width: 0px;" height="22" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"><img src="./Tema_6_images/Tema6_0046.gif" style="border-width: 0px;" height="28" width="33"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"><img src="./Tema_6_images/Tema6_0047.gif" style="border-width: 0px;" height="17" width="41"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"><img src="./Tema_6_images/Tema6_0048.gif" style="border-width: 0px;" height="26" width="42"></td>
+
+
+
+
+  <td style="text-align: center;" width="18%"><img src="./Tema_6_images/Tema6_0049.gif" style="border-width: 0px;" height="25" width="89"></td>
+
+
+
+
+  <td style="text-align: center;" width="25%"><img src="./Tema_6_images/Tema6_0042.gif" style="border-width: 0px;" height="18" width="118"></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+ 
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+<p style="color: rgb(0, 0, 0);">Из таблицы видно, что <b>при всех наборах значений переменных x и y формула
+<img src="./Tema_6_images/Tema6_0042.gif" style="border-width: 0px;" height="18" width="118">принимает значение 1</b>, то есть
+является <b><i>тождественно истинной</i>.</b></p>
+
+
+
+
+
+<p style="color: rgb(0, 0, 0);"><font size="+1">2.</font> <b>Таблица истинности для формулы <img src="./Tema_6_images/Tema6_0050.gif" style="border-width: 0px;" height="16" width="84">:</b></p>
+
+
+
+
+
+<table style="color: rgb(0, 0, 0);" align="center" border="1" cellpadding="5" cellspacing="1" width="96%">
+
+
+
+
+  <tbody>
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;" colspan="2" width="22%">Переменные</td>
+
+
+
+
+  <td style="text-align: center;" colspan="4" width="59%">Промежуточные логические формулы</td>
+
+
+
+
+  <td style="text-align: center;" width="19%">Формула</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;" width="11%"><img src="./Tema_6_images/Tema6_0043.gif" style="border-width: 0px;" height="14" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="11%"><img src="./Tema_6_images/Tema6_0044.gif" style="border-width: 0px;" height="17" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="14%"><img src="./Tema_6_images/Tema6_0047.gif" style="border-width: 0px;" height="17" width="41"></td>
+
+
+
+
+  <td style="text-align: center;" width="14%"><img src="./Tema_6_images/Tema6_0051.gif" style="border-width: 0px;" height="26" width="43"></td>
+
+
+
+
+  <td style="text-align: center;" width="14%"><img src="./Tema_6_images/Tema6_0052.gif" style="border-width: 0px;" height="28" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="16%"><img src="./Tema_6_images/Tema6_0053.gif" style="border-width: 0px;" height="26" width="33"></td>
+
+
+
+
+  <td style="text-align: center;" width="19%"><img src="./Tema_6_images/Tema6_0050.gif" style="border-width: 0px;" height="16" width="84"></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+<p style="color: rgb(0, 0, 0);">Из таблицы видно, что <b>при всех наборах значений переменных x и y
+формула</b> <img src="./Tema_6_images/Tema6_0050.gif" style="border-width: 0px;" height="16" width="84"> <b>принимает значение
+0</b>, то есть является <b><i>тождественно ложной</i></b>.</p>
+
+
+
+
+
+<p style="color: rgb(0, 0, 0);"><font size="4">3.</font> <b>Таблица истинности для формулы <img src="./Tema_6_images/Tema6_0054.gif" style="border-width: 0px;" height="19" width="79">:</b></p>
+
+
+
+ 
+
+<table style="color: rgb(0, 0, 0);" align="center" border="1" cellpadding="5" cellspacing="1" width="96%">
+
+
+
+
+  <tbody>
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;" colspan="3" width="24%">Переменные</td>
+
+
+
+
+  <td style="text-align: center;" colspan="5" width="58%">Промежуточные логические формулы</td>
+
+
+
+
+  <td style="text-align: center;" width="19%">Формула</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;" width="8%"><img src="./Tema_6_images/Tema6_0043.gif" style="border-width: 0px;" height="14" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="8%"><img src="./Tema_6_images/Tema6_0044.gif" style="border-width: 0px;" height="17" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="8%"><img src="./Tema_6_images/Tema6_0055.gif" style="border-width: 0px;" height="13" width="13"></td>
+
+
+
+
+  <td style="text-align: center;" width="12%"><img src="./Tema_6_images/Tema6_0052.gif" style="border-width: 0px;" height="28" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="12%"><img src="./Tema_6_images/Tema6_0056.gif" style="border-width: 0px;" height="25" width="41"></td>
+
+
+
+
+  <td style="text-align: center;" width="12%"><img src="./Tema_6_images/Tema6_0057.gif" style="border-width: 0px;" height="28" width="41"></td>
+
+
+
+
+  <td style="text-align: center;" width="10%"><img src="./Tema_6_images/Tema6_0058.gif" style="border-width: 0px;" height="22" width="14"></td>
+
+
+
+
+  <td style="text-align: center;" width="12%"><img src="./Tema_6_images/Tema6_0059.gif" style="border-width: 0px;" height="22" width="32"></td>
+
+
+
+
+  <td style="text-align: center;" width="19%"><img src="./Tema_6_images/Tema6_0054.gif" style="border-width: 0px;" height="19" width="79"></td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+    </tr>
+
+
+
+
+    <tr align="center">
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">1</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+  <td style="text-align: center;">0</td>
+
+
+
+
+    </tr>
+
+
+
+
+  
+  
+  
+  </tbody>
+</table>
+
+
+
+
+
+<p><span style="color: rgb(0, 0, 0);">Из таблицы видно, что </span><b><span style="color: rgb(0, 0, 0);">формула </span><img src="./Tema_6_images/Tema6_0054.gif" style="border-width: 0px;" height="19" width="79"><span style="color: rgb(0, 0, 0);">
+в некоторых случаях принимает значение 1, а в некоторых &mdash; 0</span></b><span style="color: rgb(0, 0, 0);">, 
+то есть является </span><b style="color: rgb(0, 0, 0);">выполнимой</b><span style="color: rgb(0, 0, 0);">.</span></p>
+
+
+
+
+
+        
+        
+<p class="MsoNormal" style="margin-left: 3.7pt;"><b><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;"><span style="color: rgb(255, 0, 0);">Задание 2</span> .</span></span></b>&nbsp;<b><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Запишите в конспект пример решения логической задачи</span></span></b></p>
+
+
+
+<b></b>
+        
+        
+<p class="MsoNormal" style="margin-left: 3.7pt; text-indent: 111.65pt;"><b></b></p>
+
+
+
+
+        
+        
+<p><b>&nbsp;</b><span style="font-weight: normal;"><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Постройте таблицу истинности логического высказывания и&nbsp;</span></span></span><span style="font-weight: normal;"><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">функциональную схему логического устройства для данной функции</span></span></span><b><span style="font-weight: normal;"><b><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">&nbsp;</span></span></b></span></b></p>
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<div class="art-content-layout">
+    
+<div class="art-content-layout-row">
+    
+<div class="art-layout-cell" style="width: 60%;">
+        
+<p><img alt="" src="../images/image059.gif" style="border-width: 0px;" height="406" width="508"><br>
+
+
+
+</p>
+
+
+
+
+    </div>
+
+
+
+<div class="art-layout-cell" style="width: 40%;">
+        
+<p><img alt="" src="../images/image069-2-2-2.jpg" style="border-width: 0px;" height="220" width="297"><br>
+
+
+
+</p>
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<div class="art-content-layout">
+    
+<div class="art-content-layout-row">
+    
+<div class="art-layout-cell" style="width: 100%;">
+        
+<p><b><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Уточним основные логические элементы компьютера</span></span></b><br>
+
+
+
+</p>
+
+
+
+
+        
+        
+<p><img alt="" src="../images/image033-2.png" style="border-width: 0px;" height="570" width="765"><b><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;"></span></span></b><span style="font-weight: bold;"></span></p>
+
+
+
+<p><span style="font-size: 18px;">&nbsp;</span></p>
+
+
+
+<p class="MsoNormal"><span style="font-family: Arial,sans-serif; color: rgb(255, 0, 0);"><span style="font-size: 18px;">Запишите в конспект</span></span><b><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;"> Правила построения логических схем:</span></span></b></p>
+
+
+
+<span style="font-size: 18px;"></span>
+        
+        
+<p class="MsoListParagraphCxSpFirst" style="text-indent: 0pt; line-height: 150%;"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">&nbsp;1.&nbsp;</span></span></b> <b><span style="font-size: 18px;">&nbsp;</span></b><span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Определить число логических переменных</span></span><span style="line-height: 150%; font-family: Arial,sans-serif; color: black;" xml:lang="EN-US" lang="EN-US"><span style="font-size: 18px;">;</span></span></p>
+
+
+
+
+        
+        
+<p class="MsoListParagraphCxSpMiddle" style="text-indent: 0pt; line-height: 150%;"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">&nbsp;2.&nbsp;</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Определить количество базовых логических операций и их порядок;</span></span></p>
+
+
+
+
+        
+        
+<p class="MsoListParagraphCxSpMiddle" style="text-indent: 0pt; line-height: 150%;"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">&nbsp;3.&nbsp;</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Изобразить для каждой логической операции соответствующий ей логический элемент;</span></span></p>
+
+
+
+
+        
+        
+<p class="MsoListParagraphCxSpLast" style="text-indent: 0pt; line-height: 150%;"><b><span style="line-height: 150%; font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">&nbsp;4.&nbsp;</span></span></b> <span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Соединить логические элементы в порядке выполнения логических операций.</span></span></p>
+
+
+
+
+        
+        
+<p class="MsoNormal"><b><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Построим логическую схему для нашей функции</span></span></b></p>
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<div class="art-content-layout">
+    
+<div class="art-content-layout-row">
+    
+<div class="art-layout-cell" style="width: 60%;">
+        
+<p><img alt="" src="../images/image095.gif" style="border-width: 0px;" height="406" width="508"><br>
+
+
+
+</p>
+
+
+
+
+    </div>
+
+
+
+<div class="art-layout-cell" style="width: 40%;">
+        
+<p style="text-align: left;"><img alt="" src="../images/image054-2-2-2-2-2.png" style="border-width: 0px;" height="236" width="352"><br>
+
+
+
+</p>
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<div class="art-content-layout">
+<div class="art-content-layout-row">
+<div class="art-layout-cell" style="width: 100%;">
+    
+    <b><span style="font-size: 18px;">&nbsp;</span></b>
+        
+        
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt; color: rgb(0, 0, 0); text-align: start; widows: 1; background-color: rgb(255, 255, 255);"><b><u><span style="color: black;"><span style="font-size: 18px;"><span style="font-family: Arial;"><span style="color: rgb(255, 0, 0);">Задание 4</span>.</span></span></span></u></b><b><span style="color: black;"><span style="font-size: 18px;"><span style="font-family: Arial;">&nbsp;Постройте логические схемы операций Импликации и Эквиваленции</span></span></span></b></p>
+
+
+
+<span style="font-size: 18px;"><span style="font-family: Arial;"><b></b></span></span>
+        
+        
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt; color: rgb(0, 0, 0); text-align: start; widows: 1; background-color: rgb(255, 255, 255);"><span style="font-size: 18px;"><span style="font-family: Arial;"><b></b></span></span></p>
+
+
+
+
+        
+        
+<p><b><span style="font-size: 18px;"><span style="font-family: Arial;">&nbsp;</span></span></b></p>
+
+
+
+
+        
+        
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 80pt; color: rgb(0, 0, 0); widows: 1; background-color: rgb(255, 255, 255); text-align: left;"><b><span style="color: black;"><span style="font-size: 18px;"><span style="font-family: Arial;">Импликацию можно выразить через дизъюнкцию и отрицание:</span></span></span></b></p>
+
+
+
+<span style="font-size: 18px;"><span style="font-family: Arial;"><b></b></span></span>
+        
+        
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 80pt; color: rgb(0, 0, 0); widows: 1; background-color: rgb(255, 255, 255); text-align: left;"><img alt="" src="../images/tmp625.png" style="border-width: 0px;" height="35" width="175"><span style="color: rgb(19, 59, 70);"><b></b></span></p>
+
+
+
+
+        
+        
+<p style="display: inline ! important; text-align: left;"><b><span style="font-size: 18px;"><span style="font-family: Arial;">&nbsp;</span></span></b></p>
+
+
+
+
+        
+        
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 80pt; color: rgb(0, 0, 0); widows: 1; background-color: rgb(255, 255, 255); text-align: left;"><b><span style="color: black;"><span style="font-size: 18px;"><span style="font-family: Arial;">Эквиваленцию можно выразить через отрицание, дизъюнкцию и конъюнкцию:</span></span></span></b></p>
+
+
+
+<span style="font-size: 18px;"><span style="font-family: Arial;"><b></b></span></span>
+        
+        
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 80pt; color: rgb(0, 0, 0); widows: 1; background-color: rgb(255, 255, 255); text-align: left;"><img alt="" src="../images/tmp62B.png" style="border-width: 0px;" height="43" width="300"><span style="font-family: Arial; font-size: 18px; font-weight: bold;"><br>
+
+
+
+</span></p>
+
+
+
+<span style="font-size: 18px;"><span style="font-family: Arial;"><b></b></span></span>
+        
+        
+<p class="MsoBodyTextIndent" style="margin-left: 0cm;"><b><span style="font-family: Arial,sans-serif; color: red;"></span></b></p>
+
+
+
+
+        
+        
+<p><br>
+
+
+
+</p>
+
+
+
+
+<b><span style="font-family: Arial,sans-serif; color: red; font-size: 18px;"> 
+Задание 5.</span> </b><span style="font-size: 18px;"><span style="color: rgb(0, 0, 0);">Определите с помощью таблиц истинности, какие из следующих
+формул являются тождественно истинными или тождественно ложными:</span></span>
+<font size="+1"><span style="color: rgb(0, 10, 250);"> Запишите ответ в конспект</span>
+</font><br>
+<br>
+<span style="font-size: 18px;"><span style="color: rgb(0, 0, 0);"> Пример решения</span>
+<br>
+<img src="./Tema_6_images/Tema6_0050.jpg" style="border-width: 0px;" align="texttop" >
+
+<br>
+
+<font size="+1"><span style="color: rgb(118, 39, 118);"><span style="font-weight: bold; font-style: italic;">Тождественно истиная</span> - это та функция которая всё время (при любых входных параметрах) принимает значение 1 или истина, <span style="font-weight: bold; font-style: italic;">тождественно ложная</span> - которая принимает всё время значение 0 или ложь. &nbsp;<span style="font-weight: bold; font-style: italic;">Выполнимая</span> - это та которая может принять и 0 и 1 в зависимости от входных параметров</span></font>
+<br>
+<br>
+
+<table align="center" border="0" cellpadding="7" cellspacing="0" width="80%">
+
+
+  <tbody>
+
+    <tr>
+
+ 
+  <td width="50%"><b> 1 вариант </b> <img src="./Tema_6_images/Tema6_0113.gif" style="border-width: 0px;" align="texttop" height="15" width="112"></td>
+
+
+  <td width="50%"><b>2 вариант </b> <img src="./Tema_6_images/Tema6_0114.gif" style="border-width: 0px;" align="texttop" height="15" width="84"></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+  <td><b>3 вариант </b> <img src="./Tema_6_images/Tema6_0115.gif" style="border-width: 0px;" align="texttop" height="17" width="127"></td>
+
+
+  <td><b>4 вариант </b> <img src="./Tema_6_images/Tema6_0116.gif" style="border-width: 0px;" align="texttop" height="21" width="137"></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+  <td><b>5 вариант </b> <img src="./Tema_6_images/Tema6_0117.gif" style="border-width: 0px;" align="texttop" height="17" width="90"></td>
+
+
+  <td><b>6 вариант </b> <img src="./Tema_6_images/Tema6_0118.gif" style="border-width: 0px;" align="texttop" height="25" width="97"></td>
+
+
+    </tr>
+
+
+    <tr>
+
+
+  <td><b>7 вариант </b> <img src="./Tema_6_images/Tema6_0119.gif" style="border-width: 0px;" align="texttop" height="15" width="112"></td>
+
+
+  <td style="color: rgb(51, 51, 255); font-weight: bold;">&nbsp;Номер по журналу 8 соответствует &nbsp;1 варианту, номеру 9 второй вариант, далее определеите свой вариант сами.</td>
+
+
+    </tr>
+
+
+  
+  </tbody>
+</table>
+
+
+
+
+  <br>      <br>      
+        
+<h2><span style="font-size: 18px;"><a name="_Задание_100"></a></span><span style="font-family: Arial,sans-serif; color: red;"><span style="font-size: 28px;">Пример решения логической задачи с тремя переменными</span></span></h2>
+
+
+
+
+        
+        
+<p><img alt="" src="../images/image046.png" style="border-width: 0px;" height="570" width="766"><br>
+
+
+
+</p>
+
+
+
+
+        
+        
+<p><img alt="" src="../images/image053-2.gif" style="border-width: 0px;" height="615" width="769"></p>
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<div class="art-content-layout">
+    
+<div class="art-content-layout-row">
+    
+<div class="art-layout-cell" style="width: 60%;">
+        
+<p><img alt="" src="../images/image030-2.gif" style="border-width: 0px;" height="406" width="508"><br>
+
+
+
+</p>
+
+
+
+
+    </div>
+
+
+
+<div class="art-layout-cell" style="width: 40%;">
+        
+<p><img alt="" src="../images/image056-2-2-2-2.png" style="border-width: 0px;" height="280" width="350"><br>
+
+
+
+</p>
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<div class="art-content-layout">
+    
+<div class="art-content-layout-row">
+    
+<div class="art-layout-cell" style="width: 100%;">
+        
+        
+        
+<p class="MsoBodyTextIndent" style="margin: 0cm 0cm 0.0001pt; font-size: medium; font-family: 'Times New Roman',serif; color: rgb(0, 0, 0); widows: 1; text-indent: 172pt; background-color: rgb(255, 255, 255); text-align: left;"><span style="color: rgb(12, 37, 44); font-family: Tahoma,Arial,Helvetica,sans-serif; font-size: 12px; text-align: justify;"><br>
+
+
+
+</span></p>
+
+
+
+
+        
+        
+<p class="MsoBodyTextIndent" style="margin: 0cm 0cm 0.0001pt; font-size: medium; font-family: 'Times New Roman',serif; color: rgb(0, 0, 0); widows: 1; text-indent: 0pt; background-color: rgb(255, 255, 255); text-align: center;"><b><span style="font-size: 26pt; font-family: Arial,sans-serif; color: red;">Дополнительные задания</span></b></p>
+
+
+
+
+        
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt; font-size: medium; font-family: 'Times New Roman',serif; color: rgb(0, 0, 0); widows: 1; text-indent: 0pt; background-color: rgb(255, 255, 255); text-align: center;"><b><span style="font-size: 18pt; font-family: Arial,sans-serif; color: red;">НА 5 БАЛЛОВ</span></b><b><u></u></b></p>
+
+
+
+<b><u></u></b>
+        
+        
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt; font-size: medium; font-family: 'Times New Roman',serif; color: rgb(0, 0, 0); text-align: start; widows: 1; background-color: rgb(255, 255, 255);"><b><u></u></b></p>
+
+
+
+
+        
+        
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 80pt; text-align: justify; widows: 2; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><span style="font-family: Arial; font-size: 18px; color: rgb(0, 70, 90);">&nbsp;</span></p>
+
+
+
+
+        
+        
+<p><span style="font-size: 18px;"><span style="font-family: Arial;">&nbsp;</span></span><span style="color: rgb(0, 0, 0);"><b><u><span style="color: black;"><span style="font-size: 18px;"><span style="font-family: Arial;">Задание </span></span></span></u></b><b><span style="color: black;"><span style="font-size: 18px;"><span style="font-family: Arial;">&nbsp;Дана схема логического устройства для функции</span></span></span></b></span></p>
+
+
+
+
+        
+        
+<p style="padding-left: 100px;"><img alt="" src="../images/image123-2-2.jpg" style="border-width: 0px;" height="114" width="404"><span style="color: rgb(0, 0, 0);"><b><span style="color: black;"><span style="font-size: 18px;"><span style="font-family: Arial;"><br>
+
+
+
+</span></span></span></b></span></p>
+
+
+
+
+        
+        
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 80pt; color: rgb(0, 0, 0); text-align: start; widows: 1; background-color: rgb(255, 255, 255);"><b><span style="color: black;"><span style="font-size: 18px;"><span style="font-family: Arial;">Самостоятельно составьте таблицу истинности для данной функции</span></span><br>
+
+
+
+</span></b></p>
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<div class="art-content-layout">
+    
+<div class="art-content-layout-row">
+    
+<div class="art-layout-cell" style="width: 60%;">
+        
+<p><img alt="" src="../images/image074.gif" style="border-width: 0px;" height="406" width="508"><br>
+
+
+
+</p>
+
+
+    </div>
+
+
+
+<div class="art-layout-cell" style="width: 40%;">
+        
+<p><img alt="" src="../images/image088-2-2.png" style="border-width: 0px;" height="280" width="350"><br>
+
+
+
+</p>
+
+
+
+
+    </div>
+
+
+ </div>
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<div class="art-content-layout layout-item-0">
+    
+<div class="art-content-layout-row">
+    
+<div class="art-layout-cell layout-item-1" style="width: 100%;">
+        
+<h2><a name="_LOG_KR"></a></h2>
+
+
+
+
+        
+        
+<p style="text-indent: 0pt; text-align: center;"><span style="color: rgb(255, 0, 0); font-family: Arial,sans-serif; font-size: 10px; font-weight: bold;"><br>
+
+
+
+</span></p>
+
+
+
+
+    
+      
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt; color: rgb(0, 0, 0); text-align: start; widows: 1; background-color: rgb(255, 255, 255);"><b><span style="color: black;"><span style="font-size: 18px;"><span style="font-family: Arial;"><span style="color: rgb(255, 0, 0);">Задание 6</span>.</span></span></span></b> 
+    
+      </p>
+
+
+
+
+
+  
+        
+<p style="text-indent: 0pt; text-align: center;"><b><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;"></span></span></b><b><span style="font-family: Arial,sans-serif; color: black;"></span><span style="font-size: 26pt; font-family: Arial,sans-serif; color: rgb(204, 51, 204);"><span style="color: rgb(255, 153, 0);">Проверочная</span> <span style="color: rgb(0, 153, 0);">работа</span></span></b></p>
+
+
+
+<b></b>
+        
+        
+<p><span style="font-size: 22pt; font-family: Arial,sans-serif; color: red;">!!!</span> <span style="font-size: 18pt; font-family: Arial,sans-serif; font-style: italic; color: rgb(51, 51, 255);">Номер вашего варианта соответствует номеру вашего компьютера</span></p>
+
+
+
+
+        
+        
+<p><b><span style="font-size: 18pt; font-family: Arial,sans-serif;"><span style="color: rgb(255, 26, 26);"><br>
+
+
+</span></span><span style="font-family: Arial,sans-serif;"><span style="font-size: 20px;"><a href="./tema_6/%d0%9b%d0%be%d0%b3%d0%b8%d0%ba%d0%b0%20%28%d1%82%d1%80%d0%b5%d0%bd%d0%b0%d0%b6%d0%b5%d1%80%29/Logic.exe"><span style="font-size: 22px; cursor: text;"><span style="font-weight: normal;"></span></span></a></span></span></b></p>
+
+
+
+
+        
+        
+
+        
+        
+<p><img alt="" src="../images/Tema6_2_KR_1_3.jpg" style="border-width: 0px;" height="" width=""><br>
+
+</p>
+
+
+
+<p><img alt="" src="../images/Tema6_2_KR_4_6.jpg" style="border-width: 0px;" height="" width=""><br>
+
+</p>
+
+
+<p><img alt="" src="../images/Tema6_2_KR_7_9.jpg" style="border-width: 0px;" height="" width=""><br>
+
+</p>
+
+
+<p><img alt="" src="../images/Tema6_2_KR_10_12.jpg" style="border-width: 0px;" height="" width=""><br>
+
+</p>
+
+
+<p><img alt="" src="../images/Tema6_2_KR_13_15.jpg" style="border-width: 0px;" height="" width=""><br>
+
+</p>
+
+
+<p><img alt="" src="../images/Tema6_2_KR_16_18.jpg" style="border-width: 0px;" height="" width=""><br>
+
+</p>
+
+        
+        
+<br>
+
+
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<div class="art-content-layout">
+    
+<div class="art-content-layout-row">
+    
+<div class="art-layout-cell" style="width: 100%;">
+        
+<p><b><span style="font-size: 18pt; font-family: Arial,sans-serif;"><span style="color: rgb(255, 26, 26);">Бонус</span></span> <span style="font-family: Arial,sans-serif;"><span style="font-size: 20px;">для тех, кто справился со своим вариантом &nbsp;<a href="tema_6/%d0%9b%d0%be%d0%b3%d0%b8%d0%ba%d0%b0%20%28%d1%82%d1%80%d0%b5%d0%bd%d0%b0%d0%b6%d0%b5%d1%80%29/Logic.exe"><span style="font-size: 22px; cursor: text;"><span style="font-weight: normal;">Игра-тренажёр</span></span></a></span></span></b></p>
+
+
+<h2></h2>
+
+
+
+
+        
+        
+<h2><span style="font-size: 18px;"><a name="_Задание_100"></a></span><span style="font-family: Arial,sans-serif; color: red;"><span style="font-size: 28px;">Пример решения логической задачи с тремя переменными</span></span></h2>
+
+
+
+
+        
+        
+<p><img alt="" src="../images/image046.png" style="border-width: 0px;" height="570" width="766"><br>
+
+
+
+</p>
+
+
+
+
+        
+        
+<p><img alt="" src="../images/image053-2.gif" style="border-width: 0px;" height="615" width="769"></p>
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<div class="art-content-layout">
+    
+<div class="art-content-layout-row">
+    
+<div class="art-layout-cell" style="width: 60%;">
+        
+<p><img alt="" src="../images/image030-2.gif" style="border-width: 0px;" height="406" width="508"><br>
+
+
+
+</p>
+
+
+
+
+    </div>
+
+
+
+<div class="art-layout-cell" style="width: 40%;">
+        
+<p><img alt="" src="../images/image056-2-2-2-2.png" style="border-width: 0px;" height="280" width="350"><br>
+
+
+
+</p>
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<div class="art-content-layout">
+    
+<div class="art-content-layout-row">
+    
+<div class="art-layout-cell" style="width: 100%;">
+        
+        
+        
+<p class="MsoBodyTextIndent" style="margin: 0cm 0cm 0.0001pt; font-size: medium; font-family: 'Times New Roman',serif; color: rgb(0, 0, 0); widows: 1; text-indent: 172pt; background-color: rgb(255, 255, 255); text-align: left;"><span style="color: rgb(12, 37, 44); font-family: Tahoma,Arial,Helvetica,sans-serif; font-size: 12px; text-align: justify;"><br>
+
+
+
+</span></p>
+
+
+
+
+        
+        
+<p class="MsoBodyTextIndent" style="margin: 0cm 0cm 0.0001pt; font-size: medium; font-family: 'Times New Roman',serif; color: rgb(0, 0, 0); widows: 1; text-indent: 0pt; background-color: rgb(255, 255, 255); text-align: center;"><b><span style="font-size: 26pt; font-family: Arial,sans-serif; color: red;">Дополнительные задания</span></b></p>
+
+
+
+<b></b>
+        
+        
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt; font-size: medium; font-family: 'Times New Roman',serif; color: rgb(0, 0, 0); widows: 1; text-indent: 0pt; background-color: rgb(255, 255, 255); text-align: center;"><b><span style="font-size: 18pt; font-family: Arial,sans-serif; color: red;">НА 5 БАЛЛОВ</span></b><b><u></u></b></p>
+
+
+
+<b><u></u></b>
+        
+        
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt; font-size: medium; font-family: 'Times New Roman',serif; color: rgb(0, 0, 0); text-align: start; widows: 1; background-color: rgb(255, 255, 255);"><b><u></u></b></p>
+
+
+
+
+        
+        
+<p class="MsoNormal" style="margin: 0cm 0cm 0.0001pt 80pt; text-align: justify; widows: 2; color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);"><span style="font-family: Arial; font-size: 18px; color: rgb(0, 70, 90);">&nbsp;</span></p>
+
+
+
+
+        
+        
+<p><span style="font-size: 18px;"><span style="font-family: Arial;">&nbsp;</span></span><span style="color: rgb(0, 0, 0);"><b><u><span style="color: black;"><span style="font-size: 18px;"><span style="font-family: Arial;">Задание </span></span></span></u></b><b><span style="color: black;"><span style="font-size: 18px;"><span style="font-family: Arial;">&nbsp;Дана схема логического устройства для функции</span></span></span></b></span></p>
+
+
+
+
+        
+        
+<p style="padding-left: 100px;"><img alt="" src="../images/image123-2-2.jpg" style="border-width: 0px;" height="114" width="404"><span style="color: rgb(0, 0, 0);"><b><span style="color: black;"><span style="font-size: 18px;"><span style="font-family: Arial;"><br>
+
+
+
+</span></span></span></b></span></p>
+
+
+
+
+        
+        
+<p class="MsoNormal" style="margin: 0cm 0cm 0pt 80pt; color: rgb(0, 0, 0); text-align: start; widows: 1; background-color: rgb(255, 255, 255);"><b><span style="color: black;"><span style="font-size: 18px;"><span style="font-family: Arial;">Самостоятельно составьте таблицу истинности для данной функции</span></span><br>
+
+
+
+</span></b></p>
+
+
+
+
+    </div>
+
+
+
+
+    </div>
+
+
+
+
+</div>
+
+
+
+
+<div class="art-content-layout">
+    
+<div class="art-content-layout-row">
+    
+<div class="art-layout-cell" style="width: 60%;">
+        
+<p><img alt="" src="../images/image074.gif" style="border-width: 0px;" height="406" width="508"><br>
+
+
+
+</p>
+
+
+    </div>
+
+
+
+<div class="art-layout-cell" style="width: 40%;">
+        
+<p><img alt="" src="../images/image088-2-2.png" style="border-width: 0px;" height="280" width="350"><br>
+
+
+
+</p>
+
+
+
+
+    </div>
+
+
+ </div>
+
+
+
+
+</div>
+
+
+ </div>
+
+
+ </div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+ </div>
+
+
+
+
+    </div>
+
+
+
+
+    
+<div class="art-footer">
+        
+<div class="art-footer-body">
+            
+<div class="art-footer-center">
+                
+<div class="art-footer-wrapper">
+                    
+<div class="art-footer-text">
+                        
+<p><a href="#">В начало</a></p>
+
+
+
+
+
+<p><span style="color: rgb(11, 36, 50); font-family: Arial,Helvetica,sans-serif;">&copy; Е.А. Гордеева</span></p>
+
+
+
+
+
+<p><span style="color: rgb(11, 36, 50); font-family: Arial,Helvetica,sans-serif;">2019&gt;</span></p>
+
+
+
+
+                        
+<div class="cleared"></div>
+
+
+
+
+                        
+<p class="art-page-footer"></p>
+
+
+
+
+                    </div>
+
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+            
+<div class="cleared"></div>
+
+
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    
+<div class="cleared"></div>
+
+
+
+
+
+<div style="height: 30px;"></div>
+<div id="topNubex"><img src="../images/topNubex.jpg" height="30" width="71"></div>
+
+
+</body>
+</html>

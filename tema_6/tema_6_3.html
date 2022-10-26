@@ -1,0 +1,1311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xml:lang="en" dir="ltr" lang="en-US">
+<head>
+
+
+
+  
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+  
+
+
+  
+  
+  
+  <title>Тема 6.3</title>
+  <link rel="stylesheet" href="../style.css" type="text/css" media="screen">
+<!--[if IE 6]><link rel="stylesheet" href="../style.ie6.css" type="text/css" media="screen" /><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../style.ie7.css" type="text/css" media="screen" /><![endif]-->
+
+
+
+  
+  
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+
+
+  
+  
+  <script type="text/javascript" src="../jquery.js"></script>
+  
+  <script type="text/javascript" src="../script.js"></script>
+  
+  <style type="text/css">
+
+
+   </style>
+
+
+
+
+
+<meta charset="utf-8">
+  <title>Кнопка "Вверх" при помощи JavaScript - "Нубекс"</title>
+  
+  <style>
+  #topNubex {
+	position: fixed;
+	right: 45px;
+	bottom: 45px;
+   }
+  </style>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+  $(window).scroll(function() {
+  if($(this).scrollTop() != 0) {
+  $('#topNubex').fadeIn();
+  } else {
+  $('#topNubex').fadeOut();
+  }
+  });
+  $('#topNubex').click(function() {
+  $('body,html').animate({scrollTop:0},700);
+  });
+  });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+
+<body>
+
+<body style="color:#000006">
+
+<div id="art-main">
+<div class="cleared reset-box"></div>
+
+
+
+<div class="art-header">
+<div class="art-header-position">
+<div class="art-header-wrapper">
+<div class="cleared reset-box"></div>
+
+
+
+<div class="art-header-inner">
+<div class="art-logo">
+<h1 class="art-logo-name"><a href="../index.html">&nbsp;</a></h1>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cleared reset-box"></div>
+
+
+
+<div class="art-bar art-nav">
+<div class="art-nav-outer">
+<div class="art-nav-wrapper">
+<div class="art-nav-inner">
+<ul class="art-hmenu">
+ 	<li> <a href="../%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F.html">Главная</a>  </li>
+	<li> <a href="../tema_1.html">Тема 1</a> </li>
+	<li> <a href="../tema_2.html">Тема 2</a> </li>
+	<li> <a href="../tema_3.html">Тема 3</a>
+    <ul>
+			<li> <a href="../tema_3/tema_3_1.html">Графический интерфейс ОС Windows</a> </li>
+			<li> <a href="../tema_3/tema_3_2.html">Работа с файловым менеджером Проводник</a> </li>
+    </ul>
+  </li>
+    <li> <a href="../tema_4.html">Тема 4</a>
+    <ul>
+     		  <li> <a href="../tema_4/tema_4_1_1.html">Решение задач по теме системы счисления</a></li>
+			  <li> <a href="../tema_4/tema_4_2.html">Действия с числами в позиционных системах счисления</a></li>
+              <li> <a href="../tema_4/tema_4_3.html">Формы представления чисел</a></li>
+              <li> <a href="../tema_4/tema_4_4.html">Представление и измерение информации</a></li>
+			  <li> <a href="../tema_4/tema_4_5.html">Представление и измерение текстовой, графической и звуковой информации</a></li>
+			  <li> <a href="../tema_4/tema_4_6.html" >Представление и измерение информации. Кодирование звуковой информации</a></li>
+			  <li> <a href="../tema_4/tema_4_7.html">Решение задач по теме адресация в сети Internet</a></li>
+			  <li> <a href="../tema_4/tema_4_8.html">Решение задач по теории игр, выигрышная стратегия</a></li>
+    </ul>
+  </li>
+  <li> <a href="../tema_5.html">Тема 5</a> </li>
+  <li> <a href="../tema_6.html" class="active">Тема 6</a>
+		<ul>
+			<li> <a href="../tema_6/tema_6_1.html">Логические операции</a> </li>
+			<li> <a href="../tema_6/tema_6_2.html">Построение таблиц истинности и логических схем</a> </li>
+			<li> <a href="../tema_6/tema_6_3.html" class="active">Решение задач табличным способом</a> </li>
+      <li> <a href="../tema_6/tema_6_4.html">Круги Эйлера-Венца</a> </li>
+      <li> <a href="../tema_6/tema_6_5.html">Основные законы Алгебры логики</a> </li>
+      <li> <a href="../tema_6/tema_6_6.html" class="active">Решение задач</a> </li>
+   	  <li> <a href="../tema_6/tema_6_7.html">Тригеры и сумматоры</a> </li>
+			 </ul>
+		</li>
+		<li><a href="../tema_7.html">Тема 7</a>
+			 <ul>
+						<li> <a href="../tema_7/tema_7_1.html"> Виды и типы компьютеров</a>
+								<ul>
+									 <li> <a href="../tema_7/var7_1.html">Вариант 1</a> </li>
+									 <li> <a href="../tema_7/var7_2.html">Вариант 2</a> </li>
+									 <li> <a href="../tema_7/var7_3.html">Вариант 3</a> </li>
+									 <li> <a href="../tema_7/var7_4.html">Вариант 4</a> </li>
+									 <li> <a href="../tema_7/var7_5.html">Вариант 5</a> </li>
+								</ul>
+						</li>
+						<li> <a href="../tema_7/tema_7_2.html">Внутренние устройства компьютера </a></li>
+						<li> <a href="../tema_7/tema_7_3.html">Периферийные устройства компьютера</a> </li>
+			 </ul>
+		</li>
+		<li> <a href="../tema_8.html">Тема 8</a>
+			 <ul>
+						<li> <a href="../tema_8/tema_8_1.html">Алгоритмы и способы их описания</a> </li>
+						<li> <a href="../tema_8/tema_8_2.html">Компьютерные модели различных процессов</a>
+								<ul>
+									 <li> <a href="../tema_8/var1.html">Вариант 1</a> </li>
+									 <li> <a href="../tema_8/var2.html">Вариант 2</a> </li>
+									 <li> <a href="../tema_8/var3.html">Вариант 3</a> </li>
+									 <li> <a href="../tema_8/var4.html">Вариант 4</a> </li>
+									 <li> <a href="../tema_8/var5.html">Вариант 5</a> </li>
+								</ul>
+						</li>
+						<li> <a href="../tema_8/tema_8_3.html">Реализация различных видов алгоритмов</a> </li>
+						<li> <a href="../tema_8/tema_8_4.html">Теория построения графов</a> </li>
+						<li> <a href="../tema_8/tema_8_5.html">Решение задач</a> </li>
+			 </ul>
+		</li>
+		<li> <a href="../tema_9.html">Тема 9</a> </li>
+		<li> <a href="../control.html">Контроль</a>	</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="art-box art-sheet">
+<div class="art-box-body art-sheet-body">
+<div class="art-layout-wrapper">
+<div class="art-content-layout">
+<div class="art-content-layout-row">
+<div class="art-layout-cell art-content">
+<div class="art-box art-post">
+<div class="art-box-body art-post-body">
+<div class="art-post-inner art-article">
+<div class="art-postcontent">
+<div class="art-content-layout">
+<div class="art-content-layout-row">
+<div class="art-layout-cell layout-item-0" style="width: 970px;">
+<p style="text-align: left;"><span style="font-family: Arial;"><span style="font-size: 28px;"><span style="font-weight: bold; color: rgb(0, 0, 0);">Решение задач Алгебры логики табличным способом</span></span></span></p>
+
+
+
+<p style="text-align: left;"><span style="color: rgb(0, 0, 0); font-family: Arial; font-weight: bold;"><br>
+
+
+
+</span></p>
+
+
+
+<p class="MsoNormal"><b><span style="font-family: Arial,sans-serif; color: rgb(0, 0, 0);"><span style="font-size: 18px;">Цели</span></span></b></p>
+
+	<ul type="disc">
+		<li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif; font-size: 15px;">Дать представления о табличных информационных моделях</span></li>
+		<li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif; font-size: 15px;">Научиться решать задачи табличным способом;</span></li>
+		<li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif; font-size: 15px;">Закрепить представление о табличном способе решения логических задач;</span></li>
+		<li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif; font-size: 15px;">Закрепить навыки создания таблиц;</span></li>
+		<li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif; font-size: 15px;">Научить оформлять таблицы типа ООО (объект – объект - один) и ООН (объект-объект-несколько) с использованием знаков «-» и «+».;</span></li>
+		<li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif; font-size: 15px;">Развивать словестно-логическую память, абстрактное мышление; устойчивое внимание;</span></li>
+		<li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif;"><span style="font-size: 15px;">Научить решать логические задачи нового типа: построение выводов с использованием логической операции «не».</span></span></li>
+	</ul>
+ <p class="MsoNormal"><span style="color: rgb(0, 0, 0); font-family: Arial,sans-serif;"><span style="font-size: 15px;">Инструменты:</span></span></p>
+ 	<ul type="disc">
+		<li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif;"><span style="font-size: 15px;">ОС Windows</span></span></li>
+		<li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif;"><span style="font-size: 15px;">Браузер</span></span></li>
+	</ul>
+
+<p  class="dline" style="text-indent: 0pt; text-align: left;"><b><span style="font-family: Arial,sans-serif; color: red;">
+<span style="font-size: 18px;">Задание 1.</span></span></b><span style="font-size: 18px;"> <span style="color: rgb(0, 0, 0);">
+ Запишите информацию в конспект, </span>  <span style=" color: rgb(5, 5, 255);">
+ используя навыки конспектирования    </span></span>
+ <span style="font-size: 14px;"> (например, сокращая слова).</span>
+
+
+
+<p class="dline"> <span style="font-size: 18px; font-family: Times New Roman; font-style: italic;">
+С помощью логических переменных и символов логических операций любое высказывание можно формализовать,то есть заменить логической формулой. (Записать на языке алгебры логики или записать в виде формулы)</b></p>
+
+<p></p><center><table class="definition"><tbody><tr><td>
+Определение <i><u>логической формулы</u></i>: 
+<ol> 
+  <li> Всякая логическая переменная и символы "истина" ("1") и "ложь" ("0")  — формулы.</li>
+  <li> Если &nbsp;А&nbsp;и&nbsp;В  — формулы, &nbsp; то &nbsp;
+  <img src="./Tema_6_images/Tema6_0002.gif"  style="border-width: 0px;" width="19" height="21">, &nbsp; А <b><sup>.</sup></b> В&nbsp;,
+  &nbsp; А v В&nbsp;, &nbsp; А <img src="./Tema_6_images/Tema6_imp.gif"  style="border-width: 0px;" width="24" height="15"> B&nbsp;,
+ &nbsp; А <img src="./Tema_6_images/Tema6_ekv1.gif"  style="border-width: 0px;" width="25" height="17"> В &nbsp;  —&nbsp;  формулы.</li>
+  <li> Никаких других формул в алгебре логики нет.</li>
+</ol>
+</td></tr></tbody></table></center>
+
+
+
+
+<span style="font-size: 12pt; font-family: Arial,sans-serif; color: black;"><span class="active"><span style="color: rgb(204, 0, 0);">Логическая
+  функция (~ формула)</span> -  это функция, которая устанавливает соответствие между одним или несколькими высказываниями, которые называются аргументами функции, и высказыванием которое называется значением функции. </span></span>
+<br><br>
+<span style="font-size: 12pt; font-family: Arial,sans-serif; color: black;"><span class="active">Табли́ца и́стинности &mdash; это таблица, задающая логическую функцию.</span></span>
+<br><br>
+<I><span style="font-size: 12pt; font-family:Time New Roman; color: black;"><span class="active">ТИ - это таблица, с помощью которой устанавливается истинностное значение сложного высказывания при данных значениях входящих в него простых высказываний. В классической математической логике предполагается, что
+каждое простое (не содержащее логических связок) высказывание является либо истинным, либо ложным, но не тем и другим одновременно. Нам не известно, истинно или ложно данное простое высказывание, чтобы установить это, потребовалось бы обратиться к фактам действительности,
+но логика этого не делает. Однако мы знаем, что у высказывания имеется лишь две возможности - быть истинным либо быть ложным. Когда с помощью логических связок мы соединяем простые высказывания в сложное, встает
+вопрос: при каких условиях сложное высказывание считается истинным, а при каких - ложным? Для ответа на этот вопрос и служат таблицы.</span><b><span style="font-size: 18pt; font-family: Arial,sans-serif; color: black;"><br>
+
+</span></i></b>
+
+
+</p>
+<p class="dline"> В качестве примера рассмотрим высказывание <i>"если я куплю яблоки или
+абрикосы, то приготовлю фруктовый пирог".</i> Это высказывание формализуется в виде <b>(A v B) <img src="./Tema_6_images/Tema6_imp.gif"  style="border-width: 0px;" width="24" height="15"> C</b>.
+ Такая же формула соответствует высказыванию &nbsp; <i>"если Игорь знает
+английский или японский язык, то он получит место переводчика".</i>
+
+</p>
+<p class="dline"> Как показывает анализ формулы <b>(A v B) <img src="./Tema_6_images/Tema6_imp.gif"  style="border-width: 0px;" width="24" height="15"> C</b>, при
+определённых сочетаниях значений переменных <b>A, B</b> и <b>C</b> она принимает значение "истина", а при некоторых других сочетаниях — значение "ложь" (разберите самостоятельно эти случаи). Такие формулы называются <b>выполнимыми</b>.
+
+</p>
+<p class="dline"> Некоторые формулы принимают значение "истина" при любых значениях
+истинности входящих в них переменных. Таковой будет, например,
+формула <b>А v <img src="./Tema_6_images/Tema6_0002.gif"  style="border-width: 0px;" width="19" height="21"></b>, 
+соответствующая высказыванию <i>"Этот треугольник прямоугольный или
+косоугольный".</i> Эта формула истинна и тогда, когда треугольник
+прямоугольный, и тогда, когда треугольник не прямоугольный. Такие
+формулы называются <b>тождественно истинными формулами</b> или
+<b>тавтологиями</b>. Высказывания, которые формализуются 
+тавтологиями, называются <b>логически истинными высказываниями.</b>
+
+</p>
+<p class="dline"> В качестве другого примера рассмотрим формулу <b>А<sup> . </sup></b><img src="./Tema_6_images/Tema6_0002.gif"  style="border-width: 0px;" width="19" height="21">, которой соответствует, например,
+высказывание <i>"Катя самая высокая девочка в классе, и в классе есть
+девочки выше Кати".</i> Очевидно, что эта формула ложна, так как либо
+<b>А,</b> либо <img src="./Tema_6_images/Tema6_0002.gif"  style="border-width: 0px;" width="19" height="21"> обязательно 
+ложно. Такие формулы называются <b>тождественно ложными формулами</b> 
+или <b>противоречиями</b>. Высказывания, которые формализуются 
+противоречиями, называются <b>логически ложными высказываниями.</b>
+
+</p>
+<p class="dline"> Если две формулы А и В одновременно, то есть при одинаковых наборах
+значений входящих в них переменных, принимают одинаковые значения, то они
+называются <b>равносильными</b>.
+
+</p>
+<p class="dline"> Равносильность двух формул алгебры логики обозначается символом "="
+или символом "<img src="./Tema_6_images/Tema6_trilines.gif"  style="border-width: 0px;" width="12" height="14">" Замена формулы другой, ей равносильной, называется <b>равносильным преобразованием</b> данной формулы.</p>
+
+
+<br>
+
+
+
+
+
+
+<h2> <span style="color: red; font-size: 18px;">Как решать логические задачи?</span></h2>
+
+<p>Разнообразие логических задач очень велико. Способов их решения тоже
+немало. Но наибольшее распространение получили следующие три способа
+решения логических задач:
+</p>
+<b>
+<ul>
+  <li> средствами алгебры логики;</li>
+  <li> табличный;</li>
+  <li> с помощью рассуждений.</li>
+</ul>
+</b>
+<p>Познакомимся с ними поочередно.</p>
+
+<h3><font color="#993366">I. Решение логических задач средствами алгебры логики</font></h3>
+
+<p>Обычно используется следующая схема решения:
+</p><ol>
+  <li> изучается условие задачи;</li>
+  <li> вводится система обозначений для логических высказываний;</li>
+  <li> конструируется логическая формула, описывающая логические 
+    связи между всеми высказываниями условия задачи;</li>
+  <li> определяются значения истинности этой логической формулы;</li>
+  <li> из полученных значений истинности формулы определяются 
+    значения истинности введённых 	логических высказываний, на
+    основании которых делается заключение о решении.</li>
+</ol>
+
+<p><b><font color="#FF0000">Пример 1.</font></b> Трое друзей, болельщиков автогонок "Формула-1", спорили о результатах предстоящего этапа гонок.</p>
+
+<p>— Вот увидишь, Шумахер не придет первым, — сказал Джон. Первым будет Хилл.
+
+</p>
+<p>— Да нет же, победителем будет, как всегда, Шумахер, — воскликнул Ник. — А об Алези и говорить нечего, ему не быть первым.
+
+</p>
+<p>Питер, к которому обратился Ник, возмутился:</p>
+<p>— Хиллу не видать первого места, а вот Алези пилотирует самую мощную машину.
+
+</p>
+<p>По завершении этапа гонок оказалось, что каждое из двух предположений
+двоих друзей подтвердилось, а оба предположения третьего из друзей
+оказались неверны. Кто выиграл этап гонки?
+
+</p><p><b>Решение.</b> Введем обозначения для логических высказываний:
+
+</p><p><b>Ш</b> — победит Шумахер; <b>Х</b> — победит Хилл;
+<b>А</b> — победит Алези.
+
+</p><p>Реплика Ника "Алези пилотирует самую мощную машину" не содержит
+никакого утверждения о месте, которое займёт этот гонщик, поэтому в
+дальнейших рассуждениях не учитывается.
+
+</p><p>Зафиксируем высказывания каждого из друзей:
+
+</p><center><img src="./Tema_6_images/Tema6_0103.gif" style="border-width: 0px;" width="300" height="26"></center>
+
+<p>Учитывая то, что предположения двух друзей подтвердились, а предположения третьего неверны, запишем и упростим истинное высказывание
+
+</p><center><img src="./Tema_6_images/Tema6_0104.gif" style="border-width: 0px;" width="645" height="38"></center>
+
+<p>Высказывание <img src="./Tema_6_images/Tema6_0105.gif" style="border-width: 0px;" width="58" height="15"> истинно только при
+<b>Ш=1, А=0, Х=0.</b>
+
+</p><p><b>Ответ.</b> Победителем этапа гонок стал Шумахер.
+
+</p><p><b><font color="#FF0000">Пример 2.</font></b> Некий любитель приключений отправился в кругосветное
+путешествие на яхте, оснащённой бортовым компьютером. Его предупредили, что
+чаще всего выходят из строя три узла компьютера — <b><i>a</i></b>,
+<b><i>b</i></b>, <b><i>c</i></b>, и дали необходимые детали для замены.
+Выяснить, какой именно узел надо заменить, он может по сигнальным лампочкам
+на контрольной панели. Лампочек тоже ровно три: <b><i>x</i></b>,
+<b><i>y</i></b> и <b><i>z</i></b>.
+
+</p><p>Инструкция по выявлению неисправных узлов такова:
+</p><ol>
+  <li>если неисправен хотя бы один из узлов компьютера, то горит по крайней
+    мере одна из лампочек <b><i>x</i></b>, <b><i>y</i></b>, <b><i>z</i></b>;</li>
+  <li>если неисправен узел <b><i>a</i></b>, но исправен узел <b><i>с</i></b>, 
+    то загорается лампочка <b><i>y</i></b>;</li>
+  <li>если неисправен узел <b><i>с</i></b>, но исправен узел <b><i>b</i></b>, 
+    загорается лампочка <b><i>y</i></b>, но не загорается лампочка
+    <b><i>x</i></b>;</li>
+  <li>если неисправен узел <b><i>b</i></b>, но исправен узел <b><i>c</i></b>, 
+    то загораются лампочки <b><i>x</i></b> и <b><i>y</i></b> или не загорается 
+    лампочка <b><i>x</i></b>;</li>
+  <li>если горит лампочка <b><i>х</i></b> и при этом либо неисправен узел
+    <b><i>а</i></b>, либо все три узла <b><i>a</i></b>, <b><i>b</i></b>,
+    <b><i>c</i></b> исправны, то горит и лампочка <b><i>y</i></b>.</li>
+</ol>
+
+<p>В пути компьютер сломался. На контрольной панели загорелась лампочка
+<b><i>x</i></b>. Тщательно изучив инструкцию, путешественник починил
+компьютер. Но с этого момента и до конца плавания его не оставляла тревога.
+Он понял, что инструкция несовершенна, и есть случаи, когда она ему не
+поможет.
+
+</p><p>Какие узлы заменил путешественник? Какие изъяны он обнаружил в инструкции?
+
+</p><p><b>Решение.</b> Введем обозначения для логических высказываний:
+
+</p><p><b><i>a</i></b>&nbsp;—&nbsp;неисправен&nbsp;узел&nbsp;<b><i>а</i></b>;
+  &nbsp;
+  <b><i>x</i></b>&nbsp;—&nbsp;горит&nbsp;лампочка&nbsp;<b><i>х</i></b>;
+
+</p><p><b><i>b</i></b>&nbsp;—&nbsp;неисправен&nbsp;узел&nbsp;<b><i>b</i></b>;
+  &nbsp;
+  <b><i>y</i></b>&nbsp;—&nbsp;горит&nbsp;лампочка&nbsp;<b><i>y</i></b>;
+
+</p><p><b><i>с</i></b>&nbsp;—&nbsp;неисправен&nbsp;узел&nbsp;<b><i>с</i></b>;
+  &nbsp;
+  <b><i>z</i></b>&nbsp;—&nbsp;горит&nbsp;лампочка&nbsp;<b><i>z</i></b>.
+
+</p><p>Правила 1-5 выражаются следующими формулами:
+
+</p><center><img src="./Tema_6_images/Tema6_0106.gif"  style="border-width: 0px;" width="173" height="117"></center>
+
+<p>Формулы 1-5 истинны по условию, следовательно, их конъюнкция тоже истинна: 
+
+</p><center><img src="./Tema_6_images/Tema6_0107.gif"  style="border-width: 0px;" width="643" height="28"></center>
+
+<p>Выражая импликацию через дизъюнкцию и отрицание (напомним, что <img src="./Tema_6_images/Tema6_0108.gif" style="border-width: 0px;" width="114" height="17">), получаем:
+
+</p><center><img src="./Tema_6_images/Tema6_0109.gif" style="border-width: 0px;"" width="641" height="77"></center>
+
+<p>Подставляя в это тождество конкретные значения истинности <i>x</i>=1,
+<i>y</i>=0, <i>z</i>=0, получаем:
+
+</p><center><img src="./Tema_6_images/Tema6_0110.gif" style="border-width: 0px;"" width="625" height="38"></center>
+
+<p>Отсюда следует, что <b>a=0, b=1, c=1.</b>
+
+</p><p><b>Ответ на первый вопрос задачи:</b> нужно заменить блоки <i>b</i> и
+<i>c</i>; блок <i>а</i> не требует замены. Ответ на второй вопрос задачи
+получите самостоятельно. 
+
+
+
+
+</p><h3><font color="#993366">II. Решение логических задач табличным способом</font></h3>
+
+<p>При использовании этого способа условия, которые содержит задача, и
+результаты рассуждений фиксируются с помощью специально составленных таблиц.
+
+</p><p><b><font color="#FF0000">Пример 3.</font></b> В симфонический оркестр приняли на работу трёх музыкантов: 
+Брауна, Смита и Вессона, умеющих играть на скрипке, флейте, альте, кларнете, 
+гобое и трубе.
+
+</p><p>Известно, что:
+</p><ol> 
+  <li> Смит самый высокий;</li>
+  <li> играющий на скрипке меньше ростом играющего на флейте;</li>
+  <li> играющие на скрипке и флейте и Браун любят пиццу;</li>
+  <li> когда между альтистом и трубачом возникает ссора, Смит мирит их;</li>
+  <li> Браун не умеет играть ни на трубе, ни на гобое.</li>
+</ol>
+
+<p>На каких инструментах играет каждый из музыкантов, если каждый владеет
+двумя инструментами?
+
+</p><p><b>Решение.</b> Составим таблицу и отразим в ней условия задачи, заполнив
+соответствующие клетки цифрами 0 и 1 в зависимости от того, ложно или
+истинно соответствующее высказывание.
+
+</p><p>Так как музыкантов трoе, инструментов шесть и каждый владеет только
+двумя инструментами, получается, что каждый музыкант играет на инструментах,
+которыми остальные не владеют.
+
+</p><p>Из условия 4 следует, что Смит не играет ни на альте, ни на трубе, а из
+условий 3 и 5, что Браун не умеет играть на скрипке, флейте, трубе и гобое.
+Следовательно, инструменты Брауна — альт и кларнет. Занесем это в
+таблицу, а оставшиеся клетки столбцов "альт" и "кларнет" заполним нулями:</p>
+
+<table border="" cellspacing="1" cellpadding="5" width="90%" align="CENTER">
+<tbody><tr align="CENTER">
+  <td width="14%">&nbsp;</td>
+  <td width="16%">скрипка</td>
+  <td width="14%">флейта</td>
+  <td width="14%">альт</td>
+  <td width="16%">кларнет</td>
+  <td width="12%">гобой</td>
+  <td width="14%">труба</td>
+</tr>
+<tr align="CENTER">
+  <td>Браун</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+</tr>
+<tr align="CENTER">
+  <td>Смит</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>0</td>
+  <td>0</td>
+  <td>&nbsp;</td>
+  <td>0</td>
+</tr>
+<tr align="CENTER">
+  <td>Вессон</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>0</td>
+  <td>0</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+</tbody></table>
+
+<p>Из таблицы видно, что на трубе может играть только Вессон.
+
+</p><p>Из условий 1 и 2 следует, что Смит не скрипач. Так как на скрипке не играет
+ни Браун, ни Смит, то скрипачом является Вессон. Оба инструмента, на которых 
+играет Вессон, теперь определены, поэтому остальные клетки строки "Вессон"
+можно заполнить нулями:</p>
+
+<table border="" cellspacing="1" cellpadding="5" width="90%" align="CENTER">
+<tbody><tr align="CENTER">
+  <td width="14%">&nbsp;</td>
+  <td width="16%">скрипка</td>
+  <td width="14%">флейта</td>
+  <td width="14%">альт</td>
+  <td width="16%">кларнет</td>
+  <td width="12%">гобой</td>
+  <td width="14%">труба</td>
+</tr>
+<tr align="CENTER">
+  <td>Браун</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+</tr>
+<tr align="CENTER">
+  <td>Смит</td>
+  <td>0</td>
+  <td>&nbsp;</td>
+  <td>0</td>
+  <td>0</td>
+  <td>&nbsp;</td>
+  <td>0</td>
+</tr>
+<tr align="CENTER">
+  <td>Вессон</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+</tr>
+</tbody></table>
+
+<p>Из таблицы видно, что играть на флейте и на гобое может только Смит.</p>
+
+<table border="" cellspacing="1" cellpadding="5" width="90%" align="CENTER">
+<tbody><tr align="CENTER">
+  <td width="14%">&nbsp;</td>
+  <td width="16%">скрипка</td>
+  <td width="14%">флейта</td>
+  <td width="14%">альт</td>
+  <td width="16%">кларнет</td>
+  <td width="12%">гобой</td>
+  <td width="14%">труба</td>
+</tr>
+<tr align="CENTER">
+  <td>Браун</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+</tr>
+<tr align="CENTER">
+  <td>Смит</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+</tr>
+<tr align="CENTER">
+  <td>Вессон</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+</tr>
+</tbody></table>
+
+<p><b>Ответ:</b> Браун играет на альте и кларнете, Смит — на флейте и
+гобое, Вессон — на скрипке и трубе.
+
+</p><p><b><font color="#FF0000">Пример 4.</font></b> Три одноклассника — Влад, Тимур и Юра, встретились
+спустя 10 лет после окончания школы. Выяснилось, что один из них стал врачом,
+другой физиком, а третий юристом. Один полюбил туризм, другой бег, страсть
+третьего — регби.</p>
+
+<p>Юра сказал, что на туризм ему не хватает времени, хотя его сестра —
+единственный врач в семье, заядлый турист. Врач сказал, что он разделяет
+увлечение коллеги.</p>
+
+<p>Забавно, но у двоих из друзей в названиях их профессий и увлечений не
+встречается ни одна буква их имен.</p>
+
+<p>Определите, кто чем любит заниматься в свободное время и у кого какая
+профессия.</p>
+
+<p><b>Решение.</b> Здесь исходные данные разбиваются на тройки (имя —
+профессия — увлечение).</p>
+
+<p>Из слов Юры ясно, что он не увлекается туризмом и он не врач. Из слов врача
+следует, что он турист.</p>
+
+<table border="" cellspacing="1" cellpadding="5" width="80%" align="CENTER">
+<tbody><tr align="CENTER">
+  <td width="25%">Имя</td>
+  <td width="25%">Юра</td>
+  <td width="25%">&nbsp;</td>
+  <td width="25%">&nbsp;</td>
+</tr>
+<tr align="CENTER"> 
+  <td>Профессия</td>
+  <td>&nbsp;</td>
+  <td>врач</td>
+  <td>&nbsp;</td>
+</tr>
+<tr align="CENTER"> 
+  <td>Увлечение</td>
+  <td>&nbsp;</td>
+  <td>туризм</td>
+  <td>&nbsp;</td>
+</tr>
+</tbody></table>
+
+<p>Буква "а", присутствующая в слове "врач", указывает на то, что Влад тоже не
+врач, следовательно врач — Тимур. В его имени есть буквы "т" и "р",
+встречающиеся в слове "туризм", следовательно второй из друзей, в названиях
+профессии и увлечения которого не встречается ни одна буква его имени —
+Юра. Юра не юрист и не регбист, так как в его имени содержатся буквы "ю" и
+"р". Следовательно, окончательно имеем:</p>
+
+<table border="" cellspacing="1" cellpadding="5" width="80%" align="CENTER">
+<tbody><tr align="CENTER">
+  <td width="25%">Имя</td>
+  <td width="25%">Юра</td>
+  <td width="25%">Тимур</td>
+  <td width="25%">Влад</td>
+</tr>
+<tr align="CENTER">
+  <td>Профессия</td>
+  <td>физик</td>
+  <td>врач</td>
+  <td>юрист</td>
+</tr>
+<tr align="CENTER">
+  <td>Увлечение</td>
+  <td>бег</td>
+  <td>туризм</td>
+  <td>регби</td>
+</tr>
+</tbody></table>
+
+<p><b>Ответ.</b> Влад — юрист и регбист, Тимур — врач и турист, Юра
+— физик и бегун.
+
+</p><p><b><font color="#FF0000">Пример 5.</font></b> Три дочери писательницы Дорис Кей — Джуди, Айрис
+и Линда, тоже очень талантливы. Они приобрели известность в разных видах
+искусств — пении, балете и кино. Все они живут в разных городах,
+поэтому Дорис часто звонит им в Париж, Рим и Чикаго.
+
+</p><p>Известно, что:
+</p><ol> 
+  <li> Джуди живет не в Париже, а Линда — не в Риме;</li>
+  <li> парижанка не снимается в кино;</li>
+  <li> та, кто живет в Риме, певица;</li>
+  <li> Линда равнодушна к балету.</li>
+</ol>
+
+<p>Где живет Айрис, и какова ее профессия?
+
+</p><p><b>Решение.</b> Составим таблицу и отразим в ней условия 1 и 4, заполнив
+клетки цифрами 0 и 1 в зависимости от того, ложно или истинно соответствующее
+высказывание:</p>
+
+<table border="" cellspacing="1" cellpadding="5" width="90%" align="CENTER">
+<tbody><tr align="CENTER">
+  <td width="13%">Париж</td>
+  <td width="11%">Рим</td>
+  <td width="14%">Чикаго</td>
+  <td width="17%">&nbsp;</td>
+  <td width="16%">Пение</td>
+  <td width="15%">Балет</td>
+  <td width="14%">Кино</td>
+</tr>
+<tr align="CENTER">
+  <td>0</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>Джуди</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr align="CENTER">
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>Айрис</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr align="CENTER">
+  <td>&nbsp;</td>
+  <td>0</td>
+  <td>&nbsp;</td>
+  <td>Линда</td>
+  <td>&nbsp;</td>
+  <td>0</td>
+  <td>&nbsp;</td>
+</tr>
+</tbody></table>
+
+<p>Далее рассуждаем следующим образом. Так как Линда живет не в Риме, то,
+согласно условию 3, она не певица. В клетку, соответствующую строке "Линда"
+и столбцу "Пение", ставим 0.
+
+</p><p>Из таблицы сразу видно, что Линда киноактриса, а Джуди и Айрис не
+снимаются в кино.</p>
+
+<table border="" cellspacing="1" cellpadding="5" width="90%" align="CENTER">
+<tbody><tr align="CENTER">
+  <td width="13%">Париж</td>
+  <td width="11%">Рим</td>
+  <td width="14%">Чикаго</td>
+  <td width="17%">&nbsp;</td>
+  <td width="16%">Пение</td>
+  <td width="15%">Балет</td>
+  <td width="14%">Кино</td>
+
+</tr>
+<tr align="CENTER">
+  <td>0</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>Джуди</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>0</td>
+</tr>
+<tr align="CENTER">
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>Айрис</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>0</td>
+</tr>
+<tr align="CENTER">
+  <td>&nbsp;</td>
+  <td>0</td>
+  <td>&nbsp;</td>
+  <td>Линда</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+</tr>
+</tbody></table>
+
+<p>Согласно условию 2, парижанка не снимается в кино, следовательно, Линда
+живет не в Париже. Но она живет и не в Риме. Следовательно, Линда живет в
+Чикаго. Так как Линда и Джуди живут не в Париже, там живет Айрис. Джуди
+живет в Риме и, согласно условию 3, является певицей. А так как Линда
+киноактриса, то Айрис балерина.
+
+</p><p>В результате постепенного заполнения получаем следующую таблицу:</p>
+
+<table border="" cellspacing="1" cellpadding="5" width="90%" align="CENTER">
+<tbody><tr align="CENTER">
+  <td width="13%">Париж</td>
+  <td width="11%">Рим</td>
+  <td width="14%">Чикаго</td>
+  <td width="17%">&nbsp;</td>
+  <td width="16%">Пение</td>
+  <td width="15%">Балет</td>
+  <td width="14%">Кино</td>
+</tr>
+<tr align="CENTER">
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+  <td>Джуди</td>
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+</tr>
+<tr align="CENTER">
+  <td>1</td>
+  <td>0</td>
+  <td>0</td>
+  <td>Айрис</td>
+  <td>0</td>
+  <td>1</td>
+  <td>0</td>
+</tr>
+<tr align="CENTER">
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+  <td>Линда</td>
+  <td>0</td>
+  <td>0</td>
+  <td>1</td>
+</tr>
+</tbody></table>
+
+<p><b>Ответ.</b> Айрис балерина. Она живет в Париже.</p>
+
+<h3><font color="#993366">III. Решение логических задач с помощью рассуждений</font></h3>
+
+<p>Этим способом обычно решают несложные логические задачи.
+
+</p><p><b><font color="#FF0000">Пример 6.</font></b> Вадим, Сергей и Михаил изучают различные иностранные языки: 
+китайский, японский и арабский. На вопрос, какой язык изучает каждый из них, 
+один ответил: "Вадим изучает китайский, Сергей не изучает китайский, а Михаил 
+не изучает арабский". Впоследствии выяснилось, что в этом ответе только одно 
+утверждение верно, а два других ложны. Какой язык изучает каждый из молодых 
+людей?
+
+</p><p><b>Решение</b>. Имеется три утверждения:
+</p><ol>
+  <li>Вадим изучает китайский;</li>
+  <li>Сергей не изучает китайский;</li>
+  <li>Михаил не изучает арабский.</li>
+</ol>
+
+<p>Если верно первое утверждение, то верно и второе, так как юноши изучают
+разные языки. Это противоречит условию задачи, поэтому первое утверждение ложно.
+
+</p><p>Если верно второе утверждение, то первое и третье должны быть ложны.
+При этом получается, что никто не изучает китайский. Это противоречит
+условию, поэтому второе утверждение тоже ложно.
+
+</p><p>Остается считать верным третье утверждение, а первое и второе —
+ложными. Следовательно, Вадим не изучает китайский, китайский изучает Сергей.
+
+</p><p><b>Ответ:</b> Сергей изучает китайский язык, Михаил — японский,
+Вадим — арабский.
+
+</p><p><b><font color="#FF0000">Пример 7.</font></b> В поездке пятеро друзей — Антон, Борис, Вадим, Дима и
+Гриша, знакомились с попутчицей. Они предложили ей отгадать их фамилии, причём
+каждый из них высказал одно истинное и одно ложное утверждение:
+
+</p><p>Дима сказал: "Моя фамилия — Мишин, а фамилия Бориса — Хохлов".
+Антон сказал: "Мишин — это моя фамилия, а фамилия Вадима —
+Белкин". Борис сказал: "Фамилия Вадима — Тихонов, а моя фамилия —
+Мишин". Вадим сказал: "Моя фамилия — Белкин, а фамилия Гриши —
+Чехов". Гриша сказал: "Да, моя фамилия Чехов, а фамилия Антона — Тихонов".
+
+</p><p>Какую фамилию носит каждый из друзей?
+
+</p><p><b>Решение.</b> Обозначим высказывательную форму "юноша по имени А носит
+фамилию Б" как А<sub>Б</sub>, где буквы А и Б соответствуют начальным буквам
+имени и фамилии.
+
+</p><p>Зафиксируем высказывания каждого из друзей:
+</p><ol>
+  <li> Д<sub>М</sub> &nbsp; и &nbsp; Б<sub>Х</sub>;
+  </li><li> А<sub>М</sub> &nbsp; и &nbsp; В<sub>Б</sub>;
+  </li><li> В<sub>Т</sub> &nbsp; и &nbsp; Б<sub>М</sub>;
+  </li><li> В<sub>Б</sub> &nbsp; и &nbsp; Г<sub>Ч</sub>;
+  </li><li> Г<sub>Ч</sub> &nbsp; и &nbsp; А<sub>Т</sub>.
+</li></ol>
+
+<p>Допустим сначала, что истинно Д<sub>М</sub>. Но, если истинно Д<sub>М</sub>,
+то у Антона и у Бориса должны быть другие фамилии, значит А<sub>М</sub> 
+и Б<sub>М</sub> ложно. Но если А<sub>М</sub> и Б<sub>М</sub> ложны, то должны 
+быть истинны В<sub>Б</sub> и В<sub>Т</sub>, но В<sub>Б</sub> и В<sub>Т</sub> 
+одновременно истинными быть не могут.
+
+</p><p>Значит остается другой случай: истинно Б<sub>Х</sub>. Этот случай приводит
+к цепочке умозаключений: <br>&nbsp;
+<br>Б<sub>Х</sub> истинно
+<img src="./Tema_6_images/Tema6_imp.gif" style="border-width: 0px;"" width="24" height="15" align="TEXTTOP"> Б<sub>М</sub> ложно
+<img src="./Tema_6_images/Tema6_imp.gif" style="border-width: 0px;"" width="24" height="15" align="TEXTTOP"> В<sub>Т</sub> истинно
+<img src="./Tema_6_images/Tema6_imp.gif" style="border-width: 0px;"" width="24" height="15" align="TEXTTOP"> А<sub>Т</sub> ложно
+<img src="./Tema_6_images/Tema6_imp.gif" style="border-width: 0px;"" width="24" height="15" align="TEXTTOP"> Г<sub>Ч</sub> истинно
+<img src="./Tema_6_images/Tema6_imp.gif" style="border-width: 0px;"" width="24" height="15" align="TEXTTOP"> В<sub>Б</sub> ложно
+<img src="./Tema_6_images/Tema6_imp.gif" style="border-width: 0px;"" width="24" height="15" align="TEXTTOP"> А<sub>М</sub> истинно.
+
+</p><p><b>Ответ:</b> Борис — Хохлов, Вадим — Тихонов, Гриша — Чехов,
+Антон — Мишин, Дима — Белкин.
+
+</p><p><b><font color="#FF0000">Пример 8.</font></b>Министры иностранных дел России, США и Китая обсудили за
+закрытыми дверями проекты соглашения о полном разоружении, представленные
+каждой из стран. Отвечая затем на вопрос журналистов: "Чей именно проект был
+принят?", министры дали такие ответы:
+
+</p><dir><dir>
+  Россия — "Проект не наш, проект не США";<br>
+  США — "Проект не России, проект Китая";<br>
+  Китай — "Проект не наш, проект России".
+</dir></dir>
+
+<p>Один из них (самый откровенный) оба раза говорил правду; второй (самый
+скрытный) оба раза говорил неправду, третий (осторожный) один раз сказал
+правду, а другой раз — неправду.
+
+</p><p>Определите, представителями каких стран являются откровенный, скрытный
+и осторожный министры.
+
+</p><p><b>Решение.</b> Для удобства записи пронумеруем высказывания дипломатов:
+</p><dir><dir> 
+  Россия — "Проект не наш" &nbsp; (1), &nbsp; "Проект не США" &nbsp; (2);<br>
+  США — &nbsp; "Проект не России" &nbsp; (3), &nbsp; "Проект Китая" &nbsp; (4);<br>
+  Китай — &nbsp; "Проект не наш" &nbsp; (5), &nbsp; "Проект России" &nbsp; (6).
+</dir></dir>
+
+<p>Узнаем, кто из министров самый откровенный.
+
+</p><p>Если это российский министр, то из справедливости (1) и (2) следует,
+что победил китайский проект. Но тогда оба утверждения министра США тоже
+справедливы, чего не может быть по условию.
+
+</p><p>Если самый откровенный — министр США, то тогда вновь получаем, что
+победил китайский проект, значит оба утверждения российского министра тоже
+верны, чего не может быть по условию.
+
+</p><p>Получается, что наиболее откровенным был китайский министр. Действительно, 
+из того, что (5) и (6) справедливы, cледует, что победил российский проект. 
+А тогда получается, что из двух утверждений российского министра первое ложно, 
+а второе верно. Оба же утверждения министра США неверны.
+
+</p><p><b>Ответ:</b> Откровеннее был китайский министр, осторожнее —
+российский, скрытнее — министр США.</p>
+<br> &nbsp;
+
+
+
+<p style="margin: 5pt 77.65pt 5pt 19pt;"><span style="font-family: Arial,sans-serif; color: red;"><span style="font-size: 18px;">9. </span></span> <span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Решите задачу с помощью таблицы
+истинности (</span></span><span style="font-family: Arial,sans-serif; color: red;"><span style="font-size: 20px;">ДОПОЛНИТЕЛЬНОЕ, НА 5 БАЛЛОВ</span></span><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">)</span></span></p>
+
+<p><b>&nbsp;</b></p>
+
+<p class="MsoNormal" style="text-indent: 26.1pt; line-height: 150%;"><span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">В нарушении правил обмена валюты
+подозреваются четыре работника банка &mdash; А, В, С и D. Известно, что:</span></span></p>
+
+<p class="MsoListParagraphCxSpFirst" style="margin-left: 62.1pt; text-indent: -18pt; line-height: 150%;"><span style="line-height: 150%; font-family: Arial,sans-serif;"><span style="font-size: 18px;">1.&nbsp;</span></span>
+<span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Если А нарушил, то и В нарушил
+правила обмена валюты.</span></span></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 62.1pt; text-indent: -18pt; line-height: 150%;"><span style="line-height: 150%; font-family: Arial,sans-serif;"><span style="font-size: 18px;">2.&nbsp;</span></span>
+<span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Если В нарушил, то и С нарушил или А не нарушал.</span></span></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 62.1pt; text-indent: -18pt; line-height: 150%;"><span style="line-height: 150%; font-family: Arial,sans-serif;"><span style="font-size: 18px;">3.&nbsp;</span></span>
+<span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Если D не нарушил, то А нарушил, а
+С не нарушал.</span></span></p>
+
+<p class="MsoListParagraphCxSpLast" style="margin-left: 62.1pt; text-indent: -18pt; line-height: 150%;"><span style="line-height: 150%; font-family: Arial,sans-serif;"><span style="font-size: 18px;">4.</span></span>
+<span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Если D нарушил, то и А нарушил.</span></span></p>
+
+<p class="MsoNormal" style="text-indent: 26.1pt; line-height: 150%;"><span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Кто из подозреваемых нарушил правила обмена валюты? Решите задачу с помощью логических операций.</span></span></p>
+
+<p style="margin-right: 77.65pt;"><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Решение:</span></span></p>
+
+<span style="font-size: 18px;"></span>
+<p class="MsoListParagraphCxSpFirst" style="margin-left: 62.1pt; text-indent: -18pt; line-height: 150%;"><span style="line-height: 150%; font-family: Arial,sans-serif;"><span style="font-size: 18px;">1.&nbsp;</span></span>
+<span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">А =&gt; B;</span></span></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 62.1pt; text-indent: -18pt; line-height: 150%;"><span style="line-height: 150%; font-family: Arial,sans-serif;"><span style="font-size: 18px;">2.&nbsp;</span></span>
+<span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">B =&gt; C V &not;А;</span></span></p>
+
+<p class="MsoListParagraphCxSpMiddle" style="margin-left: 62.1pt; text-indent: -18pt; line-height: 150%;"><span style="line-height: 150%; font-family: Arial,sans-serif;"><span style="font-size: 18px;">3.&nbsp;</span></span>
+<span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">&not;D =&gt; A &Lambda;
+&not;C;</span></span></p>
+
+<p class="MsoListParagraphCxSpLast" style="margin-left: 62.1pt; text-indent: -18pt; line-height: 150%;"><span style="line-height: 150%; font-family: Arial,sans-serif;"><span style="font-size: 18px;">4.</span></span>
+<span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">D =&gt; A</span></span></p>
+
+<p class="MsoNormal" style="text-indent: 26.1pt; line-height: 115%;"><span style="line-height: 115%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Произведение всех высказываний&nbsp; =1.</span></span></p>
+
+<p class="MsoNormal" style="text-indent: 26.1pt; line-height: 115%;"><span style="line-height: 115%; font-family: Arial,sans-serif; color: black;" xml:lang="EN-US" lang="EN-US"><span style="font-size: 18px;">(</span></span>
+<span style="line-height: 115%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">А</span></span> <span style="line-height: 115%; font-family: Arial,sans-serif; color: black;" xml:lang="EN-US" lang="EN-US"><span style="font-size: 18px;">=&gt; B)</span></span><span style="line-height: 115%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">&Lambda;</span></span><span style="line-height: 115%; font-family: Arial,sans-serif; color: black;" xml:lang="EN-US" lang="EN-US"><span style="font-size: 18px;">(B =&gt; C V &not;</span></span><span style="line-height: 115%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">А</span></span><span style="line-height: 115%; font-family: Arial,sans-serif; color: black;" xml:lang="EN-US" lang="EN-US"><span style="font-size: 18px;">)</span></span><span style="line-height: 115%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">&Lambda;</span></span><span style="line-height: 115%; font-family: Arial,sans-serif; color: black;" xml:lang="EN-US" lang="EN-US"><span style="font-size: 18px;">(&not;D =&gt; A</span></span>
+<span style="line-height: 115%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">&Lambda;</span></span>
+<span style="line-height: 115%; font-family: Arial,sans-serif; color: black;" xml:lang="EN-US" lang="EN-US"><span style="font-size: 18px;">&not;C)</span></span><span style="line-height: 115%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">&Lambda;</span></span>
+<span style="line-height: 115%; font-family: Arial,sans-serif; color: black;" xml:lang="EN-US" lang="EN-US"><span style="font-size: 18px;">(D =&gt; A) = 1</span></span></p>
+
+<p class="MsoNormal" style="text-indent: 26.1pt; line-height: 115%;"><span style="line-height: 115%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">а выражение справедливо
+тогда и только тогда, когда</span></span></p>
+
+<p class="MsoNormal" style="text-indent: 26.1pt; line-height: 115%;"><span style="line-height: 115%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">А</span></span>
+<span style="line-height: 115%; font-family: Arial,sans-serif; color: black;" xml:lang="EN-US" lang="EN-US"><span style="font-size: 18px;">=&gt; B =
+1; B =&gt; C V &not;</span></span><span style="line-height: 115%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">А</span></span> <span style="line-height: 115%; font-family: Arial,sans-serif; color: black;" xml:lang="EN-US" lang="EN-US"><span style="font-size: 18px;">= 1;;D
+=&gt; A</span></span> <span style="line-height: 115%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">&Lambda;</span></span>
+<span style="line-height: 115%; font-family: Arial,sans-serif; color: black;" xml:lang="EN-US" lang="EN-US"><span style="font-size: 18px;">&not;C =
+1;&nbsp;&nbsp;&nbsp; D =&gt; A = 1;</span></span></p>
+
+<p class="MsoNormal" style="text-indent: 26.1pt; line-height: 150%;"><span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Составим таблицу истинности для этого выражения:</span></span></p>
+
+<p class="MsoNormal" style="text-indent: 0pt; line-height: 150%;"><b><img style="width: 664px; height: 358px;" alt="" src="../images/tema6_1_tabl_DZ.jpg"><span style="line-height: 150%; font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;"><br>
+
+</span></span></b></p>
+
+
+<p style="margin-right: 77.65pt;"><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Ответ:&nbsp;</span></span>
+<span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Ваш ответ</span></span></p>
+
+
+
+
+
+
+
+<p style="text-indent: 0pt; text-align: center;"><b><span style="font-size: 24pt; font-family: Arial,sans-serif; color: rgb(204, 51, 204);"><span style="color: rgb(255, 153, 0);">Проверочная работа</span> <span style="color: rgb(0, 153, 0);"> решить ЛОГИЧЕСКУЮ ЗАДАЧУ</span></span></b>табличным способом</p>
+
+
+
+
+        
+        
+<p><span style="font-size: 22pt; font-family: Arial,sans-serif; color: red;">!!!</span> <span style="font-size: 18pt; font-family: Arial,sans-serif; font-style: italic; color: rgb(51, 51, 255);">Номер вашего варианта соответствует номеру вашего компьютера</span></p>
+
+
+
+
+        
+        
+<p><b><span style="font-size: 18pt; font-family: Arial,sans-serif;"><span style="color: rgb(255, 26, 26);"><br>
+
+
+</span></span><span style="font-family: Arial,sans-serif;"><span style="font-size: 20px;"><a href="./tema_6/%d0%9b%d0%be%d0%b3%d0%b8%d0%ba%d0%b0%20%28%d1%82%d1%80%d0%b5%d0%bd%d0%b0%d0%b6%d0%b5%d1%80%29/Logic.exe"><span style="font-size: 22px; cursor: text;"><span style="font-weight: normal;"></span></span></a></span></span></b></p>
+
+
+
+
+
+<p><b>1 вариант.</b> Три девочки — Роза, Маргарита и Анюта представили на конкурс 
+цветоводов корзины выращенных ими роз, маргариток и анютиных глазок. Девочка, 
+вырастившая маргаритки, обратила внимание Розы на то, что ни у одной из девочек 
+имя не совпадает с названием любимых цветов.
+<br>Какие цветы вырастила каждая из девочек?
+<!-- <br><b>[ <a href="http://book.kbsu.ru/theory/chapter5/answers/answers.html#023">Ответ</a> ]</b></p> -->
+
+<p><b>2 вариант.</b> Виновник ночного дорожно-транспортного происшествия скрылся с 
+места аварии.
+<br>Первый из опрошенных свидетелей сказал работникам ГАИ, что это были "Жигули",
+первая цифра номера машины — единица.
+<br>Второй свидетель сказал, что машина была марки "Москвич", а номер начинался 
+с семёрки.
+<br>Третий свидетель заявил, что машина была иностранная, номер начинался не с 
+единицы.
+<br>При дальнейшем расследовании выяснилось, что каждый из свидетелей правильно 
+указал либо только марку машины, либо только первую цифру номера.
+<br>Какой марки была машина и с какой цифры начинался номер?
+<!-- <br><b>[ <a href="http://book.kbsu.ru/theory/chapter5/answers/answers.html#024">Ответ</a> ]</b></p> -->
+
+<p><b>3 вариант.</b> Пятеро одноклассников: Ирена, Тимур, Камилла, Эльдар и Залим
+стали победителями олимпиад школьников по физике, математике, информатике,
+литературе и географии.
+<br>Известно, что:
+</p><ul>
+  <li>победитель олимпиады по информатике учит Ирену и Тимура работе на компьютере;</li>
+  <li>Камилла и Эльдар тоже заинтересовались информатикой;</li>
+  <li>Тимур всегда побаивался физики;</li>
+  <li>Камилла, Тимур и победитель олимпиады по литературе занимаются плаванием;</li>
+  <li>Тимур и Камилла поздравили победителя олимпиады по математике;</li>
+  <li>Ирена cожалеет о том, что у нее остается мало времени на литературу.</li>
+</ul>
+Победителем какой олимпиады стал каждый из этих ребят?
+<!-- <br><b>[ <a href="http://book.kbsu.ru/theory/chapter5/answers/answers.html#025">Ответ</a> ]</b><p></p> -->
+
+<p><b>4 варианат </b> Ирена любит мороженое с фруктами. В кафе был выбор из
+таких вариантов:
+</p><ul>
+  <li>пломбир с орехами;</li>
+  <li>пломбир с бананами;</li>
+  <li>пломбир с черникой;</li>
+  <li>шоколадное с черникой;</li>
+  <li>шоколадное с клубникой.</li>
+</ul>
+В четырёх вариантах Ирене не нравились или тип мороженого, или наполнитель, 
+а в одном варианте ей не нравились ни мороженое, ни наполнитель. Она попросила 
+приготовить из имеющихся продуктов порцию по своему вкусу.
+<br>Какое же мороженое и с какими фруктами любит Ирена?
+<!-- <br><b>[ <a href="http://book.kbsu.ru/theory/chapter5/answers/answers.html#026">Ответ</a> ]</b><p></p> -->
+
+<p><b>5 варианат</b> На очередном этапе автогонок "Формула 1" первые четыре места заняли 
+Шумахер, Алези, Хилл и Кулхардт. Опоздавший к месту награждения телерепортёр 
+успел заснять пилотов, занявших второе и третье места, которые поливали друг 
+друга шампанским. В это время Шумахер с четвёртым гонщиком пожимали друг другу 
+руки. Далее в кадр попал мокрый Хилл, поздравляющий пилота, занявшего второе 
+место. Напоследок оператор снял сцену, в которой Шумахер и Кулхардт пытались 
+втащить на пьедестал почёта пилота, занявшего четвёртое место.
+<br>Просматривая отснятый материал, режиссёр спортивного выпуска быстро разобрался, 
+кто из пилотов какое место занял. Он знал, что, в соответствии с церемонией 
+награждения победителей гонок, пилоты, занявшие первые три места, поливают друг 
+друга шампанским из огромных бутылок знаменитой фирмы — спонсора соревнований.
+<br>Какое же место занял каждый пилот?
+<!-- <br><b>[ <a href="http://book.kbsu.ru/theory/chapter5/answers/answers.html#027">Ответ</a> ]</b></p> -->
+
+<p><b>6 варинта.</b> В некотором царстве-государстве повадился Змей Горыныч разбойничать. 
+Послал царь четырёх богатырей погубить Змея, а награду за то обещал великую. 
+Вернулись богатыри с победой и спрашивает их царь: "Так кто же из вас главный 
+победитель, кому достанется царёва дочь и полцарства?"
+<br>Засмущались добры молодцы и ответы дали туманные:
+<br>Сказал Илья Муромец: "Это все Алеша Попович, царь-батюшка".
+<br>Алеша Попович возразил: "То был Микула Селянинович".
+<br>Микула Селянинович: "Не прав Алеша, не я это".
+<br>Добрыня Никитич: "И не я, батюшка".
+<br>Подвернулась тут баба Яга и говорит царю: "А прав то лишь один из
+богатырей, видела я всю битву своими глазами".
+<br>Кто же из богатырей победил Змея Горыныча?
+<!-- <br><b>[ <a href="http://book.kbsu.ru/theory/chapter5/answers/answers.html#028">Ответ</a> ]</b></p> -->
+
+<p><b>7 вариант</b> При составлении расписания на пятницу были высказаны пожелания, 
+чтобы информатика была первым или вторым уроком, физика — первым или
+третьим, история — вторым или третьим.
+<br>Можно ли удовлетворить одновременно все высказанные пожелания?
+<!-- <br><b>[ <a href="http://book.kbsu.ru/theory/chapter5/answers/answers.html#029">Ответ</a> ]</b></p> -->
+
+<p><b>8 вариант </b> Обсуждая конструкцию нового трёхмоторного самолёта, трое
+конструкторов поочередно высказали следующие предположения:
+<br>1) при отказе второго двигателя надо приземляться, а при отказе третьего
+можно продолжать полёт;
+<br>2) при отказе первого двигателя лететь можно, или при отказе третьего
+двигателя лететь нельзя;
+<br>3) при отказе третьего двигателя лететь можно, но при отказе хотя бы
+одного из остальных надо садиться.
+<br>Лётные испытания подтвердили правоту каждого из конструкторов. Определите,
+при отказе какого из двигателей нельзя продолжать полёт.
+<!-- <br><b>[ <a href="http://book.kbsu.ru/theory/chapter5/answers/answers.html#030">Ответ</a> ]</b></p> -->
+
+<p><b>8 вариант</b> В соревнованиях по плаванию участвовали Андрей, Виктор, Саша
+и Дима. Их друзья высказали предположения о возможных победителях:
+<br>1) первым будет Саша, Виктор будет вторым;
+<br>2) вторым будет Саша, Дима будет третьим;
+<br>3) Андрей будет вторым, Дима будет четвёртым.
+<br>По окончании соревнований оказалось, что в каждом из предположений
+только одно из высказываний истинно, другое ложно.
+<br>Какое место на соревнованиях занял каждый из юношей, если все они
+заняли разные места.
+<!-- <br><b>[ <a href="http://book.kbsu.ru/theory/chapter5/answers/answers.html#031">Ответ</a> ]</b></p> -->
+
+<p><b>9 вариант.</b> Для длительной международной экспедиции на околоземной космической 
+станции надо из восьми претендентов отобрать шесть специалистов: по аэронавтике, 
+космонавигации, биомеханике, энергетике, медицине и астрофизике. Условия полёта 
+не позволяют совмещать работы по разным специальностям, хотя некоторые претенденты 
+владеют двумя специальностями. Обязанности аэронавта могут выполнять Геррети 
+и Нам; космонавигатора — Кларк и Фриш; биомеханика — Фриш и Нам; энергетика 
+— Депардье и Леонов; врача — Депардье и Хорхес; астрофизика — 
+Волков и Леонов.
+<br>По особенностям психологической совместимости врачи рекомендуют совместные 
+полеты Фриша и Кларка, а также Леонова с Хорхесом и Депардье. Напротив, нежелательно, 
+чтобы Депардье оказался в одной экспедиции с Намом, а Волков — с Кларком.
+<br>Кого следует включить в состав экспедиции?
+<!-- <br><b>[ <a href=123456789">Ответ</a> ]</b></p> -->
+
+
+<p><b>10 вариант.</b> Света, Марина, Андрей, Кирилл и Юра держат домашних животных. У каждого либо кошка, либо собака, либо попугай.
+Девочки не держат собак, а мальчики попугаев. У Светы нет кошки. У Светы и Марины разные животные. У Марины и Андрея – одинаковые животные. У Андрея и Кирилла – разные животные. У Кирилла и Юры – одинаковые. 
+<br>
+<br>Какие животные у каждого.?
+</p>
+  
+  <p><b>11 вариант.</b> Три товарища - Артур, Дима и Володя - пошли в лес за грибами, причём каждый из них со своей сестрой. Девочек звали Галя, Лена, Оля. Мальчики быстро наполнили свои корзинки и стали помогать девочкам. Определите пары брат-сестра, если оказалось, что ни один из мальчиков не помогал своей сестре, и что Дима несколько грибов положил в корзину Гали, а Артур в корзины Гали и Оли.<br>
+<br>
+</p>
+  
+ 
+ <p><b>12 вариант.</b> На новогодний праздник три друга - Евгений, Николай, Алексей, выбрали себе костюмы трех богатырей: Ильи Муромца, Алеши Поповича, Добрыни Никитича.<br>
+
+Известно, что: Евгений самый высокий. Выбравший костюм Добрыни меньше ростом, чем выбравший костюм Ильи. Алексею не подошел костюм Добрыни. Ни у одного из друзей не совпадают имена с именем богатырей, выбранных костюмом. Какой костюм выбрал каждый из друзей?
+<br>
+
+  </p>
+  
+<p><b>13 вариант.</b> Вадим, Сергей и Михаил изучают различные иностранные языки: китайский, японский и арабский. На вопрос, какой язык изучает каждый из них, один ответил: "Вадим изучает китайский, Сергей не изучает китайский, а Михаил не изучает арабский". Впоследствии выяснилось, что в этом ответе только одно утверждение верно, а два других ложны. Какой язык изучает каждый из молодых людей? 
+</p>
+<p><b>14 вариант.</b> 
+
+В поездке пятеро друзей — Антон, Борис, Вадим, Дима и Гриша, знакомились с попутчицей. Они предложили ей отгадать их фамилии, причём каждый из них высказал одно истинное и одно ложное утверждение: 
+Дима сказал: "Моя фамилия — Мишин, а фамилия Бориса — Хохлов". Антон сказал: "Мишин — это моя фамилия, а фамилия Вадима — Белкин". Борис сказал: "Фамилия Вадима — Тихонов, а моя фамилия — Мишин". Вадим сказал: "Моя фамилия — Белкин, а фамилия Гриши — Чехов". Гриша сказал: "Да, моя фамилия Чехов, а фамилия Антона — Тихонов". 
+Какую фамилию носит каждый из друзей? 
+
+</p>
+
+<p><b>15 вариант.</b> 
+Три грибника, рассматривая найденный гриб, высказали свои предположения. Первый грибник сказал: "Не верно, что, если это не опенок, то этот гриб съедобный". Второй грибник также был осторожен и сказал: "Не верно, что этот гриб или ядовитый, или опенок, или не сыроежка". Третий грибник заявил: "Это гриб не ядовитый, и я отрицаю, что если это сыроежка, то она съедобна". В итоге оказалось, что все три грибника были правы и их суждения оказались истинными. Какой гриб нашли грибники?
+
+
+</p>
+
+
+<p><b>16 вариант.</b> 
+
+Синоптик предсказал погоду следующим образом. Если будет южный ветер или не будет северного ветра, то будет дождливо и не будет холодно. Если ветра южного не будет, то не будет пасмурно или пойдет дождь. Если все же будет южный ветер, то будет пасмурно, но дождя не будет. Если не будет северного ветра или </p>
+Если не будет северного ветра или не будет холодно, то задует южный ветер и будет пасмурно. Какую погоду предсказал синоптик? 
+ </div>
+
+</div>
+
+
+
+  </div>
+
+
+
+</ul>
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div class="art-footer">
+<div class="art-footer-body">
+<div class="art-footer-center">
+<div class="art-footer-wrapper">
+<div class="art-footer-text">
+<p><a href="#">Вверх</a></p>
+
+
+
+<p><span style="color: rgb(11, 36, 50); font-family: Arial,Helvetica,sans-serif;">&copy; Е.А. Гордеева</span></p>
+
+
+
+<p><span style="color: rgb(11, 36, 50); font-family: Arial,Helvetica,sans-serif;">2019</span></p>
+
+
+
+<div class="cleared"></div>
+
+
+
+<p class="art-page-footer"></p>
+
+
+
+</div>
+</div>
+</div>
+<div class="cleared"></div>
+</div>
+</div>
+
+
+
+<div class="cleared"></div>
+
+  
+<div style="height: 30px;"></div>
+<div id="topNubex"><img src="../images/topNubex.jpg" height="30" width="71"></div>
+
+
+
+
+</body>
+</html>

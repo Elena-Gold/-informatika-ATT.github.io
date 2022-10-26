@@ -1,0 +1,2445 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xml:lang="en" dir="ltr" lang="en-US">
+<head>
+
+
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  
+
+
+  
+  <title>Тема 6.4</title>
+  <link rel="stylesheet" href="../style.css" type="text/css" media="screen">
+<!--[if IE 6]><link rel="stylesheet" href="../style.ie6.css" type="text/css" media="screen" /><![endif]--><!--[if IE 7]><link rel="stylesheet" href="../style.ie7.css" type="text/css" media="screen" /><![endif]-->
+
+
+  
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+
+
+  
+  <script type="text/javascript" src="../jquery.js"></script>
+  
+  <script type="text/javascript" src="../script.js"></script>
+  
+  <style type="text/css">
+
+  </style>
+   <meta charset="utf-8">
+  <title>Кнопка "Вверх" при помощи JavaScript - "Нубекс"</title>
+  
+  <style>
+  #topNubex {
+	position: fixed;
+	right: 45px;
+	bottom: 45px;
+   }
+  </style>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+  $(window).scroll(function() {
+  if($(this).scrollTop() != 0) {
+  $('#topNubex').fadeIn();
+  } else {
+  $('#topNubex').fadeOut();
+  }
+  });
+  $('#topNubex').click(function() {
+  $('body,html').animate({scrollTop:0},700);
+  });
+  });
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</head>
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+<div id="art-main">
+<div class="cleared reset-box"></div>
+
+
+
+
+
+<div class="art-header">
+<div class="art-header-position">
+<div class="art-header-wrapper">
+<div class="cleared reset-box"></div>
+
+
+
+
+
+<div class="art-header-inner">
+<div class="art-logo">
+<h1 class="art-logo-name"><a href="../index.html"> </a></h1>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="cleared reset-box"></div>
+
+<div class="art-bar art-nav">
+<div class="art-nav-outer">
+<div class="art-nav-wrapper">
+<div class="art-nav-inner">
+<ul class="art-hmenu">
+
+
+
+
+
+  	<li> <a href="../%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F.html">Главная</a>  </li>
+	<li> <a href="../tema_1.html">Тема 1</a> </li>
+	<li> <a href="../tema_2.html">Тема 2</a> </li>
+	<li> <a href="../tema_3.html">Тема 3</a>
+    <ul>
+			<li> <a href="../tema_3/tema_3_1.html">Графический интерфейс ОС Windows</a> </li>
+			<li> <a href="../tema_3/tema_3_2.html">Работа с файловым менеджером Проводник</a> </li>
+    </ul>
+  </li>
+    <li> <a href="../tema_4.html">Тема 4</a>
+    <ul>
+     		  <li> <a href="../tema_4/tema_4_1_1.html">Решение задач по теме системы счисления</a></li>
+			  <li> <a href="../tema_4/tema_4_2.html">Действия с числами в позиционных системах счисления</a></li>
+              <li> <a href="../tema_4/tema_4_3.html">Формы представления чисел</a></li>
+              <li> <a href="../tema_4/tema_4_4.html">Представление и измерение информации</a></li>
+			  <li> <a href="../tema_4/tema_4_5.html">Представление и измерение текстовой, графической и звуковой информации</a></li>
+			  <li> <a href="../tema_4/tema_4_6.html" >Представление и измерение информации. Кодирование звуковой информации</a></li>
+			  <li> <a href="../tema_4/tema_4_7.html">Решение задач по теме адресация в сети Internet</a></li>
+			  <li> <a href="../tema_4/tema_4_8.html">Решение задач по теории игр, выигрышная стратегия</a></li>
+    </ul>
+  </li>
+  <li> <a href="../tema_5.html">Тема 5</a> </li>
+  <li> <a href="../tema_6.html" class="active">Тема 6</a>
+   
+    <ul>
+
+      <li> <a href="../tema_6/tema_6_1.html">Логические операции</a> </li>
+
+			<li> <a href="../tema_6/tema_6_2.html">Построение таблиц истинности и логических схем</a> </li>
+
+			<li> <a href="../tema_6/tema_6_3.html">Решение задач табличным способом</a> </li>
+
+			<li> <a href="../tema_6/tema_6_4.html" class="active">Круги Эйлера-Венца. Решение задач.</a> </li>
+
+	     <li> <a href="../tema_6/tema_6_5.html">Основные законы Алгебры логики</a> </li>
+      <li> <a href="../tema_6/tema_6_6.html" class="active">Решение задач</a> </li>
+   	  <li> <a href="../tema_6/tema_6_7.html">Тригеры и сумматоры</a> </li>
+			 </ul>
+		</li>
+		<li><a href="../tema_7.html">Тема 7</a>
+			 <ul>
+						<li> <a href="../tema_7/tema_7_1.html"> Виды и типы компьютеров</a>
+								<ul>
+									 <li> <a href="../tema_7/var7_1.html">Вариант 1</a> </li>
+									 <li> <a href="../tema_7/var7_2.html">Вариант 2</a> </li>
+									 <li> <a href="../tema_7/var7_3.html">Вариант 3</a> </li>
+									 <li> <a href="../tema_7/var7_4.html">Вариант 4</a> </li>
+									 <li> <a href="../tema_7/var7_5.html">Вариант 5</a> </li>
+								</ul>
+						</li>
+						<li> <a href="../tema_7/tema_7_2.html">Внутренние устройства компьютера </a></li>
+						<li> <a href="../tema_7/tema_7_3.html">Периферийные устройства компьютера</a> </li>
+			 </ul>
+		</li>
+		<li> <a href="../tema_8.html">Тема 8</a>
+			 <ul>
+						<li> <a href="../tema_8/tema_8_1.html">Алгоритмы и способы их описания</a> </li>
+						<li> <a href="../tema_8/tema_8_2.html">Компьютерные модели различных процессов</a>
+								<ul>
+									 <li> <a href="../tema_8/var1.html">Вариант 1</a> </li>
+									 <li> <a href="../tema_8/var2.html">Вариант 2</a> </li>
+									 <li> <a href="../tema_8/var3.html">Вариант 3</a> </li>
+									 <li> <a href="../tema_8/var4.html">Вариант 4</a> </li>
+									 <li> <a href="../tema_8/var5.html">Вариант 5</a> </li>
+								</ul>
+						</li>
+						<li> <a href="../tema_8/tema_8_3.html">Реализация различных видов алгоритмов</a> </li>
+						<li> <a href="../tema_8/tema_8_4.html">Теория построения графов</a> </li>
+						<li> <a href="../tema_8/tema_8_5.html">Решение задач</a> </li>
+			 </ul>
+		</li>
+		<li> <a href="../tema_9.html">Тема 9</a> </li>
+		<li> <a href="../control.html">Контроль</a>
+  </li>
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+<div class="cleared reset-box"></div>
+
+
+
+
+
+<div class="art-box art-sheet">
+<div class="art-box-body art-sheet-body">
+<div class="art-layout-wrapper">
+<div class="art-content-layout">
+<div class="art-content-layout-row">
+<div class="art-layout-cell art-content">
+<div class="art-box art-post">
+<div class="art-box-body art-post-body">
+<div class="art-post-inner art-article">
+<div class="art-postcontent">
+<div class="art-content-layout">
+<div class="art-content-layout-row">
+<div class="art-layout-cell layout-item-0" style="width: 970px;">
+
+
+<p style="text-align: left;"><span style="font-family: Arial;"><span style="font-size: 28px;"><span style="font-weight: bold; color: rgb(0, 0, 0);">Круги Эйлера - Венца</span></span></span></p>
+
+
+
+
+
+<p style="text-align: left;"><span style="color: rgb(0, 0, 0); font-family: Arial; font-weight: bold;"><br>
+
+
+
+
+
+</span></p>
+
+ 
+  
+<p style="text-align: left;"><span style="color: rgb(0, 0, 0); font-family: Arial; font-weight: bold;"><br>
+
+
+
+
+  </span></p>
+
+
+
+
+
+  
+  
+  
+<p class="MsoNormal"><b><span style="font-family: Arial,sans-serif; color: rgb(0, 0, 0);"><span style="font-size: 18px;">Цели</span></span></b></p>
+
+
+
+
+
+  
+  
+  
+<ul type="disc">
+
+
+
+
+
+    <li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif; font-size: 15px;">Дать
+понятие кругам Эйлера Венца</span></li>
+
+
+
+
+
+    <li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif; font-size: 15px;">Решение логических задач с помощью кругов Эйлера<br>
+
+
+
+
+
+      </span></li>
+
+
+
+  
+  
+  
+</ul>
+
+
+
+
+
+  
+  
+  
+<p class="MsoNormal"><span style="color: rgb(0, 0, 0); font-family: Arial,sans-serif;"><span style="font-size: 15px;">Инструменты:</span></span></p>
+
+
+
+
+
+  
+  
+  
+<ul type="disc">
+
+
+
+
+
+    <li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif;"><span style="font-size: 15px;">ОС Windows</span></span></li>
+
+
+
+    <li class="MsoNormal" style="color: black;"><span style="font-family: Arial,sans-serif;"><span style="font-size: 15px;">Браузер</span></span></li>
+
+
+
+  
+  
+</ul>
+
+
+
+
+
+  
+  
+  
+<p></p>
+
+
+
+
+
+  
+  
+ 
+
+  
+  
+  
+<p>   </p>
+
+
+
+
+
+<div class="art-postcontent"><b><span style="font-family: Arial; color: rgb(0, 0, 0);"><span style="font-size: 28px;">Великий математик
+Леонард Эйлер и его вклад в науку</span>
+<p></p>
+
+
+
+</span></b></div>
+
+
+
+<b> </b>
+<p><b><img alt="" src="../images/Tema_6_4_Eiler.jpg" style="border-width: 0px;"  align="left" height="284" width="219"><br>
+
+</b></p>
+
+
+
+<p style="margin: 0cm 0cm 15pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Выдающийся ученый
+Леонард Эйлер (Euler) (годы жизни 1707&ndash;1783 г.г.), по происхождению швейцарец,
+однако основную часть своей жизни работал в России.</span></p>
+
+
+
+
+
+<p style="margin: 0cm 0cm 15pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Почти половину своей
+жизни Эйлер прожил в России. Неоспорима его заслуга в становлении российской
+науки. В 1726 году Петр I пригласил Эйлера в Петербургскую Академию наук и в
+1727 году ученый переехал в Россию. В период с 1731 по 1741, а также с 1766 года
+был академиком Петербургской академии наук. В период с 1741 по 1766 годы ученый
+работал в Берлине, при этом он оставался почётным членом Петербургской
+Академии. Эйлер быстро выучил русский язык и часть его работ, в частности, ряд
+учебников написаны им на русском языке. </span></p>
+
+
+
+
+
+<p style="margin: 0cm 0cm 15pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Эйлер был не только
+выдающимся математиком. Всего Эйлер написал более 800 работ. Сферы его
+интересов &ndash; это математический анализ, дифференциальная геометрия, теория
+чисел, приближенные вычисления. Кроме этого, Эйлер публиковал работы по небесной
+механике, математической физике, оптике, баллистике, кораблестроению, а также
+теории музыки и других дисциплин. </span></p>
+
+
+
+
+
+<p style="margin: 0cm 0cm 15pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Человек, достаточно
+серьезно изучающий математику, понимает, что математика &ndash; это не определенная
+область науки, состоящая из чисел и вычислений. Это образ мышления,
+универсальный инструмент, который позволяет решать задачи не только в точных
+науках, но даже в искусстве, биологии, медицине, химии, изучении языков. </span></p>
+
+
+
+
+
+<p style="margin: 0cm 0cm 15pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Что касается
+математики, то XVIII век заслуженно считается &laquo;веком Эйлера&raquo;&nbsp;. </span></p>
+
+
+
+
+
+<p style="margin: 0cm 0cm 15pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Основная заслуга
+Эйлера &ndash; это систематизация знаний в области
+математики и построение единой системы. Если до Эйлера, исследования в области
+математики были достаточно разрозненны и не всегда согласовались друг с другом,
+то Эйлер собрал отдельные части (алгебра, геометрия, тригонометрия и другие
+математические дисциплины) в единую систему. Кроме этого, Эйлер фактически
+создал новые математические дисциплины. К ним относятся теория чисел,
+математическая физика и ряд других. </span></p>
+
+
+
+
+
+<p style="margin: 0cm 0cm 15pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><span style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Именно
+он предложил использовать графическое изображение операций над множествами.
+Круги Эйлера решение любой, даже самой сложно составленной задачи, способны
+изобразить наглядно.</span><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><b> </b></span></p>
+
+
+
+
+<ul type="disc">
+
+
+
+
+
+  <b>  
+  </b>
+</ul>
+
+
+
+
+<p class="MsoNormal" style="text-indent: 0pt; text-align: center;"><b><b><span style="font-size: 26pt; font-family: Arial,sans-serif; color: red;">В таблице приведены запросы к поисковому серверу</span></b></b></p>
+
+<b><b></b>
+
+
+</b>
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Расположите обозначения запросов в порядке возрастания количества
+страниц, которые найдет поисковый сервер по каждому запросу. Для обозначения
+логической операции ИЛИ в запросе используется символ |, а для логической
+операции И &ndash; символ &amp;.</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">1.Франция | Испания | История</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">2.Франция &amp; Карта &amp; История</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">3.Франция | История</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">4.Франция &amp; История</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Решение:</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">В запросах у нас встречается 4 разных с слова &mdash; Франция, Испания, История
+и Карта. Для решения мы будем использовать очень наглядный инструмент &mdash; круги
+Эйлера. Итак, каждое слово из запросов мы представим в виде круга.</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><b> </b></span></p>
+
+
+
+<p><b><img alt="" src="../images/Tema_6_4_001.jpg" style="border-width: 0px;"  class="center-img" height="151" width="561"><br>
+
+</b></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">При этом, если у нас два слова в запросе объединяются логической операцией
+ИЛИ (кстати, эту операцию называют дизъюнкция<span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">), то в
+результате получается новая фигура, объединяющая две исходных. Давайте
+посмотрим это на примере:</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Возьмем такой запрос &mdash; Франция | Испания и построим его графический
+эквивалент</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><b> </b></span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+
+<p><b><img alt="" src="../images/Tema_6_4_002.jpg" style="border-width: 0px;"  class="center-img" height="192" width="541"><br>
+
+</b></p>
+
+
+
+<span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Полученная фигура закрашена
+желтым цветом. Сразу видно, что ее площадь больше, чем площадь отдельных
+запросов Франция или Испания. Делаем вывод, что объединение слов в запросе
+логической операцией ИЛИ увеличивает количество найденных страниц.</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Теперь рассмотрим, что произойдет, если слова объединить логической
+операцией И (эту операцию называют <span style="font-weight: bold; font-style: italic;">коньюкция</span>&nbsp;</span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"></p>
+<div style="text-align: center;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+
+<b> 
+ </b>
+<p><b><img alt="" src="../images/Tema_6_4_003.jpg" style="border-width: 0px;"  class="center-img"></b></p>
+</span><br>
+<span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p><b>
+</b></p>
+</span></div>
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Как мы видим, в данном случае полученная фигура (она выделена желтым
+цветом) имеет меньше площадь, чем площади исходных слов. Значит, количество
+страниц, найденных по запросу с использованием логической операции И будет
+меньше, чем для отдельных слов.</span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Вот теперь мы готовы к окончательному решению задачи. Для этого построим
+графический эквивалент для каждого запроса. Мы получим 4 фигуры, потом нам
+нужно будет просто сравнить их площади, а затем расставить их в требуемом
+порядке. Желтым цветом выделены фигуры, соответствующие запросу.</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="">&nbsp;</span></span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">1) Франция | Испания | История</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><b> </b></span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style=""><b>&nbsp;</b></span></span><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+
+
+<b> </b>
+</span></p>
+</span></p>
+<div style="text-align: center;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p><b><img alt="" src="../images/Tema_6_4_004.jpg" style="border-width: 0px;"  class="center-img"></b></p>
+</span><br>
+<span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p><b>
+</b></p>
+</span></div>
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Франция |
+Испания | История </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">2) Франция &amp; Карта &amp; История</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><b> </b></span></p>
+
+
+
+
+</span><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"></p>
+</span></p>
+</span></p>
+<div style="text-align: center;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+
+
+<b> </b>
+<p><b><img alt="" src="../images/Tema_6_4_005.jpg" style="border-width: 0px;"  class="center-img"></b></p>
+</span><br>
+<span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p><b>
+</b></p>
+</span></div>
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+
+
+<span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Франция &amp; Карта &amp; История </span></span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">3) Франция | История</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+</span><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"></p>
+</span></p>
+</span></p>
+<div style="text-align: center;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+
+
+ 
+<p><img alt="" src="../images/Tema_6_4_006.jpg" style="border-width: 0px;"  class="center-img"></p>
+</span><br>
+<span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p><b>
+</b></p>
+</span></div>
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+
+
+<span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"></span></span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Франция |
+История </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">4) Франция &amp; История</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><b> </b></span></p>
+
+
+
+
+</span><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"></p>
+</span></p>
+</span></p>
+<div style="text-align: center;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<b> </b>
+<p><b><img alt="" src="../images/Tema_6_4_007.jpg" style="border-width: 0px;"  class="center-img"></b></p>
+</span><br>
+<span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p><b>
+</b></p>
+</span></div>
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style=""><b>&nbsp;</b></span>Франция &amp; История </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Если теперь посмотреть на полученные фигуры и сравнить площади желтых
+участков, то довольно просто расположить их в порядке возрастания:</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><b> </b></span></p>
+
+
+
+<b> </b>
+</span></p>
+</span></p>
+</span></p>
+<div style="text-align: center;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p><b><img alt="" src="../images/Tema_6_4_008.jpg" style="border-width: 0px;"  class="center-img"></b></p>
+</span><br>
+<span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p><b>
+</b></p>
+</span></div>
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Франция &amp; Карта &amp; История</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Франция &amp; История</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Франция | История</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">Франция | Испания | История.</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">А значит правильный ответ будет 2431</span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="">&nbsp;</span></span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 18pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;"><span style="color: rgb(255, 0, 0);">Рассмотрим еще одну задачу</span> </span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+
+
+
+<span style="font-size: 16pt; font-family: Arial;sans-serif; color: rgb(0, 0, 0);">
+
+
+За зимние каникулы из 36 учеников класса 2 не были ни в кино, ни в театре, ни в цирке. В кино сходило 25 человек, в театр -- 11, в цирк --17 человек; и в кино, и в театре -- 6; и в кино и в цирк --10; и в театр и в цирк -- 4.
+<br>Сколько человек побывало и в кино, и в театре, и в цирке?
+<br>
+Решение:
+<br>
+Обозначим количество ребят, побывавших и в кино, и в театре, и в цирке -- X.
+<br>
+Построим диаграмму и узнаем количество ребят в каждой области:
+<p><img alt="" src="../images/Tema_6_4_0081.jpg" style="border-width: 0px;"  class="center-img"></p>
+<br>
+<p class="MsoNormal" ><span style="font-size: 16pt; font-family: Arial;sans-serif; color: rgb(0, 0, 0);">
+
+Не были ни в театре, ни в кино, ни в цирке -- 2 чел.
+<br>
+Значит, 36-2=34 чел. побывали на мероприятиях.
+<br>
+В кино и театр сходило 6 чел., значит, только в кино и театр (6-Х) чел.
+<br>
+В кино и цирк сходило  10 чел., значит, только в кино и цирк (10-Х) чел.
+<br>
+В театр и цирк сходило 4 чел., значит, только в театре и цирк (4-Х) чел.
+<br>
+В кино сходило 25 чел., значит, из них только в кино сходило 25-(10-Х)-(6-Х)-Х=(9+Х) .
+<br>
+Аналогично, только в театр сходило (3+Х) чел.
+<br>
+Только в цирк сходило (3+Х) чел.
+<br>
+Итак, сходили в театр, кино и цирк:
+<br>
+(9+Х)+(1+Х)+(3+Х)+(10-Х)+(6-Х)+(4-Х)+Х=34;
+<br>
+33+Х=34;
+<br>
+Х=1.
+<br>
+Т.е. только один человек сходил и в театр, и в кино, и в цирк.
+<br>
+Ответ: 1.
+<br>
+
+
+
+
+
+</span></span></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 18pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="color: rgb(255, 0, 0);">В последнем примере покажем сразу круги Эйлера</span> </span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><big>В таблице приведены запросы к поисковому серверу. Для каждого запроса
+указан его код &ndash; соответствующая буква от А до Г. Расположите коды запросов
+слева направо в порядке убывания количества страниц, которые найдёт поисковый
+сервер по каждому запросу. Для обозначения логической операции &laquo;ИЛИ&raquo; в запросе
+используется символ |, а для логической операции &laquo;И&raquo; &ndash; &amp;.</big></span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><big> </big></span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><big>А(Муха &amp; Денежка) | Самовар</big></span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><big> </big></span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><big>БМуха &amp; Денежка &amp; Базар &amp; Самовар</big></span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><big> </big></span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><big>ВМуха | Денежка | Самовар</big></span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><big> </big></span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><big>ГМуха &amp; Денежка &amp; Самовар</big></span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><big> </big></span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><big>Решение:</big></span><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><big> </big></span></p>
+
+
+
+
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-size: 12pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><big>Подробно решение подобных задач рассмотрено выше,  здесь показаны только итоговые фигуры:</big></span></p>
+
+
+
+
+</span><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="text-align: justify;"></p>
+</span></p>
+</span></p>
+</span></p>
+<div style="text-align: center;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+
+
+<p><img alt="" src="../images/Tema_6_4_009.jpg" style="border-width: 0px;"  class="center-img"></p>
+</span><br>
+<span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p><big>
+</big></p>
+</span></div>
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; margin-bottom: 15pt; text-align: justify; line-height: normal;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+
+
+
+<p class="MsoNormal"><big><b><u><span style="color: black;"><span style="font-family: Arial;"><span style="font-size: 18px;">Задание 2.</span></span></span></u></b><span style="font-family: Arial;"><span style="font-size: 18px;">&nbsp;</span></span><b><span style="color: rgb(55, 55, 155);"><span style="font-family: Arial;"><span style="font-size: 18px;"> Решите
+задачу. Решение оформите в конспект.</span></span></span></b></big></p>
+
+
+
+<big><b></b>
+        
+
+
+</big>
+<p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><big><b>Работа по вариантам: </b></big></span></p>
+
+
+
+
+<table class="MsoNormalTable" style="border-collapse: collapse; width: 359px;" border="0" cellpadding="0" cellspacing="0">
+
+ <tbody>
+
+    <tr style="height: 15.75pt;">
+
+ <td style="padding: 0cm 5.4pt; width: 53.75pt; height: 15.75pt;" width="72">
+ 
+      <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center; line-height: normal;" align="center"><big style="font-weight: bold;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; color: rgb(51, 51, 255);">Вариант</span></big><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+      </td>
+
+      <td colspan="5" style="padding: 0cm 5.4pt; width: 215.6pt; height: 15.75pt;" nowrap="nowrap" width="287">
+      <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center; line-height: normal;" align="center"><big style="font-weight: bold;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;; color: rgb(153, 51, 153);">Номер
+  по списку</span></big><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"> </span></p>
+
+ </td>
+
+    </tr>
+
+    <tr style="height: 25.5pt;">
+
+      <td style="padding: 0cm 5.4pt; width: 53.75pt; height: 25.5pt;" width="72">
+      <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center; line-height: normal;" align="center"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">1 </span></p>
+
+      </td>
+
+      <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">3 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">11 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">19 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">25 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 40.5pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="54">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">33 </span></font></p>
+
+
+
+  </td>
+
+
+
+ </tr>
+
+
+
+ <tr style="height: 25.5pt;">
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 53.75pt; height: 25.5pt;" width="72">
+  
+      
+      
+      <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center; line-height: normal; width: 322px;" align="center"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">2 </span></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">4 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">12 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">20 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">26 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 40.5pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="54">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">34 </span></font></p>
+
+
+
+  </td>
+
+
+
+ </tr>
+
+
+
+ <tr style="height: 25.5pt;">
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 53.75pt; height: 25.5pt;" width="72">
+  
+      
+      
+      <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center; line-height: normal;" align="center"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">3 </span></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">5 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">13 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">21 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">27 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 40.5pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="54">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">35 </span></font></p>
+
+
+
+  </td>
+
+
+
+ </tr>
+
+
+
+ <tr style="height: 25.5pt;">
+
+
+  <td style="padding: 0cm 5.4pt; width: 53.75pt; height: 25.5pt;" width="72">
+     
+      
+      <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center; line-height: normal;" align="center"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">4 </span></p>
+
+
+  </td>
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+   
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">6 </span></font></p>
+
+  </td>
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">14 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">22 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">28 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 40.5pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="54">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">36 </span></font></p>
+
+
+
+  </td>
+
+
+
+ </tr>
+
+
+
+ <tr style="height: 25.5pt;">
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 53.75pt; height: 25.5pt;" width="72">
+  
+      
+      
+      <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center; line-height: normal;" align="center"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">5 </span></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">7 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">1 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">17 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">29 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 40.5pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="54">
+  
+      
+      
+      <p class="MsoNormal"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;"> </span></font></p>
+
+
+
+  <font size="+1"></font></td>
+
+
+
+ </tr>
+
+
+
+ <tr style="height: 25.5pt;">
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 53.75pt; height: 25.5pt;" width="72">
+  
+      
+      
+      <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center; line-height: normal;" align="center"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">6</span></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">8 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">2 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">18 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">30 </span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 40.5pt; height: 25.5pt;" nowrap="nowrap" valign="bottom" width="54">
+  
+      
+      
+      <p class="MsoNormal"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;"> </span></font></p>
+
+
+
+  <font size="+1"></font></td>
+
+
+
+ </tr>
+
+
+
+ <tr style="height: 25.5pt;">
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 53.75pt; height: 40px;" width="72">
+  
+      
+      
+      <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center; line-height: normal;" align="center"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">7<o:p></o:p></span></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 40px;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">9<o:p></o:p></span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 40px;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">15<o:p></o:p></span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 40px;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">23<o:p></o:p></span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 40px;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">31<o:p></o:p></span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 40.5pt; height: 40px;" nowrap="nowrap" valign="bottom" width="54">
+  
+      
+      
+      <p class="MsoNormal"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;"> </span></font></p>
+
+
+
+  <font size="+1"></font></td>
+
+
+
+ </tr>
+
+
+
+ <tr style="height: 25.5pt;">
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 53.75pt; height: 53px;" width="72">
+  
+      
+      
+      <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center; line-height: normal;" align="center"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">8<o:p></o:p></span></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 53px;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">10</span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 53px;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">16<o:p></o:p></span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.75pt; height: 53px;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">24<o:p></o:p></span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 43.8pt; height: 53px;" nowrap="nowrap" valign="bottom" width="58">
+  
+      
+      
+      <p class="MsoNormal" style="text-align: right;" align="right"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">32<o:p></o:p></span></font></p>
+
+
+
+  </td>
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 40.5pt; height: 53px;" nowrap="nowrap" valign="bottom" width="54">
+  
+      
+      
+      <p class="MsoNormal"><font size="+1"><span style="font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;"><o:p>&nbsp;</o:p></span></font></p>
+
+
+
+  </td>
+
+
+
+ </tr>
+
+
+
+ <tr style="height: 25.5pt;">
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 53.75pt; height: 25.5pt;" width="72">
+  
+      
+      
+      <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center; line-height: normal;" align="center"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">9 пример на 4 (проще)</span></p>
+
+
+
+  </td>
+
+
+
+  <td colspan="5" rowspan="1" style="padding: 0cm 5.4pt; width: 43.75pt; height: 25.5pt;" nowrap="nowrap" width="58">
+  
+      
+
+  
+  
+      
+
+  
+  
+      
+
+  
+  
+      
+
+  </td>
+
+
+
+  
+
+  
+
+  
+
+  
+
+ </tr>
+
+
+
+ <tr style="height: 25.5pt;">
+
+
+
+  <td style="padding: 0cm 5.4pt; width: 53.75pt; height: 25.5pt;" width="72">
+  
+      
+      
+      <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center; line-height: normal;" align="center"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">10 пример на 4 (проще)
+  </span></p>
+
+
+      </td>
+
+
+      <td colspan="5" rowspan="1" style="padding: 0cm 5.4pt; width: 43.75pt; height: 25.5pt;" nowrap="nowrap" width="58"></td>
+
+
+      
+      
+      
+      
+    </tr>
+
+
+  <tr>
+
+      <td style="padding: 0cm 5.4pt; width: 53.75pt; height: 25.5pt; text-align: center; vertical-align: bottom;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-size: 14pt; font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">11 пример на 4 (проще)</span></span></span></span></span></td>
+
+      <td colspan="5" rowspan="1" style="padding: 0cm 5.4pt; width: 43.75pt; height: 25.5pt;" nowrap="nowrap" width="58"></td>
+
+    </tr>
+
+  
+  </tbody>
+</table>
+
+
+<ul type="disc">
+
+
+  <big>  <b>  </b>
+  </big>
+  <div align="justify">
+  <big>  <b>  </b>
+  </big>
+  <div style="width: 938px;" align="justify">
+  <big>  <b>  </b>
+  </big>
+  <div style="width: 1004px; color: rgb(0, 0, 0); font-family: Helvetica,Arial,sans-serif;" align="justify"><big><b></b>
+  </big>
+  <p style="margin: 0cm 0cm 15pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify;"><big><b><font size="+1">Задача 1.</font></b></big></p>
+
+
+
+
+  <big>  <b>  </b>
+  </big>
+  <p style="margin: 0cm 0cm 15pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify;"><big><font size="+1">Однажды учеников спросили, кто из них любит
+математику, кому нравится русский язык, а кому физика. Оказалось, что из 36
+учеников 2 не любят ни математику, ни русский, ни физику. Математика нравится
+25 ученикам, русский язык- 11, физика &ndash; 17 ученикам; и математика, и русский-
+6; и математика, и физика- 10; русский язык и физика - 4.</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p style="margin: 0cm 0cm 15pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify;"><big><font size="+1">Сколько человек любят все три предмета?</font></big></p>
+
+
+
+
+  <big>  <b>  </b>
+  </big>
+  <p class="MsoNormal" style="text-align: justify; line-height: normal;"><big><b><font size="+1">Задача 2.</font></b></big></p>
+
+
+
+
+  <big>  <b>  </b>
+  </big>
+  <p class="MsoNormal" style="text-align: justify; line-height: normal;"><big><font size="+1">Из
+100 студентов 30 изучают испанский язык,
+30 - немецкий, 50 - английский, 15 - испанский и немецкий, 25 -
+немецкий и английский, 13- испанский и английский и 10 все три языка.</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="MsoNormal" style="text-align: justify; line-height: normal;"><big><font size="+1">Сколько студентов 1) не изучают ни одного языка?, 2) только английский язык?</font></big></p>
+
+
+
+
+  <big>  <b>  </b>
+  </big>
+  <p class="MsoNormal" style="text-align: justify; line-height: normal;"><big><b><font size="+1">Задача 3.</font></b></big></p>
+
+
+
+
+  <big>  <b>  </b>
+  </big>
+  <p class="MsoNormal" style="text-align: justify; line-height: normal;"><big><font size="+1">В пансионате отдыхали люди. 12 - любят играть в
+шашки, 14 в карты, 12 - любители домино. К тому же 2 из них любят и шашки и
+карты, 4 человека играют в карты и домино, а 3 любят шашки и домино А еще 3
+человека любят играть во все игры. Сколько всего человек?</font></big></p>
+
+
+
+
+  <big>  <b>  </b>
+  </big>
+  <p class="MsoNormal" style="text-align: justify; line-height: normal;"><big><b><font size="+1">Задача 4.</font></b></big></p>
+
+
+
+
+  <big>  <b>  </b>
+  </big>
+  <p class="MsoNormal" style="text-align: justify; line-height: normal;"><big><font size="+1">В классе 38 учеников. Из них 16 увлекаются математикой, 17
+&mdash; физикой, 18 &mdash; историей. Увлекаются двумя предмета&shy;ми &mdash; математикой и физикой
+&mdash; четверо, математикой и историей &mdash; трое, физикой и историей &mdash; пятеро. Трое не
+увлекаются ни математикой, ни физикой, ни историей. </font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="MsoNormal" style="text-align: justify; line-height: normal;"><big><font size="+1">Сколько учеников увлекается &nbsp;двумя предметами, сколько одним, сколько
+тремя?</font></big></p>
+
+
+
+
+  <big>  <b>  </b>
+  </big>
+  <p class="MsoNormal" style="text-align: justify; line-height: normal;"><big><b><font size="+1">Задача 5.</font></b></big></p>
+
+
+
+
+  <big>  <b>  </b>
+
+
+  <b>  </b>
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial;"><big><b><font size="+1">&nbsp;</font></b><font size="+1">В классе 20 человек. Из них 12 посещают спортивные секции, 7
+человек &ndash; музыкальную школу и трое увлекаются ни музыкой, ни спортом.</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial;"><big><font size="+1">Нарисуй круги Эйлера. Выдели ту часть рисунка, в которой
+находятся:</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial;"><big><font size="+1">1)те, кто не посещают спортивную секцию и музыкальную школу;</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial;"><big><font size="+1">2)спортсмены-музыканты;</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial;"><big><font size="+1">3) &laquo;чистые&raquo; музыканты;</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial;"><big><font size="+1">4) те, кто не посещает спортивную секцию.</font></big></p>
+
+
+
+
+  <big>  
+
+
+  <b>  </b><b></b>
+  </big>
+  <p class="MsoNormal" style="text-align: justify; line-height: normal;"><big><font size="+1">&nbsp;</font><b><font size="+1">Задача 6.</font></b></big></p>
+
+
+
+
+  <big>  <b>  </b>
+  </big>
+  <p class="c6" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial;"><big><font size="+1">На полке стояло 26 волшебных книг по заклинаниям, все они были
+прочитаны. Из них 4 прочитал и Гарри Поттер, и Рон. Гермиона прочитала 7 книг,
+которых не читали ни Гарри Поттер, ни Рон, и две книги, которые читал Гарри
+Поттер. Всего Гарри Поттер прочитал 11 книг. Сколько книг прочитал только Рон?</font></big></p>
+
+
+
+
+  <big>  <b>  </b>
+  </big>
+  <p class="MsoNormal" style="text-align: justify; line-height: normal;"><big><b><font size="+1">Задача 7.</font></b></big></p>
+
+
+
+
+  <big>  <b>  </b>
+
+
+  <b>  </b>
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><big><font size="+1">На 3 курсе факультета
+обучается 81 студент. Многие из них выбрали одинаковые
+дисциплины, посещают одни и те же лекции и хорошо знают друг друга. б) 43
+студента посещают лекции по философии, в)32 - по логике и г)41 - по
+естествознанию. д) Философию и логику выбрали 11 человек. е) Философию и
+естествознание посещает 21 студент, ж)а логику и естествознание - 16. з) 4
+человека выбрали только философию и логику.</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><big><font size="+1">Сколько студентов посещают
+лекции:</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><big><font size="+1">1) по всем трём предметам,</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><big><font size="+1">2)только по философии и
+естествознанию,</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><big><font size="+1">3)только по логике и
+естествознанию,</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><big><font size="+1">4)только по философии,</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><big><font size="+1">5)только по
+естествознанию,</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><big><font size="+1">6)только по логике,</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><big><font size="+1">7)не выбрали ни одну из
+этих дисциплин.</font></big></p>
+
+
+
+
+  <big>  <b>  </b>
+  </big>
+  <p class="MsoNormal" style="text-align: justify; line-height: normal;"><big><b><font size="+1">Задача 8.</font></b></big></p>
+
+
+
+
+  <big>  <b>  </b>
+
+
+  <b>  </b>
+  </big>
+  <p class="c2" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 42.55pt;"><big><font size="+1">В классе всего 36 человек.
+Учащиеся посещают математический, физический и химический кружки, причем,
+математический кружок посещают 17 человек, физический - 13 человек, химический
+- 11 человек. Кроме того, известно, что все три кружка посещают 2 человека,
+математический и физический -7, математический и химический - 6, физический и
+химический - 3. Сколько человек не посещают никаких кружков?</font></big></p>
+
+  <big>  <b></b>
+  </big>
+  <p class="MsoNormal" style="text-align: justify;"><big><b><font size="+1">&nbsp;</font></b><font size="+1">&nbsp;</font><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><b><font size="+1">Задача&nbsp;9.</font></b></span></span></span></span><font size="+1"><br>
+
+  </font></big></p>
+
+
+
+
+  <big>  <b>  </b>
+
+
+  <b>  </b>
+
+
+  
+  </big>
+  <p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"></span></span></span></span><big><font size="+1">В&nbsp;
+поход&nbsp; ходили&nbsp; 75&nbsp; %&nbsp; учеников&nbsp; класса,&nbsp; а&nbsp;
+на&nbsp; экскурсии&nbsp; было&nbsp; 68&nbsp; %,&nbsp; причем&nbsp; каждый&nbsp;
+был&nbsp; в&nbsp; походе&nbsp; или&nbsp; на&nbsp; экскурсии.&nbsp;
+Сколько&nbsp; процентов&nbsp; класса&nbsp; были&nbsp; и&nbsp; там,&nbsp;
+и&nbsp; там?</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><big><b><font size="+1">&nbsp;</font></b><font size="+1">&nbsp;</font><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><b><font size="+1">Задача 10.</font></b></span></span></span></span></big></span></span></span></span></p>
+
+  <big>  </big>
+  <p class="MsoNormal" style="text-align: justify;"><big><font size="+1">"Ёлки" и "Неудержимый":
+Некоторые ребята из нашего класса любят ходить в кино. Известно, что 12 ребят
+смотрели фильм &laquo;Ёлки&raquo;, 9 человек &ndash; фильм &laquo;Неудержимый&raquo;, из них 6 смотрели и
+&laquo;Ёлки&raquo;, и &laquo;Неудержимый&raquo;. Сколько человек смотрели только фильм &laquo;Неудержимый&raquo;?</font></big></p>
+
+  <big>  <span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><b><font size="+1">&nbsp;</font></b><font size="+1">&nbsp;</font><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><b><font size="+1">Задача 11.</font></b></span></span></span></span></span></span></span></span>
+  </big>
+  <p class="MsoNormal" style="text-align: justify;"><big><font size="+1">9&nbsp;
+моих&nbsp; друзей&nbsp; любят&nbsp; бананы,&nbsp; 8&nbsp; &ndash;&nbsp;
+апельсины,&nbsp; а&nbsp; 7&nbsp; &ndash;&nbsp; сливы,&nbsp; 5&nbsp; &ndash;&nbsp;
+бананы&nbsp; и&nbsp; апельсины,&nbsp; 3&nbsp; &ndash;&nbsp; бананы&nbsp; и&nbsp;
+сливы,&nbsp; 4&nbsp; &ndash;&nbsp; апельсины&nbsp; и&nbsp; сливы,&nbsp; 2&nbsp;
+&ndash;&nbsp; бананы,&nbsp; апельсины&nbsp; и&nbsp; сливы.&nbsp; Сколько&nbsp;
+у&nbsp; меня&nbsp; друзей?</font></big></p>
+
+  <big>  </big>
+  <p class="MsoNormal" style="text-align: justify;"></p>
+
+  <big>  </big>
+  <p class="MsoNormal" style="text-align: justify;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;">
+  <big>  </big>
+  <p class="c6" style="margin: 0cm 0cm 0.0001pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial;"><big><font size="+1">&nbsp;</font><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><span style="font-family: &quot;Arial&quot;,&quot;sans-serif&quot;;"><b><font size="+1">Задача 12.</font></b></span></span></span></span></big></p>
+
+
+
+
+  <big>  <b>  </b>
+  </big>
+  <p style="margin: 0cm 0cm 12.75pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 1cm; line-height: 15.75pt;"><big><font size="+1">В&nbsp;
+пионерском&nbsp; лагере&nbsp; &laquo;Дубки&raquo;&nbsp; в&nbsp; смене&nbsp; актива&nbsp;
+отдыхали:&nbsp; 30&nbsp; отличников,&nbsp; 28&nbsp; победителей&nbsp;
+олимпиад&nbsp; и&nbsp; 42&nbsp; спортсмена.&nbsp; 10&nbsp; человек&nbsp;
+были&nbsp; и&nbsp; отличниками&nbsp; и&nbsp; победителями&nbsp; олимпиад,&nbsp;
+5&nbsp; &mdash;&nbsp; отличниками&nbsp; и&nbsp; спортсменами,&nbsp; 8&nbsp; &mdash;&nbsp;
+спортсменами&nbsp; и&nbsp; победителями&nbsp; олимпиад,&nbsp; 3&nbsp; &mdash;&nbsp;
+и&nbsp; отличники,&nbsp; и&nbsp; спортсмены,&nbsp; и&nbsp; победители&nbsp;
+олимпиад.</font></big></p>
+
+
+
+
+  <big>  
+  </big>
+  <p style="margin: 0cm 0cm 12.75pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 1cm; line-height: 15.75pt;"><big><font size="+1">Сколько&nbsp;
+ребят&nbsp; отдыхали&nbsp; в&nbsp; лагере?&nbsp;</font></big></p>
+
+  <big>  </big></span></span></span></span></p>
+
+
+
+
+  <p class="MsoNormal"><big><b><u><span style="color: black;"><span style="font-family: Arial;"><span style="font-size: 18px;">Задание 3.</span></span></span></u></b><span style="font-family: Arial;"><span style="font-size: 18px;">&nbsp;</span></span><b><span style="color: rgb(55, 55, 155);"><span style="font-family: Arial;"><span style="font-size: 18px;"> Решите
+задачу. Решение оформите в конспект.</span></span></span></b></big></p>
+
+
+
+  <big><b></b>
+        
+  </big>
+  <p style="text-align: left;"><big><b><span style="font-family: Arial,sans-serif; color: black;"><span style="font-size: 18px;">Для выполнения задния, вам
+надо ознакомится с правилами </span></span></b></big></p>
+
+  <div align="center">
+  <big>  </big>
+  <h2><span style="color: rgb(255, 0, 0);"><big>Графическое представление логических высказываний </big></span></h2>
+
+  <big>  <br>
+
+
+
+
+
+ </big>
+  <p style="margin: 0cm 0cm 12.75pt; background: white none repeat scroll 0% 50%; -moz-background-clip: initial; -moz-background-origin: initial; -moz-background-inline-policy: initial; text-align: justify; text-indent: 1cm; line-height: 15.75pt;"><big><font size="+1">Высказывания A, B, C истинны для точек, принадлежащих <b>прямоугольнику</b>, <i>треугольнику</i> и <b>кругу</b> соответственно. Истинно ли высказывание <span style="color: rgb(255, 0, 0);"><img alt="" src="../images/Tema_6_4_020_1.jpg" style="border-width: 0px;"  class=""></span>  для всех точек, принадлежащих только области, выделенной красным цветом на рисунке? </font></big></p>
+
+
+  <p><big><img alt="" src="../images/Tema_6_4_020.jpg" style="border-width: 0px;"  class="center-img"><br>
+  </big></p>
+
+
+
+  <p style="text-align: left;"><big> <span style="font-family: Arial,sans-serif;"><span style="font-size: 18px;">При
+ответе на этот вопрос следует помнить приоритет логических операций, а
+также интерпретацию операторов алгебры логики высказываний в теории
+множеств. Перепишем в символике фигур Эйлера, множества A, B и C
+выглядят так: <img alt="" src="../images/Tema_6_4_021.jpg" style="border-width: 0px;"  class="center-img">
+
+  </span></span></big></p>
+
+
+
+  <img alt="" src="../images/Tema_6_4_022.jpg" style="border-width: 0px;"  class="center-img">  <br>
+
+  <img alt="" src="../images/Tema_6_4_023.jpg" style="border-width: 0px;"  class="center-img">  <br>
+
+  <img alt="" src="../images/Tema_6_4_024.jpg" style="border-width: 0px;"  class="center-img">  <br>
+
+   <br>
+ <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center; line-height: normal;" align="center"><span style="font-size: 16pt; font-family: sans-serif; color: rgb(0, 51, 153)"><big>Для решения надо <b>перерисовать</b> картинку 5 раз и соответственно закрасить области для решения логического выражения.</big></span></p>
+  <br>
+  <table style="text-align: left; height: 117px; width: 329px;" border="1" cellpadding="2" cellspacing="2">
+    <tbody>
+      <tr>
+        <td style="width: 123px; text-align: center; color: rgb(153, 51, 153);" valign="undefined"><big><big><big>Варинат</big></big></big></td>
+        <td style="width: 193px; text-align: center; color: rgb(153, 51, 153);" valign="undefined"><big><big><big>Номер по журналу</big></big></big></td>
+      </tr>
+      <tr>
+        <td style="text-align: center; width: 123px;" valign="undefined"><big><big><big><big>1</big></big></big></big></td>
+        <td style="width: 193px;" align="undefined" valign="undefined"><big><big><big><big><big>
+
+        </big></big></big></big></big>
+        <p class="MsoNormal"><big><big><big><big><big><span style="font-size: 11pt; font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">1,7,13,19,25,31</span></big></big></big></big></big></p>
+        <big><big><big><big><big>
+        </big></big></big></big></big></td>
+      </tr>
+      <tr>
+        <td style="text-align: center; width: 123px;" valign="undefined"><big><big><big><big>2</big></big></big></big></td>
+        <td style="width: 193px;" align="undefined" valign="undefined"><big><big><big><big><big>
+
+        </big></big></big></big></big>
+        <p class="MsoNormal"><big><big><big><big><big><span style="font-size: 11pt; font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">2,8,14,20,26,32</span></big></big></big></big></big></p>
+        <big><big><big><big><big>
+        </big></big></big></big></big></td>
+      </tr>
+      <tr>
+        <td style="text-align: center; width: 123px;" valign="undefined"><big><big><big><big>3</big></big></big></big></td>
+        <td style="width: 193px;" align="undefined" valign="undefined"><big><big><big><big><big>
+
+        </big></big></big></big></big>
+        <p class="MsoNormal"><big><big><big><big><big><span style="font-size: 11pt; font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">3,9,15,21,27,33</span></big></big></big></big></big></p>
+        <big><big><big><big><big>
+        </big></big></big></big></big></td>
+      </tr>
+      <tr>
+        <td style="text-align: center; width: 123px;" valign="undefined"><big><big><big><big>4</big></big></big></big></td>
+        <td style="width: 193px;" align="undefined" valign="undefined"><big><big><big><big><big>
+
+        </big></big></big></big></big>
+        <p class="MsoNormal"><big><big><big><big><big><span style="font-size: 11pt; font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">4,10,16,22,28,34</span></big></big></big></big></big></p>
+        <big><big><big><big><big>
+        </big></big></big></big></big></td>
+      </tr>
+      <tr>
+        <td style="text-align: center; width: 123px;" valign="undefined"><big><big><big><big>5</big></big></big></big></td>
+        <td style="width: 193px;" align="undefined" valign="undefined"><big><big><big><big><big>
+
+        </big></big></big></big></big>
+        <p class="MsoNormal"><big><big><big><big><big><span style="font-size: 11pt; font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">5,11,17,23,29,35<o:p></o:p></span></big></big></big></big></big></p>
+        <big><big><big><big><big>
+        </big></big></big></big></big></td>
+      </tr>
+      <tr>
+        <td style="text-align: center; width: 123px;" valign="undefined"><big><big><big><big>6</big></big></big></big></td>
+        <td style="width: 193px;" align="undefined" valign="undefined"><big><big><big><big><big>
+
+        </big></big></big></big></big>
+        <p class="MsoNormal"><big><big><big><big><big><span style="font-size: 11pt; font-family: &quot;Lucida Sans&quot;,&quot;sans-serif&quot;; color: black;">6,12,18,24,30,36</span></big></big></big></big></big></p>
+        <big><big><big><big><big>
+        </big></big></big></big></big></td>
+      </tr>
+    </tbody>
+  </table>
+  <p class="MsoNormal" style="margin-bottom: 0.0001pt; text-align: center; line-height: normal;" align="center"></p>
+
+
+
+  <big>  
+ 
+
+ 
+
+
+
+
+
+
+
+
+  </big>
+  <p style="text-align: left;"><big><b><span style="font-family: Arial,sans-serif; color: blue;"><span style="font-size: 18px;">Задание №1</span></span></b></big></p>
+
+
+  <p style="text-align: left;"><big> <span style="font-family: Arial,sans-serif;"><span style="font-size: 18px;">Высказывания
+А, В, С истины для точек, принадлежащих кругу, треугольнику или
+прямоугольнику соответственно. Определите по рисунку истинность
+следующих высказываний: <br>
+
+  <img alt="" src="../images/Tema_6_4_032.jpg" style="border-width: 0px;"  style="border-width: 0px;" class="center-img">  <img alt="" src="../images/Tema_6_4_031.jpg" style="border-width: 0px;"  class="center-img">  <br>
+
+  </span></span></big></p>
+
+
+
+  <p style="text-align: left;"><big><b><span style="font-family: Arial,sans-serif; color: blue;"><span style="font-size: 18px;">Задание №2</span></span></b></big></p>
+
+
+  <p style="text-align: left;"><big> <span style="font-family: Arial,sans-serif;"><span style="font-size: 18px;">Высказывания
+А, В, С истины для точек, принадлежащих кругу, треугольнику или
+прямоугольнику соответственно. Определите по рисунку истинность
+следующих высказываний: <br>
+
+  <img alt="" src="../images/Tema_6_4_034.jpg" style="border-width: 0px;"  class="center-img">  <img alt="" src="../images/Tema_6_4_033.jpg" style="border-width: 0px;"  class="center-img">  <br>
+
+  </span></span></big></p>
+
+
+  <p style="text-align: left;"><big><b><span style="font-family: Arial,sans-serif; color: blue;"><span style="font-size: 18px;">Задание №3</span></span></b></big></p>
+
+
+  <p style="text-align: left;"><big> <span style="font-family: Arial,sans-serif;"><span style="font-size: 18px;">Высказывания
+А, В, С истины для точек, принадлежащих кругу, треугольнику или
+прямоугольнику соответственно. Определите по рисунку истинность
+следующих высказываний: <br>
+
+  <img alt="" src="../images/Tema_6_4_034.jpg" style="border-width: 0px;"  class="center-img">  <img alt="" src="../images/Tema_6_4_035.jpg" style="border-width: 0px;"  class="center-img">  <br>
+
+  </span></span></big></p>
+
+
+  <p style="text-align: left;"><big><b><span style="font-family: Arial,sans-serif; color: blue;"><span style="font-size: 18px;">Задание №4</span></span></b></big></p>
+
+
+  <p style="text-align: left;"><big> <span style="font-family: Arial,sans-serif;"><span style="font-size: 18px;">Высказывания
+А, В, С истины для точек, принадлежащих кругу, треугольнику или
+прямоугольнику соответственно. Определите по рисунку истинность
+следующих высказываний: <br>
+
+  <img alt="" src="../images/Tema_6_4_036.jpg" style="border-width: 0px;"  class="center-img">  <img alt="" src="../images/Tema_6_4_037.jpg" style="border-width: 0px;"  class="center-img">  <br>
+
+  </span></span></big></p>
+
+
+  <p style="text-align: left;"><big><b><span style="font-family: Arial,sans-serif; color: blue;"><span style="font-size: 18px;">Задание №5</span></span></b></big></p>
+
+
+  <p style="text-align: left;"><big> <span style="font-family: Arial,sans-serif;"><span style="font-size: 18px;">Высказывания
+А, В, С истины для точек, принадлежащих кругу, треугольнику или
+прямоугольнику соответственно. Определите по рисунку истинность
+следующих высказываний: <br>
+
+  <img alt="" src="../images/Tema_6_4_038.jpg" style="border-width: 0px;"  class="center-img">  <img alt="" src="../images/Tema_6_4_039.jpg" style="border-width: 0px;"  class="center-img">  <br>
+
+  </span></span></big></p>
+
+
+
+  <p style="text-align: left;"><big><b><span style="font-family: Arial,sans-serif; color: blue;"><span style="font-size: 18px;">Задание №6</span></span></b></big></p>
+
+
+  <p style="text-align: left;"><big> <span style="font-family: Arial,sans-serif;"><span style="font-size: 18px;">Высказывания
+А, В, С истины для точек, принадлежащих кругу, треугольнику или
+прямоугольнику соответственно. Определите по рисунку истинность
+следующих высказываний: <br>
+
+  <img alt="" src="../images/Tema_6_4_042.jpg" style="border-width: 0px;"  class="center-img">  <img alt="" src="../images/Tema_6_4_039.jpg" style="border-width: 0px;"  class="center-img">  <br>
+
+  </span></span></big></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <big>  <b>  </b></big></div>
+
+
+
+
+
+  <big>  <b>  <b><font style="color: rgb(0, 0, 0);" face="Trebuchet MS" size="2"><span style="background-color: rgb(255, 255, 255);"><br>
+
+
+
+
+
+  </span></font></b></b></big></div>
+
+
+
+
+
+  <big>  <b>  </b></big></div>
+
+
+
+
+
+  </div>
+</ul>
+
+
+
+
+
+</span></p>
+
+</span></p>
+
+</span></p>
+
+</span></p>
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<div class="art-footer">
+<div class="art-footer-body">
+<div class="art-footer-center">
+<div class="art-footer-wrapper">
+<div class="art-footer-text">
+<p><big><b><a href="#">В начало</a></b></big></p>
+
+
+
+
+
+<p><span style="color: rgb(11, 36, 50); font-family: Arial,Helvetica,sans-serif;"><big><b>&copy;
+Е.А. Гордеева</b></big></span></p>
+
+
+
+
+
+<p><span style="color: rgb(11, 36, 50); font-family: Arial,Helvetica,sans-serif;"><big><b>2019</b></big></span></p>
+
+
+
+
+
+<div class="cleared"></div>
+
+
+
+
+
+<p class="art-page-footer"></p>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<div class="cleared"></div>
+
+
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+<div class="cleared"></div>
+
+
+
+<div style="height: 30px;"></div>
+<div id="topNubex"><img src="../images/topNubex.jpg" height="30" width="71"></div>
+
+
+
+</body>
+</html>

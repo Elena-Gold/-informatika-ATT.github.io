@@ -1,0 +1,637 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+
+<head>
+
+  
+  <meta http-equiv="content-type" content="text/html; charset=Windows-1251" />
+
+
+  
+  
+  <title>6.4</title>
+
+  <meta charset="utf-8">
+  <title>������ "�����" ��� ������ JavaScript - "������"</title>
+  
+  <style>
+  #topNubex {
+	position: fixed;
+	right: 45px;
+	bottom: 45px;
+   }
+  </style>
+  
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+  $(window).scroll(function() {
+  if($(this).scrollTop() != 0) {
+  $('#topNubex').fadeIn();
+  } else {
+  $('#topNubex').fadeOut();
+  }
+  });
+  $('#topNubex').click(function() {
+  $('body,html').animate({scrollTop:0},700);
+  });
+  });
+  </script>
+
+
+</head>
+
+
+<body>
+
+<span style="color: rgb(255, 0, 0);">Применение диаграмм Эйлера-Венна при решении логических задач</span><br />
+
+1.&nbsp;&nbsp; &nbsp;История<br />
+
+2.&nbsp;&nbsp; &nbsp;Принцип построения диаграмм<br />
+
+3.&nbsp;&nbsp; &nbsp;Использование диаграмм Эйлера-Венна для доказательства логических равенств<br />
+
+4.&nbsp;&nbsp; &nbsp;Решение задачи поиска информации в Интернет с помощью диаграмм Эйлера-Венна<br />
+
+5.&nbsp;&nbsp; &nbsp;Решение логической содержательной задачи с помощью диаграмм Эйлера-Венна<br />
+
+История<br />
+
+Определение 1<br />
+<span style="color: rgb(0, 0, 0); font-family: &quot;comic sans ms&quot;,cursive; font-size: 18px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 10px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(218, 234, 198); display: inline ! important; float: none;">Известно,
+что великий швейцарский математик Эйлер создал целое направление науки,
+решая задачу о семи кенигсбергских мостах. Существует легенда, что
+жители Кенигсберга любили прогуливаться по улицам трех "слившихся" в
+единое целое средневековых городов: Альштадта, Лебенихта и Кнайпхофа -
+но терпеть не могли зря топтать свои башмаки. А города эти были
+соединены между собой семью мостами. И вот будто бы экономные горожане
+однажды задумались: а можно ли пройти по всем мостам так, чтобы на
+каждом из них побывать лишь один раз и вернуться к месту, откуда начал
+прогулку?</span><br />
+
+Леонарду Эйлеру задали вопрос: можно ли, прогуливаясь по Кенигсбергу,
+обойти через все мосты города, дважды не проходя ни через один из них.
+План города с семью мостами прилагался.<br />
+
+<span style="font-size: 13.5pt; line-height: 115%; font-family: &quot;Calibri&quot;,&quot;sans-serif&quot;; color: black;"><!--[if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:449.25pt;
+ height:209.25pt'>
+ <v:imagedata src="file:///C:\Users\gold\AppData\Local\Temp\msohtmlclip1\01\clip_image001.png"
+  o:href="http://www.problems.ru/show_document.php?id=1715208"/>
+</v:shape><![endif]--><!--[if !vml]--><img src="file:///C:%5CUsers%5Cgold%5CAppData%5CLocal%5CTemp%5Cmsohtmlclip1%5C01%5Cclip_image001.png" v:shapes="_x0000_i1025" height="279" width="599" /><!--[endif]--></span><br />
+
+<p style="margin: 10px 0px; padding: 0px; color: rgb(0, 0, 0); font-size: 13.3333px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; text-indent: 10px; font-family: arial,verdana,tahoma; text-align: left; background-color: rgb(218, 234, 198);"><span style="font-size: 18px;"><span style="font-family: &quot;comic sans ms&quot;,cursive;">Эйлера задача заинтересовала.&nbsp;<b style="margin: 0px; padding: 0px;"><i style="margin: 0px; padding: 0px;">"Никто
+еще до сих пор не смог это проделать, но никто и не доказал, что это
+невозможно... Для решения недостаточны ни геометрия, ни алгебра, ни
+комбинаторское искусство"</i></b>, - так писал он своему коллеге, итальянскому математику и инженеру...</span></span></p>
+<p style="margin: 10px 0px; padding: 0px; color: rgb(0, 0, 0); font-size: 13.3333px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; text-indent: 10px; font-family: arial,verdana,tahoma; text-align: left; background-color: rgb(218, 234, 198);"><span style="font-family: &quot;comic sans ms&quot;,cursive; font-size: 18px;">В
+конце концов, выстроив сложнейший алгоритм, Эйлер получил отрицательный
+ответ. Пройти по всем мостам лишь по одному разу и, описав круг,
+вернуться в исходную точку, оказалось невозможным.</span></p>
+<br />
+<span style="color: rgb(0, 0, 0); font-family: &quot;comic sans ms&quot;,cursive; font-size: 18px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;">На
+упрощённой схеме части города (графе) мостам соответствуют линии (дуги
+графа), а частям города &mdash; точки соединения линий (вершины графа).
+В ходе рассуждений Эйлер пришёл к следующим выводам:<br />
+</span>
+<p style="margin: 5px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); font-size: 14px;"><span style="font-size: 18px;"><span style="font-family: &quot;comic sans ms&quot;,cursive;"><strong>Число
+нечётных вершин (вершин, к которым ведёт нечётное число рёбер) графа
+должно быть чётно. Не может существовать граф, который имел бы нечётное
+число нечётных вершин.</strong></span></span></p>
+<p style="margin: 5px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); font-size: 14px;"><span style="font-size: 18px;"><span style="font-family: &quot;comic sans ms&quot;,cursive;"><strong>Если
+все вершины графа чётные, то можно, не отрывая карандаша от бумаги,
+начертить граф, при этом можно начинать с любой вершины графа и
+завершить его в той же вершине.</strong></span></span></p>
+<p style="margin: 5px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); font-size: 14px;"><strong><span style="font-size: 18px;"><span style="font-family: &quot;comic sans ms&quot;,cursive;">Граф с более чем двумя нечётными вершинами невозможно начертить одним росчерком</span></span>.</strong></p>
+<p style="margin: 5px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana; font-size: 13.3333px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);"><span style="font-size: 18px;"><span style="font-family: &quot;comic sans ms&quot;,cursive;">Граф
+кёнигсбергских мостов имел четыре нечётные вершины (то есть все),
+следовательно, невозможно пройти по всем мостам, не проходя ни по
+одному из них дважды.</span></span></p>
+<p style="margin: 5px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); font-size: 14px;"><span style="font-size: 18px;"><span style="font-family: &quot;comic sans ms&quot;,cursive;">Созданная
+Эйлером теория графов нашла очень широкое применение: например, её
+используют при изучении транспортных и коммуникационных систем, в
+частности, для маршрутизации данных в Интернете.</span></span></p>
+<p style="margin: 5px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); font-size: 14px;">&nbsp;</p>
+<p style="margin: 5px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: Verdana; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); font-size: 14px;">&nbsp;</p>
+<div style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 13.3333px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);"><span style="font-size: 18px;"><span style="font-family: &quot;comic sans ms&quot;,cursive;">Любопытно,
+что другое решение задачи предложил кайзер Вильгельм. На приёме ему
+поднесли карту Кёнигсберга и предложили решить загадку семи мостов.
+Вильгельм не растерялся, а тут же приказал построить восьмой мост.
+После чего задача стала легкорешаемой.</span></span></div>
+<div style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 13.3333px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">&nbsp;</div>
+<div style="color: rgb(0, 0, 0); font-family: Verdana; font-size: 13.3333px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);"><span style="font-size: 18px;"><span style="font-family: &quot;comic sans ms&quot;,cursive;">Третье решение придумали речники. За небольшую плату они предлагают перевезти всех, кому не хватает моста для решения задачки.</span></span></div>
+<br class="Apple-interchange-newline" />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+В письме знакомому итальянскому математику Эйлер дал краткое и красивое
+решение проблемы кенигсбергских мостов: при таком расположении задача
+неразрешима. При этом он указал, что вопрос показался ему интересным,
+т.к. &laquo;для его решения недостаточны ни геометрия, ни
+алгебра...&raquo;.<br />
+
+<br />
+
+При решении многих задач Л. Эйлер изображал множества с помощью кругов,
+поэтому они и получили название &laquo;круги Эйлера&raquo;. Этим
+методом ещё ранее пользовался немецкий философ и математик Готфрид
+Лейбниц, который использовал их для геометрического объяснения
+логических связей между понятиями, но при этом чаще использовал
+линейные схемы. Эйлер же достаточно основательно развил метод. Особенно
+знаменитыми графические методы стали благодаря английскому логику и
+философу Джону Венну, который ввел диаграммы Венна и подобные схемы
+часто называют диаграммами Эйлера-Венна. Используются они во многих
+областях, например, в теории множеств, теории вероятности, логике,
+статистике и информатике.<br />
+
+<br />
+<h2 style="border: 0px none ; margin: 0.83em 0px; padding: 0px; font-style: normal; font-weight: normal; font-stretch: inherit; font-size: 2.2em; line-height: 1.2em; font-family: Roboto-Light,helvetica,sans-serif; vertical-align: baseline; color: rgb(27, 127, 187); letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Зачем нужны круги Эйлера?</h2>
+<p style="border: 0px none ; margin: 1em 0px; padding: 0px; font-style: normal; font-weight: 400; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: helvetica,sans-serif; vertical-align: baseline; text-align: justify; color: rgb(65, 65, 65); letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Круги
+Эйлера имеют прикладное назначение, то есть с их помощью на практике
+решаются задачи на объединение или пересечение множеств в математике,
+логике, менеджменте и не только.</p>
+<p style="border: 0px none ; margin: 1em 0px; padding: 0px; font-style: normal; font-weight: 400; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: helvetica,sans-serif; vertical-align: baseline; text-align: justify; color: rgb(65, 65, 65); letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Если
+говорить о видах кругов Эйлера, то можно разделить их на те, что
+описывают объединение каких-то понятий (например, соотношение рода и
+вида) &ndash; мы их рассмотрели на примере в начале статьи.</p>
+<p style="border: 0px none ; margin: 1em 0px; padding: 0px; font-style: normal; font-weight: 400; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: helvetica,sans-serif; vertical-align: baseline; text-align: justify; color: rgb(65, 65, 65); letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">А
+также на те, что описывают пересечение множеств по какому-то признаку.
+Таким принципом руководствовался Джон Венн в своих схемах. И именно он
+лежит в основе многих популярных в интернете мемов. Вот вам один из
+примеров таких кругов Эйлера:&nbsp;krugi-jejlera1.jpg <img src="../../../../%D0%9A%20%D0%A3%D0%A0%D0%9E%D0%9A%D0%A3/1%20%D0%BA%D1%83%D1%80%D1%81/1%20%D0%BA%D1%83%D1%80%D1%81%204,%205%20%D1%83%D1%80%D0%BE%D0%BA%20%D0%90%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0%20%D0%9B%D0%BE%D0%B3/%D0%9A%D1%80%D1%83%D0%B3%D0%B8%20%D0%AD%D0%B9%D0%BB%D0%B5%D1%80%D0%B0/%D0%9A%D1%80%D1%83%D0%B3%D0%B8%20%D0%AD%D0%B9%D0%BB%D0%B5%D1%80%D0%B0_%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BE%D0%B4%D0%B8%D0%BD%20%D1%80%D0%B0%D0%B7%20%D1%83%D0%B2%D0%B8%D0%B4%D0%B5%D1%82%D1%8C%20%D0%BB%D1%83%D1%87%D1%88%D0%B5,%20%D1%87%D0%B5%D0%BC%20%D1%81%D1%82%D0%BE%20%D1%80%D0%B0%D0%B7%20%D1%83%D1%81%D0%BB%D1%8B%D1%88%D0%B0%D1%82%D1%8C_files/krugi-jejlera3.jpg" alt="&ETH;&Ntilde;&Ntilde;&ETH;&sup3;&ETH;&cedil; &ETH;&shy;&ETH;&sup1;&ETH;&raquo;&ETH;&micro;&Ntilde;&ETH;&deg;" /><img src="../../../../%D0%9A%20%D0%A3%D0%A0%D0%9E%D0%9A%D0%A3/1%20%D0%BA%D1%83%D1%80%D1%81/1%20%D0%BA%D1%83%D1%80%D1%81%204,%205%20%D1%83%D1%80%D0%BE%D0%BA%20%D0%90%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0%20%D0%9B%D0%BE%D0%B3/%D0%9A%D1%80%D1%83%D0%B3%D0%B8%20%D0%AD%D0%B9%D0%BB%D0%B5%D1%80%D0%B0/%D0%9A%D1%80%D1%83%D0%B3%D0%B8%20%D0%AD%D0%B9%D0%BB%D0%B5%D1%80%D0%B0_%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BE%D0%B4%D0%B8%D0%BD%20%D1%80%D0%B0%D0%B7%20%D1%83%D0%B2%D0%B8%D0%B4%D0%B5%D1%82%D1%8C%20%D0%BB%D1%83%D1%87%D1%88%D0%B5,%20%D1%87%D0%B5%D0%BC%20%D1%81%D1%82%D0%BE%20%D1%80%D0%B0%D0%B7%20%D1%83%D1%81%D0%BB%D1%8B%D1%88%D0%B0%D1%82%D1%8C_files/krugi-jejlera3.jpg" alt="&ETH;&Ntilde;&Ntilde;&ETH;&sup3;&ETH;&cedil; &ETH;&shy;&ETH;&sup1;&ETH;&raquo;&ETH;&micro;&Ntilde;&ETH;&deg;" /></p>
+<img src="../../../../%D0%9A%20%D0%A3%D0%A0%D0%9E%D0%9A%D0%A3/1%20%D0%BA%D1%83%D1%80%D1%81/1%20%D0%BA%D1%83%D1%80%D1%81%204,%205%20%D1%83%D1%80%D0%BE%D0%BA%20%D0%90%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0%20%D0%9B%D0%BE%D0%B3/%D0%9A%D1%80%D1%83%D0%B3%D0%B8%20%D0%AD%D0%B9%D0%BB%D0%B5%D1%80%D0%B0/%D0%9A%D1%80%D1%83%D0%B3%D0%B8%20%D0%AD%D0%B9%D0%BB%D0%B5%D1%80%D0%B0_%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BE%D0%B4%D0%B8%D0%BD%20%D1%80%D0%B0%D0%B7%20%D1%83%D0%B2%D0%B8%D0%B4%D0%B5%D1%82%D1%8C%20%D0%BB%D1%83%D1%87%D1%88%D0%B5,%20%D1%87%D0%B5%D0%BC%20%D1%81%D1%82%D0%BE%20%D1%80%D0%B0%D0%B7%20%D1%83%D1%81%D0%BB%D1%8B%D1%88%D0%B0%D1%82%D1%8C_files/krugi-jejlera2_499x555.jpg" />
+<p style="border: 0px none ; margin: 1em 0px; padding: 0px; font-style: normal; font-weight: 400; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: helvetica,sans-serif; vertical-align: baseline; text-align: justify; color: rgb(65, 65, 65); letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Забавно,
+правда? И главное, все сразу становится понятно. Можно потратить много
+слов, объясняя свою точку зрения, а можно просто нарисовать простую
+схему, которая сразу расставит все по местам.</p>
+<p style="border: 0px none ; margin: 1em 0px; padding: 0px; font-style: normal; font-weight: 400; font-stretch: inherit; font-size: 14px; line-height: inherit; font-family: helvetica,sans-serif; vertical-align: baseline; text-align: justify; color: rgb(65, 65, 65); letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Кстати,
+если вы не можете определиться, какую профессию выбрать, попробуйте
+нарисовать схему в виде кругов Эйлера. Возможно, чертеж вроде этого
+поможет вам определиться с выбором:</p>
+krugi-jejlera2.jpg <img src="../../../../%D0%9A%20%D0%A3%D0%A0%D0%9E%D0%9A%D0%A3/1%20%D0%BA%D1%83%D1%80%D1%81/1%20%D0%BA%D1%83%D1%80%D1%81%204,%205%20%D1%83%D1%80%D0%BE%D0%BA%20%D0%90%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0%20%D0%9B%D0%BE%D0%B3/%D0%9A%D1%80%D1%83%D0%B3%D0%B8%20%D0%AD%D0%B9%D0%BB%D0%B5%D1%80%D0%B0/%D0%9A%D1%80%D1%83%D0%B3%D0%B8%20%D0%AD%D0%B9%D0%BB%D0%B5%D1%80%D0%B0_%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BE%D0%B4%D0%B8%D0%BD%20%D1%80%D0%B0%D0%B7%20%D1%83%D0%B2%D0%B8%D0%B4%D0%B5%D1%82%D1%8C%20%D0%BB%D1%83%D1%87%D1%88%D0%B5,%20%D1%87%D0%B5%D0%BC%20%D1%81%D1%82%D0%BE%20%D1%80%D0%B0%D0%B7%20%D1%83%D1%81%D0%BB%D1%8B%D1%88%D0%B0%D1%82%D1%8C_files/krugi-jejlera3.jpg" alt="&ETH;&Ntilde;&Ntilde;&ETH;&sup3;&ETH;&cedil; &ETH;&shy;&ETH;&sup1;&ETH;&raquo;&ETH;&micro;&Ntilde;&ETH;&deg;" /><img src="../../../../%D0%9A%20%D0%A3%D0%A0%D0%9E%D0%9A%D0%A3/1%20%D0%BA%D1%83%D1%80%D1%81/1%20%D0%BA%D1%83%D1%80%D1%81%204,%205%20%D1%83%D1%80%D0%BE%D0%BA%20%D0%90%D0%BB%D0%B3%D0%B5%D0%B1%D1%80%D0%B0%20%D0%9B%D0%BE%D0%B3/%D0%9A%D1%80%D1%83%D0%B3%D0%B8%20%D0%AD%D0%B9%D0%BB%D0%B5%D1%80%D0%B0/%D0%9A%D1%80%D1%83%D0%B3%D0%B8%20%D0%AD%D0%B9%D0%BB%D0%B5%D1%80%D0%B0_%20%D0%BF%D0%BE%D1%87%D0%B5%D0%BC%D1%83%20%D0%BE%D0%B4%D0%B8%D0%BD%20%D1%80%D0%B0%D0%B7%20%D1%83%D0%B2%D0%B8%D0%B4%D0%B5%D1%82%D1%8C%20%D0%BB%D1%83%D1%87%D1%88%D0%B5,%20%D1%87%D0%B5%D0%BC%20%D1%81%D1%82%D0%BE%20%D1%80%D0%B0%D0%B7%20%D1%83%D1%81%D0%BB%D1%8B%D1%88%D0%B0%D1%82%D1%8C_files/krugi-jejlera3.jpg" alt="&ETH;&Ntilde;&Ntilde;&ETH;&sup3;&ETH;&cedil; &ETH;&shy;&ETH;&sup1;&ETH;&raquo;&ETH;&micro;&Ntilde;&ETH;&deg;" /><br />
+Те варианты, которые окажутся на пересечении всех трех кругов, и есть
+профессия, которая не только сможет вас прокормить, но и будет вам
+нравиться.<br />
+<br />
+<br />
+cм тема 6.1 таблица графическое обозначение<br />
+<br />
+<br />
+<br />
+<span style="color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255); display: inline ! important; float: none;">58
+человек ежедневно добираются на работу общественным транспортом: на
+автобусе, на трамвае или на метро. Каждый пользуется хотя бы одним из
+видов транспорта. 42 человека из них используют метро, 32 &ndash;
+трамвай, 44 &ndash; автобус. 21 человек из них используют метро и
+трамвай, 31 &ndash; метро и автобус, 22 &ndash; трамвай и автобус.
+Сколько среди них человек, которые используют все три вида транспорта,
+чтобы добраться на работу?<br />
+</span>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Тут
+нужно понимать, что если сказано, что &laquo;42 человека используют
+метро&raquo;, то это вовсе не означает, что кроме метро они не
+используют никаких других видов транспорта. Кто-нибудь из них может
+быть и использует. Может быть ещё какой-то один вид транспорта, трамвай
+или автобус. А может и сразу оба! Вопрос задачи как раз и состоит в
+том, чтобы посчитать людей, которые используют все три вида транспорта.</p>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С
+первого взгляда даже непонятно, с чего начинать решение. Но если
+немного поразмыслить, становится ясно, что действовать нужно по
+следующему алгоритму. Будем стараться расписать всех людей (58 человек)
+через известные из условия данные. Нам известно, что автобус используют
+44 человека. Прибавим к этому количество людей, которые используют
+метро. Их всего 42 человек. С помощью кругов Эйлера эту операцию можно
+изобразить наглядно&nbsp;в следующем виде:</p>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);"><a href="https://yourtutor.info/%d0%ba%d1%80%d1%83%d0%b3%d0%b8-%d1%8d%d0%b9%d0%bb%d0%b5%d1%80%d0%b0-%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d1%80%d0%b5%d1%88%d0%b5%d0%bd%d0%b8%d1%8f-%d0%b7%d0%b0%d0%b4%d0%b0%d1%87%d0%b8/venndiagramtwooverlapedsets" rel="attachment wp-att-18980" style="color: rgb(214, 54, 42); text-decoration: none;"><img class="aligncenter wp-image-18980" src="https://yourtutor.info/wp-content/uploads/2017/06/VennDiagramTwoOverlapedSets.png" alt="Два пересекающихся множества, изображённые с помощью кругов Эйлера" srcset="https://yourtutor.info/wp-content/uploads/2017/06/VennDiagramTwoOverlapedSets.png 348w, https://yourtutor.info/wp-content/uploads/2017/06/VennDiagramTwoOverlapedSets-300x291.png 300w" sizes="(max-width: 221px) 100vw, 221px" style="border: 0px none ; padding: 3px; margin-left: auto; margin-right: auto; clear: both; display: block; max-width: 515px; height: auto;" height="215" width="221" /></a></p>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">То
+есть пока что мы имеем дело с выражением 58 = 44 + 42&hellip; Знак
+&laquo;&hellip;&raquo; означает, что выражение ещё не закончено.
+Проблема в том, что мы посчитали людей на пересечении этих кругов
+дважды. Соответствующая область на диаграмме выделена тёмно-зелёным
+цветом. Поэтому один раз их нужно вычесть. Это люди, которые пользуются
+автобусом и метро. Их, как известно, 31. То есть наше
+&laquo;неоконченное&raquo; выражение&nbsp;принимает вид: 58 = 44 + 42
+&mdash; 31&hellip; И на диаграмме при этом пропадает тёмно-зелёный цвет:</p>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);"><a href="https://yourtutor.info/%d0%ba%d1%80%d1%83%d0%b3%d0%b8-%d1%8d%d0%b9%d0%bb%d0%b5%d1%80%d0%b0-%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d1%80%d0%b5%d1%88%d0%b5%d0%bd%d0%b8%d1%8f-%d0%b7%d0%b0%d0%b4%d0%b0%d1%87%d0%b8/venndiagramwithoutintersection" rel="attachment wp-att-18996" style="color: rgb(214, 54, 42); text-decoration: none;"><img class="aligncenter wp-image-18996" src="https://yourtutor.info/wp-content/uploads/2017/06/VennDiagramWithoutIntersection.png" alt="Объединение двух множеств на диаграмме Эйлера" srcset="https://yourtutor.info/wp-content/uploads/2017/06/VennDiagramWithoutIntersection.png 370w, https://yourtutor.info/wp-content/uploads/2017/06/VennDiagramWithoutIntersection-300x263.png 300w" sizes="(max-width: 234px) 100vw, 234px" style="border: 0px none ; padding: 3px; margin-left: auto; margin-right: auto; clear: both; display: block; max-width: 515px; height: auto;" height="204" width="234" /></a></p>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Пока
+всё хорошо. Прибавляем теперь людей, которые ездят на трамвае. Таких
+людей 32. Выражение принимает вид: 58 = 44 + 42 &mdash; 31 + 32&hellip;
+Диаграмма с кругами Эйлера, в свою очередь, становится следующей:</p>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);"><a href="https://yourtutor.info/%d0%ba%d1%80%d1%83%d0%b3%d0%b8-%d1%8d%d0%b9%d0%bb%d0%b5%d1%80%d0%b0-%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d1%80%d0%b5%d1%88%d0%b5%d0%bd%d0%b8%d1%8f-%d0%b7%d0%b0%d0%b4%d0%b0%d1%87%d0%b8/venndiagramwiththreesets" rel="attachment wp-att-18984" style="color: rgb(214, 54, 42); text-decoration: none;"><img class="aligncenter wp-image-18984" src="https://yourtutor.info/wp-content/uploads/2017/06/VennDiagramWithThreeSets.png" alt="Диаграмма Эйлера с тремя пересекающимися множествами из решения задачи про пассажиров на общественном транспорте" srcset="https://yourtutor.info/wp-content/uploads/2017/06/VennDiagramWithThreeSets.png 370w, https://yourtutor.info/wp-content/uploads/2017/06/VennDiagramWithThreeSets-300x276.png 300w" sizes="(max-width: 262px) 100vw, 262px" style="border: 0px none ; padding: 3px; margin-left: auto; margin-right: auto; clear: both; display: block; max-width: 515px; height: auto;" height="241" width="262" /></a><br />
+Проблема в том, что опять мы хватанули лишку. Люди, которых мы вновь
+посчитали дважды, отмечены на диаграмме тёмно-зелёным цветом. Эта
+область находится на пересечении множества, которое мы получили на
+предыдущем этапе, и множества людей, пользующихся трамваем.</p>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Нужно
+вычесть людей, которых мы посчитали дважды. Но как это сделать?
+Единственное, что мы можем сделать, &mdash; это разом вычесть людей,
+которые передвигаются на трамвае и автобусе (их 22 человека), а также
+на трамвае и метро (таких людей 21). После этого наше неоконченное
+выражение для общего количества людей примет вид: 58 = 44 + 42 &mdash;
+31 + 32 &mdash; 22 &mdash; 21&hellip;, а диаграмма с кругами Эйлера
+окажется с дыркой в центре, потому что центральную часть мы вычли
+дважды:</p>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);"><a href="https://yourtutor.info/%d0%ba%d1%80%d1%83%d0%b3%d0%b8-%d1%8d%d0%b9%d0%bb%d0%b5%d1%80%d0%b0-%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d1%80%d0%b5%d1%88%d0%b5%d0%bd%d0%b8%d1%8f-%d0%b7%d0%b0%d0%b4%d0%b0%d1%87%d0%b8/venndiagramwithemptyregion" rel="attachment wp-att-18987" style="color: rgb(214, 54, 42); text-decoration: none;"><img class="aligncenter wp-image-18987" src="https://yourtutor.info/wp-content/uploads/2017/06/VennDiagramWithEmptyRegion.png" alt="Круги Эйлера с &quot;дыркой&quot; посередине" srcset="https://yourtutor.info/wp-content/uploads/2017/06/VennDiagramWithEmptyRegion.png 348w, https://yourtutor.info/wp-content/uploads/2017/06/VennDiagramWithEmptyRegion-300x297.png 300w, https://yourtutor.info/wp-content/uploads/2017/06/VennDiagramWithEmptyRegion-60x60.png 60w" sizes="(max-width: 250px) 100vw, 250px" style="border: 0px none ; padding: 3px; margin-left: auto; margin-right: auto; clear: both; display: block; max-width: 515px; height: auto;" height="247" width="250" /></a></p>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">К
+счастью в незакрашенной области как раз и находятся те люди, число
+которых нам нужно посчитать. Действительно, эти бедняги используют
+ежедневно все три вида транспорта для того, чтобы добраться до работы,
+ведь они находятся на пересечении всех трёх множеств. Обозначим
+количество этих бедолаг за<span>&nbsp;</span><img src="https://yourtutor.info/wp-content/ql-cache/quicklatex.com-a75001f4d9094699e6043ff2eaa0b4f9_l3.png" class="ql-img-inline-formula" alt="x" title="Rendered by QuickLaTeX.com" style="border: medium none  ! important; margin: 0px ! important; padding: 0px ! important; background: transparent none repeat scroll 0% ! important; -moz-background-clip: initial ! important; -moz-background-origin: initial ! important; -moz-background-inline-policy: initial ! important; max-width: 515px; height: auto; vertical-align: 0px;" height="9" width="11" />. Тогда диаграмма примет следующий вид:</p>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);"><a href="https://yourtutor.info/%d0%ba%d1%80%d1%83%d0%b3%d0%b8-%d1%8d%d0%b9%d0%bb%d0%b5%d1%80%d0%b0-%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d1%80%d0%b5%d1%88%d0%b5%d0%bd%d0%b8%d1%8f-%d0%b7%d0%b0%d0%b4%d0%b0%d1%87%d0%b8/threesetsonvenndiagram" rel="attachment wp-att-18999" style="color: rgb(214, 54, 42); text-decoration: none;"><img class="aligncenter wp-image-18999" src="https://yourtutor.info/wp-content/uploads/2017/06/ThreeSetsOnVennDiagram.png" alt="Изображение пересечения трёх множеств с помощью кругов Эйлера" srcset="https://yourtutor.info/wp-content/uploads/2017/06/ThreeSetsOnVennDiagram.png 348w, https://yourtutor.info/wp-content/uploads/2017/06/ThreeSetsOnVennDiagram-300x286.png 300w" sizes="(max-width: 253px) 100vw, 253px" style="border: 0px none ; padding: 3px; margin-left: auto; margin-right: auto; clear: both; display: block; max-width: 515px; height: auto;" height="241" width="253" /></a></p>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">А уравнение станет следующим:</p>
+<p class="ql-center-displayed-equation" style="line-height: 16px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: center ! important; font-size: 15px; white-space: nowrap ! important; overflow: hidden ! important; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);"><span class="ql-right-eqno" style="width: 3em ! important; text-align: right ! important; float: right ! important; font-size: 16.5px;">&nbsp;</span><span class="ql-left-eqno" style="width: 3em ! important; text-align: left ! important; float: left ! important; font-size: 16.5px;">&nbsp;</span><img src="https://yourtutor.info/wp-content/ql-cache/quicklatex.com-f9301e673aa16e88b57dd313127a714c_l3.png" class="ql-img-displayed-equation" alt="\[ 58 = 44 + 42 - 31 + 32 - 22 - 21 + x. \]" title="Rendered by QuickLaTeX.com" style="border: medium none  ! important; margin: 0px ! important; padding: 0px ! important; background: transparent none repeat scroll 0% ! important; -moz-background-clip: initial ! important; -moz-background-origin: initial ! important; -moz-background-inline-policy: initial ! important; vertical-align: middle ! important; max-width: 515px; height: auto;" height="16" width="328" /></p>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Расчёты дают<span>&nbsp;</span><img src="https://yourtutor.info/wp-content/ql-cache/quicklatex.com-87ab806fb280b0638c1cc000bedb8173_l3.png" class="ql-img-inline-formula" alt="x=14" title="Rendered by QuickLaTeX.com" style="border: medium none  ! important; margin: 0px ! important; padding: 0px ! important; background: transparent none repeat scroll 0% ! important; -moz-background-clip: initial ! important; -moz-background-origin: initial ! important; -moz-background-inline-policy: initial ! important; max-width: 515px; height: auto; vertical-align: -1px;" height="15" width="58" />. Это и есть ответ к задаче. Столько людей используют все три вида транспорта каждый день, чтобы добраться на работу.</p>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Вот
+такое вот простое решение. Фактически, в одно уравнение. Просто
+удивительно, не правда ли?! А теперь представьте, как пришлось бы
+решать эту задачу без использования кругов Эйлера. Это было бы
+настоящее мучение.&nbsp;Так что в очередной раз убеждаемся, что любые
+методы визуализации чрезвычайно полезны при решении задач по
+математике. Используйте их, это поможет вам в решении сложных задач как
+на олимпиадах, так и на вступительных экзаменах по математике в лицеи и
+вузы.</p>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Чтобы проверить, хорошо ли вы поняли решение данной задачи, ответьте на следующие вопросы:</p>
+<ol style="color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: justify; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">
+  <li>Сколько человек используют только один вид транспорта для того, чтобы добраться до работы?</li>
+  <li>Сколько человек используют для этого ровно два вида транспорта?</li>
+</ol>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);"><strong style="font-weight: bold;">Задачи:</strong></p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">1. Сколько существует натуральных чисел, меньших 1000, которые делятся на 3 , но не делятся на 2 и на 5?</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">2. Сколько существует различных десятизначных чисел, состоящих только из нулей и единиц, которые содержат не более трех единиц ?</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">3.
+Биатлонист проходит четыре огневые точки, на каждой он делает по 5
+выстрелов. Сколько существует различных способов промахнуться не более
+4?</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">4.
+По результатам одного социологического исследования, было установлено,
+что из 200 людей смотрящих телевизор, 110 человек смотрят спортивную
+передачу, 120 &ndash; комедии, 85 предпочитаю драмы, 50 смотрят драмы и
+спорт, 70 &ndash; комедии и спорт, 55 смотрят комедии и драмы и 30
+человек смотрят все три вида передач. Сколько человек, смотрят спорт
+или комедии или драмы? сколько человек не смотрят ничего из
+вышеперечисленного?</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">5.
+Человек имеет 10 друзей и течение нескольких дней, приглашает некоторых
+из них в гости, так что компания, ни разу не повторяется. Сколько дней
+он может так делать?</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">6. Найти количество трехзначных чисел, которые делятся на 7, но не делятся на 2 и на 5.</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">7.
+На данный момент, в классе 20 учеников, получивших сначала учебного
+года, хотя одну двойку, 17 учеников, получивших не менее двух двоек, 8
+учеников, получивших не менее трех двоек, три ученика получивших не
+менее 4 двоек, один ученик получивший 5 двоек, больше пяти двое нет ни
+у кого. Сколько всего двое в журнале?</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Задача 1.</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Решение:</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Определение: множество А называется подмножество множества В, если каждый элемент множества А принадлежит множеству В.</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Если в некоторой задаче считается что элементы принадлежат некоторым множествам, то это множество называется универсальным.</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Например, в задаче № 1 универсальным множеством можно считать множество чисел, от 1 до 999.</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">A = количество элементов во множестве А</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">В = 333</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Если число делится на 2 и 3, то число делится на 6</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">A В = 166</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Если число делится на 3 и 5, то число делится на 15</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">В D = 66</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">При таком подсчете, мы дважды посчитали числа, которые входят во множество</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">АВD = 33</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">(В/А)/D = В - AВ - ВD + AВD = 333 &ndash; 166 &ndash; 66 + 33 = 134</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Задача 2</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Определение: Правило суммы.</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Все
+множества способов подсчета можно разбить на пересекающиеся множества.
+Тогда общее количество способов вычисляется как сумма множеств.</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = = 1-0 единиц</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = = 10-1 единица</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = = 45</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = = 120</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">120+45+10+1=176</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Задача 3.</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = = 1 способ &ndash; 0 промахов</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">C = = 20 способов &ndash; 1 промах</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = = 190 способов &ndash; 2 промаха</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = =1140 способов &ndash; 3 промаха</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = =4845 способов &ndash; 4 промаха</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Всего 1 + 20 + 190 +1140 + 4845= 6196 способов</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Задача 4.</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Формула включений и исключений</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">А ВD = A + В +D - AВ - AD - ВD - AВD</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">а) А ВD = 110 + 120 + 85 &ndash; 70 -55 &ndash; 50 + 30 =170</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">б)200-170=30 человек ничего не смотрят</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Задача 5.</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Составим таблицу друзей</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = = 10 компаний из 1 человека</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = = 45 компаний из 2 человек</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = = 120 компаний из 3 человек</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = = 210 компаний из 4 человек</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = = 252 компании из 5 человек</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С ==210 компаний из 6 человек</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = = 120 компаний из 7 человек</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = =45 компаний из 8 человек</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = =10 компаний из 9 человек</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">С = = 1 компания из 10 человек</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Итого 10+45+120+210+252+210+120+45+10+1= 1023 способов</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Задача 6.</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Всего 900 трехзначных чисел.</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">A = 900:7=128 чисел</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">АВ =900:14=64 числа</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">АD = 900: 35=25 чисел</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">АВD =900:70=12 чисел</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">А = А - АВ - АD + АВD = 128 &ndash; 64 &ndash; 25 + 12 = 51 число</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Задача 7.</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Найдем количество учеников, получивших ровно четыре двойки.</p>
+<ol style="margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">
+  <li style="">
+    <p style="margin: 0px 0px 20px; font-size: 14px;">3 &ndash; 1= 2 ученика получили 4 двойки</p>
+  </li>
+</ol>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Теперь узнаем количество учеников , получивших ровно три двойки, ровно две двойки и ровно одну двойку.</p>
+<ol style="margin-top: 0px; margin-bottom: 10px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">
+  <li style="">
+    <p style="margin: 0px 0px 20px; font-size: 14px;">8 &ndash; 2 - 1 = 5 учеников получили 3 двойки</p>
+  </li>
+  <li style="">
+    <p style="margin: 0px 0px 20px; font-size: 14px;">17 &ndash; 5 &ndash; 2 &ndash; 1 = 9 учеников получили 2 двойки</p>
+  </li>
+  <li style="">
+    <p style="margin: 0px 0px 20px; font-size: 14px;">20 &ndash; 9 &ndash; 5 &ndash; 2 &ndash; 1 = 3 ученика получили 1 двойку</p>
+  </li>
+  <li style="">
+    <p style="margin: 0px 0px 20px; font-size: 14px;">1&times;3 + 2&times;9 + 3&times;5 + 4&times;2 + 5&times;1 = 49 двоек в журнале</p>
+  </li>
+</ol>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);"><em style=""><strong style="font-weight: bold;">Вывод</strong></em></p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);">Для
+решения данных логических задач, использовала круги Эйлера, что
+позволило успешно решить поставленные задачи. Этот способ показался мне
+удобным и надежным, так как он упрощает путь к решению задачи, делая
+его наглядным.</p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);" align="center"><strong style="font-weight: bold;"></strong></p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">2. 3. Задачи, решаемые с помощью кругов Эйлера</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Задача №1. Сколько натуральных чисел из первого десятка не делится ни на 2, ни на 3?</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Решение.
+Для решения задачи удобно воспользоваться кругами Эйлера. В нашем
+случае три круга: большой круг &ndash; это множество чисел от 1 до 10,
+внутри большого &ndash; два меньших круга, пресекающихся друг с другом.
+Пусть множество чисел, кратных 2&ndash; это множество А, а множество
+чисел, кратных 3 &ndash; множество В. Рассуждаем. На 2 делится каждое
+второе число. Значит, таких чисел будет 10:2=5. На 3 делится 3 числа
+(10:3). На 2 и 3 делятся те числа, которые делятся на 6. Такое число
+только одно. Поэтому множество А состоит из 5-1=4 чисел, множество В
+&ndash; 3-1=2 чисел. Отсюда следует, что в первом десятке содержится
+10-(4+1+2)=3 числа.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Задача №2. С помощью кругов Эйлера можно ответить на множество вопросов, поставленных к одному условию задачи.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Пусть
+круг А изображает всех учащихся, говорящих по-английски, круг Н &ndash;
+говорящих на немецком языке, Круг Ф &ndash; говорящих по-французски.
+Сколько учащихся говорит: а) на всех трех языках? б) по-английски и
+по-немецки? в) по-французски? Сколько всего учащихся, говорящих на
+иностранном языке? Сколько из них не говорит по-французски? Сколько из
+них не говорит по-немецки? Сколько из них не говорит на иностранном
+языке?</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Ответ:
+а) На всех трех языках говорят 3 ученика; б) По-английски и по-немецки
+&ndash; 15 человек; в) только по-французски &ndash; 8 учащихся. Всего
+100 (40+7+3+15+5+22+8) ребят, говорящих на иностранных языках.
+По-французски не говорят 77учащихся (100-(8+5+7+3) и т. д.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Кроме данных вопросов к этой задаче можно составить ещё множество других.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Задача
+№3. В классе учатся 40 человек. Из них по русскому языку имеют
+&laquo;тройки&raquo; 19 человек, по математике &ndash; 17 человек и по
+истории &ndash; 22 человека. Только по одному предмету имеют
+&laquo;тройки&raquo;: по русскому языку &ndash; 4 человека, по
+математике &ndash; 4 человека, по истории &ndash; 11 человек. Семь
+учеников имеют &laquo;тройки&raquo; и по математике и по истории, а 5
+учеников &ndash; &laquo;тройки&raquo; по всем предметам. Сколько
+человек учится без &laquo;троек&raquo;? Сколько человек имеют
+&laquo;тройки&raquo; по двум из трех предметов?</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Решение.
+Нарисуем круги Эйлера. Внутри большего круга, изображающего всех
+учеников класса, поместим три меньших круга М, Р, И, означающих
+соответственно математика, русский язык и история.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Дальнейшие
+расчеты не представляют большого труда. Так как число ребят, имеющих
+&laquo;тройки&raquo; по математике и истории, равно 7, то число
+учеников, имеющих только две &laquo;тройки&raquo; - по математике и по
+истории, равно 7-5=2. Тогда 17-4-5-2=6 учеников имеют две
+&laquo;тройки&raquo; - по математике и по русскому языку, а 22-5-2-11=4
+ученика только две &laquo;тройки&raquo; - по истории и по русскому
+языку. В этом случае без &laquo;тройки&raquo; учится 40-22-4-6-4=4
+ученика. А имеют &laquo;тройки&raquo; по двум предметам из трех
+6+2+4=12 человек.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Задача № 4. Задача, решаемая с помощью диаграммы Эйлера &ndash; Венна.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Ребятам
+поручили изготовить кубики. Несколько кубиков сделали из картона, а
+остальные из дерева. Кубики были двух размеров: большие и маленькие.
+Часть из них покрасили в зеленый цвет, другую &ndash; в красный.
+Получилось 16 зеленых кубиков. Зеленых кубиков большого размера было 6.
+Больших зеленых из картона было 4. Красных кубиков из картона было
+8,красных кубиков из дерева &ndash; 9. Больших деревянных кубиков было
+7, а маленьких деревянных кубиков было 11. Сколько же всего получилось
+кубиков?</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Решение. Выполняем рисунок.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Заполняем диаграмму.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">1)
+Надо начинать с того подмножества, для которого указаны три свойства.
+Это большие зеленый кубики из картона &ndash; таких кубиков 4.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">2)
+Далее ищем подмножества, для которого указаны два свойства из
+перечисленных трех. Это большие зеленые кубики &ndash; 6. Но это
+подмножество состоит из картонных и деревянных. Картонных было 4.
+Значит, деревянных 6-4=2.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">3) Больших деревянных кубиков 7. Из них зеленых &ndash; 2. Значит, красных будет 7-2=5.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">4) Красных деревянных кубиков 9. , из них 5 &ndash; большие. Значит, маленьких красных кубиков из дерева будет 9-5=4.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">5) Маленьких деревянных кубиков 11. Из них красных &ndash; 4. Значит, маленьких зеленых кубиков из дерева 11-4=7.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">6)
+Всего зеленых кубиков 16. Зеленые кубики помещены в кольцеобразную
+часть, состоящую из четырех частей. Значит, маленьких зеленых кубиков
+из картона 16-(4+2+7)=3.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">7)
+Осталось последнее условии: красных кубиков из картона было 8. Нам и не
+надо узнать, сколько из них маленьких, сколько больших.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">8) Считаем: 2+5+8+4+4+7+3=33. Ответ: всего было изготовлено 33 кубика.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Задача
+№ 5. Более сложные задачи можно решить с помощью кругов Эйлера и
+составлением системы уравнений. Ребят, которые хотят обмениваться
+различного рода журналами, собралось 10 человек. Среди них выписывают К
+- 6 человек, Т &ndash; 5 человек, Ю &ndash; 5 человек, К и Т &ndash; 3
+человека, Т и Ю -2 человека, К и Ю &ndash; 3 человека. , а один человек
+не выписывает ни одного журнала. , но читает все эти журналы в
+библиотеке. Надо узнать, сколько человек выписывают все три журнала,
+сколько &ndash; два, а сколько &ndash; только один журнал.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Решение.
+Пусть большой круг, состоящий из 10 человек, &ndash; это множество всех
+ребят, обменивающихся журналами. Внутри большого круга нарисуем три
+меньших круга: К, Т, Ю, которые изображают ребят, подписавшихся на
+соответствующие журналы. Известно, что один человек не выписывает ни
+одного журнала. Значит, в области, расположенной вне кругов К, Т, Ю,
+запишем 1. В остальных ячейках получившегося рисунка запишем буквы
+a&cedil; b, c, x&cedil; y&cedil; z&cedil; t, которые будут обозначать
+число ребят, подписавшихся на соответствующие журналы.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Так как членов кружка было 10, то можно записать еще одно уравнение</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Складывая уравнения первой системы, получим (2).</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Складывая уравнения второй системы, получим (3).</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Подставляя во (2) уравнение (1) и (3), получим</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Отсюда t = 1, b = 2, c = 1, a =2. Значит, a + b + c = 5.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Вычисляя далее, получаем: x =1, y = 1, z = 1, т. е. x+y+z =3.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Итак,
+3 &ndash; это число ребят, подписавшихся только на один журнал, 5
+&ndash; это число ребят, подписавшихся на два журнала, а 1 &ndash;
+число ребят, подписавшихся на все три журнала.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">2. 4 Составление задач, имеющих практическое значение.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Задача
+1. В классе 35 учеников. В математическом кружке из них 12 занимаются,
+в биологическом - 9, а 16 ребят не посещают эти кружки. Сколько
+биологов увлекаются математикой.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Решение:
+Мы видим, что кружки посещают 19 ребят, так как 35 - 16=19, из них 10
+человек посещают только математический кружок (19-9=10) и 2 биолога
+(12-10=2) увлекаются математикой.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Ответ: 2 биолога.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">С помощью кругов Эйлера легко увидеть и другой способ решения задачи.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Количество учеников изобразим с помощью большого круга, а внутри поместим круги поменьше.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Очевидно,
+что в общей части кругов окажутся те самые биологи-математики, о
+которых спрашивается в задаче. Теперь посчитаем: Внутри большого круга
+35 учеников, внутри кругов М и Б : 35-16=19 учеников, внутри круга М -
+12 ребят, значит, в той части круга Б, которая не имеет ничего общего с
+кругом М, находится 19-12=7 учеников, следовательно, в МБ находится 2
+ученика (9-7=2). Таким образом, 2 биолога увлекаются математикой.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">1)35-16=19(чел. );</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">2) 12+9=21 (чел. );</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">3)21-19=2(чел. ).</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Ответ: 2 биолога.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Задача
+2. Из 100 семиклассников, выполнивших практическое задание по физике,
+75 сделали модели, а 65 эскиз фонтана, а 10 человек ни чего не сделали.
+Сколько учеников сделали модель и эскиз?</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Решение:
+В большом круге, изображающем 100 семиклассников, поместим 2 меньших
+круга, изображающих учеников, выполнивших модель и эскиз фонтана.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Мы
+видим, что 90 учеников (100-10)выполнили хотя бы одну часть задания; 15
+учеников (90-75) сделали только эскиз фонтана, 75-15=50 &ndash;
+учеников сделали эскиз и фонтан.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Ответ: 50 учеников.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Задача
+3. В 5 классе нашей школы 22, в 6 классе &ndash; 16, в 7 классе &ndash;
+23 ребят. Известно, что кружки по лыжам, шахматам и спортивным играм
+ходят 4 человека. Каждые 2 секции посещают 9 человек. Сколько человек
+ходит из каждого класса на секции? Сколько учеников не ходит ни на
+какой спортивный кружок?</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Решение:
+Если на все три кружка ходят 4 ученика, а на каждые два &ndash; 9
+человек, то две секции с 5 и 6 класса, с 6 и 7 класса, с 5 и 7 класса
+посещают по 5 человек. Получаем 5+5+4=14 пятиклассников посещают
+кружки, 22-14=8 человек не ходят ни на какой кружков. Рассуждая также,
+из шестиклассников 16-14=2 ученика никуда не ходя, а из семиклассников
+&ndash; 23-14=9 человек.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Ответ:
+14 учеников с каждого класса посещают кружки, не ходят ни на какой из
+5-ого &ndash; 7, из 6-ого &ndash; 2, из 7-ого &ndash; 9 учеников.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Задача
+4. В классе 32 человека. Из них 14 играют в баскетбол, 24 - в
+пионербол, 16 - в волейбол. Увлекаются двумя видами спорта -
+баскетболом и пионерболом - шестеро, баскетболом и волейбол - четверо,
+пионерболом и волейболом - четверо. Трое ни чем не занимаются. Сколько
+ребят увлекается всеми видами игры?</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Решение. Воспользуемся кругами Эйлера.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">1)32-3=29(ч. ) &ndash; играют хотя бы в одну игру.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">2)14-6-4-Х=4-Х (ч. ) &ndash; играют только в баскетбол.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">3)24-6-4-Х=14-Х (ч. ) &ndash; играют только в пионербол.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">4)16-4-4-Х=8-Х (ч. ) &ndash; играют только в волейбол.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">5)4-Х+14-Х+8-Х+5+6+4=29 (ч. )</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">41-3Х=29</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Х=4(ч. )</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Ответ: четыре человека увлекаются всеми тремя видами спорта.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">3. Заключение</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Ты человек, а значит, ты</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Обязан рассуждать &ndash;</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">А без логичной простоты</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Ты будешь пропадать.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Пусть за собой она зовёт &ndash;</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Уйми в коленях дрожь!</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Коль с Логикой пойдёшь вперёд &ndash;</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Нигде не пропадёшь!</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">(С. Алдошин)</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Логика,
+наука о законах и формах правильного мышления, зародилась в Древней
+Греции. Основоположником логики по праву считают великого учёного
+Аристотеля (384 &ndash; 322 гг. до н. э. ). Она лежит в основе
+различных наук (естественных, общественных и технических), а также в
+основе любого учебного предмета, изучаемого в общеобразовательной
+школе. Логику должен знать каждый человек, чтобы мыслить правильно, т.
+е. определённо, непротиворечиво, доказательно, чётко, и уметь излагать
+свои мысли понятным языком. Одна из характерных черт любой логики
+состоит в том, что она позволяет, получив некоторую информацию, извлечь
+(выявить) содержащиеся в ней новые знания.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Школьникам
+логика помогает в процессе овладения ими многообразной информацией, с
+которой они встречаются при изучении различных наук и в практической
+деятельности. Потом, в ходе дальнейшего самообразования, логика поможет
+им отделить главное от второстепенного, критически воспринять данные в
+различных книгах определения и классификации разнообразных понятий,
+подобрать формы доказательства своих истинных суждений и формы
+опровержения ложных. И это только некоторые из многих преимуществ,
+которые даёт человеку изучение интереснейшей и древнейшей из наук
+&ndash; логики, т. е. науки о законах и формах правильного мышления.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Как
+видно из моей исследовательской работы, задачи состоят из множества
+данных. Выстроив данные в единую цепочку, можно увидеть, что решение
+задач подчиняется одному и тому же способу. Для решения задач, решаемых
+с помощью кругов Эйлера, был составлен алгоритм, состоящий из следующих
+этапов:</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">&bull; Записываем краткое условие задачи.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">&bull; Выполняем рисунок.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">&bull; Записываем данные в круги (или в диаграмму Эйлера).</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">&bull; Выбираем условие, которое содержит больше свойств.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">&bull; Анализируем, рассуждаем, не забывая записывать результаты в части круга (диаграммы).</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">&bull; Записываем ответ.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">При
+выполнении данной исследовательской работы закрепились мои умения и
+навыки работы с компьютером. Пришлось познакомиться поближе с
+программами Microsoft Office Word, Paint.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;">Логические
+задачи заставляют думать, рассуждать, составлять цепочку действий,
+последовательность, учат алгоритмизации, что немаловажно в современной
+жизни. А исследовательские работы учат искать информацию из различных
+источников (включая и интернет) и обрабатывать её, учат находить из
+большого материала лишь тот, который необходим.</p>
+<p style="margin: 0px 0px 20px; line-height: 20.8px; font-size: 13px; color: rgb(0, 0, 0); font-family: Verdana,Arial,Helvetica,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px;"></p>
+<p style="margin: 0px 0px 20px; font-size: 14px; color: rgb(51, 51, 51); font-family: &quot;Open Sans&quot;,sans-serif; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);" align="center"></p>
+<p style="line-height: 22px; color: rgb(34, 34, 34); font-family: arial,&quot;Helvetica LT Std&quot;,sans-serif; text-align: justify; font-size: 15px; font-style: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; background-color: rgb(255, 255, 255);"></p>
+
+
+
+<div style="height: 30px;"></div>
+<div id="topNubex"><img src="../images/topNubex.jpg" height="30" width="71"></div>
+
+</body>
+
+
+</html>
